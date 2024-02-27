@@ -1,14 +1,32 @@
-import { ModeToggle } from "./components/mode-toggle"
-import { ThemeProvider } from "./components/theme-provider"
+import Contact from "./components/Contact"
+import Experience from "./components/Experience"
+import Home from "./components/Home"
+import Projects from "./components/Projects"
+import Reviews from "./components/Reviews"
+import TechStack from "./components/TechStack"
 
 const App = () => {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div>
-        Dilpreet 
-        <ModeToggle/>
+      <div className="px-10 py-3 ">
+        <div>
+          <Home/>       
+        </div>
+        <div>
+          <Experience/>
+        </div>
+        <div>
+          <TechStack/>
+        </div>
+        <div>
+          <Projects/>
+        </div>
+        <div>
+          <Reviews/>
+        </div>
+        <div>
+          <Contact/>
+        </div>
       </div>
-    </ThemeProvider>
   )
 }
 
