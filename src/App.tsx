@@ -9,25 +9,21 @@ import TechStack from "./components/TechStack"
 const App = () => {
   return (
       <div className="px-10 py-3 main">
-        <div>
+        <div id="home">
           <Home/>       
         </div>
-        <div>
+        <div id="About">
           <Aboutme/>
-        </div>
-        <div>
           <Experience/>
-        </div>
-        <div>
           <TechStack/>
         </div>
-        <div>
+        <div id="Projects">
           <Projects/>
         </div>
-        <div>
+        <div id="Reviews">
           <Reviews/>
         </div>
-        <div>
+        <div id="Contact">
           <Contact/>
         </div>
       </div>

@@ -8,6 +8,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube ,FaBehance} fro
 
 const Home = () => {
 
+  const navigateToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const texts = ['Software Developer', 'Problem Solver', 'Designer', 'Video Editor','Writer', 'Photographer','Youtuber' ];
@@ -34,16 +41,16 @@ const Home = () => {
           <div>
             <ModeToggle/>
           </div>
-          <div>
+          <div onClick={() => navigateToSection('About')}>
             About
           </div>
-          <div>
+          <div onClick={() => navigateToSection('Projects')}>
             Projects
           </div>
-          <div>
+          <div onClick={() => navigateToSection('Reviews')}>
             Reviews
           </div>
-          <div>
+          <div onClick={() => navigateToSection('Contact')}>
             Contact
           </div>
         </div>
