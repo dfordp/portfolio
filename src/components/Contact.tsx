@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaBehance } from 'react-icons/fa';
 import { Textarea } from '@/components/ui/textarea';
@@ -8,11 +8,11 @@ const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setForm({ ...form, [(e.target as HTMLTextAreaElement).name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     if (formRef.current) {

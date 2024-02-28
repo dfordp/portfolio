@@ -1,4 +1,3 @@
-import React from 'react';
 import { SiC, SiCplusplus, SiJavascript, SiTypescript, SiPython, SiReact, SiRedux, SiTailwindcss, SiExpress, SiMongodb, SiMysql, SiFirebase, SiGithub, SiVercel, SiFigma, SiGooglecloud, SiMicrosoftazure, SiSocketdotio,SiAdobepremierepro  } from 'react-icons/si';
 import { FaNodeJs, FaAws } from 'react-icons/fa';
 import { TbBrandNextjs } from "react-icons/tb";

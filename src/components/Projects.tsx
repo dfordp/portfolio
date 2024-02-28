@@ -41,6 +41,10 @@ const projects = [
 ]
 
 const Projects = () => {
+  const handleClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div>
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-4xl justify-center py-16 flex flex-row justify-center">
@@ -54,8 +58,8 @@ const Projects = () => {
               </div>
               <p className="leading-7 [&:not(:first-child)]:py-2 pl-4 pr-2 font-medium text-xs">{project.description}</p>
               <div className="flex flex-row justify-between p-4">
-                <Button href={project.github_link} className=''>GitHub</Button>
-                {project.deployed_link && <Button href={project.deployed_link}>Deployed</Button>}
+                <Button onClick={() => handleClick(project.github_link)} className=''>GitHub</Button>
+                {project.deployed_link && <Button onClick={() => handleClick(project.deployed_link)}>Deployed</Button>}
               </div>
             </div>
           ))}
