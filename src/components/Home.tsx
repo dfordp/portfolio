@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo.png"
 import LogoDark from "@/assets/Logodark.png"
 import ProfilePhoto from "@/assets/Profile-Photo.png"
 import { ModeToggle } from "@/components/mode-toggle"
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube ,FaBehance} from 'react-icons/fa';
 
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
           <img src={Logo} className="w-20 dark:hidden" />
           <img src={LogoDark} className="w-20 hidden dark:block" />
         </div>
-        <div className="flex flex-row  items-center gap-10 my-6 font-medium">
+        <div className="flex flex-row  items-center gap-9 my-6 font-medium">
           <div>
             <ModeToggle/>
           </div>
@@ -48,7 +48,7 @@ const Home = () => {
           </div>
         </div>
       </div>  
-      <div className="flex flex-row px-16 py-28 items-center justify-center gap-16">
+      <div className="flex flex-row px-16 py-28 items-center justify-center gap-24">
         {/* Main Profile with name , pic & social links */}
         <div className="justify-center">
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight px-1 py-2">
@@ -57,9 +57,9 @@ const Home = () => {
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
             Dilpeet Grover
           </h1>
-          <h1 className="scroll-m-20 text-2xl font-semibold tracking-tight px-1 py-2">
+          <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight px-1 py-2">
             A {displayText}
-          </h1>
+          </h3>
           <div className='flex flex-row gap-3 py-2 justify-center'>
             <a href="https://github.com/dfordp" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} />
@@ -75,6 +75,9 @@ const Home = () => {
             </a>
             <a href="https://www.youtube.com/@dfordp" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={24} />
+            </a>
+            <a href="https://www.behance.net/redjohn8" target="_blank" rel="noopener noreferrer">
+              <FaBehance size={24} />
             </a>
           </div>
         </div>
