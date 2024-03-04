@@ -32,7 +32,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row justify-between px-6">
+      <div className="flex flex-row justify-between px-24">
         <div>
           <img src={Logo} className="w-20 dark:hidden" />
           <img src={LogoDark} className="w-20 hidden dark:block" />
@@ -61,8 +61,8 @@ const Home = () => {
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight px-1 py-2">
             I am
           </h3>
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            Dilpeet Grover
+          <h1 className="scroll-m-20 font-extrabold tracking-tight text-5xl">
+            Dilpreet Grover
           </h1>
           <h3 className="scroll-m-20 text-2xl font-semibold tracking-tight px-1 py-2">
             A {displayText}
