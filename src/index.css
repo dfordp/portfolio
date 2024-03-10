@@ -114,6 +114,10 @@
   animation: blink 1s infinite;
 }
 
+.blink {
+  animation: blink 1s linear infinite;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 10px;
@@ -130,3 +134,4 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2); 
 }
+

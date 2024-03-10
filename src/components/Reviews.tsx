@@ -46,7 +46,7 @@ const Reviews = () => {
         </h1>
         <div className="flex flex-row gap-4 animate-slide space-x-4">
         {reviews.concat(reviews).map((review, index) => (
-          <div key={index} className="w-[400px] h-[200px] flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
+          <div key={index} className="w-80 h-40 flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
             <div className="pt-3 flex flex-row">
               <img src={review.image} className="w-10 h-10 ml-4 rounded-full"/>
               <p className="leading-7 [&:not(:first-child)]:pt-1 pl-2 font-bold text-xs">{review.name}</p>

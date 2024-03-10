@@ -48,7 +48,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Name"
             required
-            className='my-5 w-full lg:w-64'
+            className='my-5 w-80 md:w-48'
           />
           <Textarea
             name="email"
@@ -56,7 +56,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Email"
             required
-            className='my-5 w-64'
+            className='my-5 w-80'
           />
         </div>
         <Textarea
@@ -65,7 +65,7 @@ const Contact = () => {
           onChange={handleChange}
           placeholder="Message"
           required
-          className='my-5 w-[375px] lg:w-[675px] h-[200px]'
+          className='my-5 w-80 md:w-[675px] h-[200px]'
         />
         <Button type="submit" className="flex flex-row mt-4 mb-6" >Submit</Button>
       </form>

@@ -50,9 +50,9 @@ const Projects = () => {
      <h1 className="scroll-m-20 font-extrabold tracking-tight text-2xl lg:text-4xl py-8 flex flex-row justify-center whitespace-nowrap my-6">
           Projects
       </h1>
-      <div className="flex flex-row gap-4 py-10  overflow-x-auto custom-scrollbar">
+      <div className="flex flex-row gap-4 py-10 px-5 overflow-x-scroll custom-scrollbar">
         {projects.map((project, index) => (
-          <div key={index} className="w-[400px] h-[275px] flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
+          <div key={index} className="w-80 h-56 flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
             <div className="pt-3 flex flex-row">
               <p className="leading-7 [&:not(:first-child)]:pt-1 pl-4 font-bold ">{project.name}</p>
             </div>

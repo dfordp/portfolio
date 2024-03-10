@@ -5,6 +5,7 @@ import ProfilePhoto from "@/assets/Profile-Photo.png"
 import { ModeToggle } from "@/components/mode-toggle"
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube ,FaBehance} from 'react-icons/fa';
 import { VscListSelection } from "react-icons/vsc";
+import { IoIosArrowDown } from "react-icons/io";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -76,10 +77,10 @@ const Home = () => {
           </div>
         </div>
       </div>  
-      <div className="flex flex-col lg:flex-row  items-center justify-center my-32">
+      <div className="flex flex-col lg:flex-row  items-center justify-center my-32 lg:my-16">
         {/* Main Profile with name , pic & social links */}
-        <div className="text-center md:text-left">
-          <h3 className="scroll-m-20  md:text-2xl font-semibold tracking-tight text-left">
+        <div>
+          <h3 className="scroll-m-20 text-xl md:text-2xl font-semibold tracking-tight text-left mx-1">
             I am
           </h3>
           <h1 className="scroll-m-20 font-extrabold tracking-tight text-3xl md:text-5xl whitespace-nowrap">
@@ -110,9 +111,12 @@ const Home = () => {
           </div>
         </div>
         <div className="flex lg:ml-10">
-          <img src={ProfilePhoto} className="lg:w-60 md:w-48 w-40 lg:mx-16 flex flex-row justify-center mt-16 rounded-full outline outline-4 dark:outline-white md:block"/>
+          <img src={ProfilePhoto} className="w-60 lg:mx-16 flex flex-row justify-center mt-16 rounded-full outline outline-4 dark:outline-white hidden lg:block"/>
         </div>
       </div>
+      <div className='flex flex-row gap-3 py-2 justify-center'>
+      <IoIosArrowDown className="blink" size={32} onClick={() => navigateToSection('About')} />
+    </div>
     </div>
   )
 }
