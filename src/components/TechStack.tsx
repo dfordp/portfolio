@@ -34,9 +34,9 @@ const TechStack = () => {
   ];
 
   return (
-    <div className='px-24'>
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-4xl justify-center py-16 flex flex-row">
-        Skill Set
+    <div className="md:my-24 md:px-24">
+      <h1 className="scroll-m-20 font-extrabold tracking-tight text-2xl lg:text-4xl py-8 flex flex-row justify-center whitespace-nowrap my-6">
+          Skill Set
       </h1>
       <div className="flex flex-wrap justify-center gap-4 items-center">
         {techStack.map((tech, index) => (

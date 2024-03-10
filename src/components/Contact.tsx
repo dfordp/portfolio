@@ -41,14 +41,14 @@ const Contact = () => {
         Contact
       </h1>
       <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col justify-center  items-center'>
-        <div className='flex flex-row gap-5 justify-center'>
+        <div className='flex flex-col md:flex-row gap-5 justify-center'>
           <Textarea
             name="name"
             value={form.name}
             onChange={handleChange}
             placeholder="Name"
             required
-            className='my-5 w-64'
+            className='my-5 w-full lg:w-64'
           />
           <Textarea
             name="email"
@@ -56,7 +56,7 @@ const Contact = () => {
             onChange={handleChange}
             placeholder="Email"
             required
-            className='my-5 w-64 h-[50px]'
+            className='my-5 w-64'
           />
         </div>
         <Textarea
@@ -65,7 +65,7 @@ const Contact = () => {
           onChange={handleChange}
           placeholder="Message"
           required
-          className='my-5 w-[675px] h-[200px]'
+          className='my-5 w-[375px] lg:w-[675px] h-[200px]'
         />
         <Button type="submit" className="flex flex-row mt-4 mb-6" >Submit</Button>
       </form>
@@ -89,7 +89,7 @@ const Contact = () => {
           <FaBehance size={24} />
         </a>
       </div>
-      <h3 className="scroll-m-20 font-semibold tracking-tight px-1 py-4 flex flex-row justify-center"> © Dilpreet Grover 2024</h3>
+      <h3 className="scroll-m-20 font-semibold tracking-tight px-1 py-4 flex flex-row justify-center whitespace-nowrap"> © Dilpreet Grover 2024</h3>
     </div>
   );
 };
