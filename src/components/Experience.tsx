@@ -1,5 +1,15 @@
 const experiences = [
   {
+    company: 'Zinx Ze',
+    role : 'Social Media Manager',
+    timePeriod : 'April 2021-April 2023',
+    points : [
+      "Create & Manage Posts for creators , organizations & self-owned agency.",
+      "Made Close to 2 lakh+ impressions globally.",
+      "Networkerd and collabrated with multiple artists across Asia & Europe."
+    ]
+  },
+  {
     company : 'GeeksforGeeks',
     role : 'Student Coordinator',
     timePeriod : 'April 2022 - March 2023',
