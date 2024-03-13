@@ -5,10 +5,10 @@ const Aboutme = () => {
           About Me
         </h1>
         <p className="leading-7 [&:not(:first-child)]:mt-4 text-xs md:text-base dark:text-gray-400">
-          As a dynamic 20-year-old, I'm a multifaceted artist and software developer with a vibrant portfolio spanning photography, video editing, design, music production, and software development. My journey in these creative fields has not only honed my aesthetic and technical skills but also sparked my passion for computer science, where I'm currently a third-year undergraduate. This academic pursuit combines my love for technology with my artistic sensibilities, aiming to innovate and solve real-world problems through technology.
+          I'm a third-year computer science student with a dynamic portfolio spanning photography, video editing, design, and music production. My goal is to innovate and solve real-world problems through technology.
         </p>
         <p className="leading-7 [&:not(:first-child)]:mt-6 text-xs md:text-base  dark:text-gray-400">
-          My skill set is versatile, extending from creating aesthetically pleasing and ergonomic works across various domains to leveraging my knowledge in computer science for software development. I'm a firm believer in the power of continuous learning and innovation, and I'm always eager to connect with professionals, share ideas, and contribute to the tech community. My platforms for showcasing my work include a YouTube channel for video edits, Instagram and Behance for photography and design, SoundCloud and Spotify for music production, and GitHub for software development. Let's connect and explore the intersections of art and technology together.
+            I'm a versatile creator with skills in aesthetics, ergonomics, and software development. I value continuous learning, innovation, and connecting with professionals. Find my work on YouTube, Instagram, Behance, SoundCloud, Spotify, and GitHub. Let's explore art and technology together.
         </p>
       </div>
     )
