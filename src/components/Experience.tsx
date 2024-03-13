@@ -4,9 +4,9 @@ const experiences = [
     role : 'Social Media Manager',
     timePeriod : 'April 2021-April 2023',
     points : [
-      "Create & Manage Posts for creators , organizations & self-owned agency.",
-      "Made Close to 2 lakh+ impressions globally.",
-      "Networkerd and collabrated with multiple artists across Asia & Europe."
+      "Developed and curated content for various creators, organizations, and my own agency & managed the end-to-end process of post creation, ensuring a cohesive and engaging online presence.",
+      "Achieved a significant online impact with nearly 200,000 impressions globally & implemented strategies to enhance visibility and reach across diverse audiences on a global scale..",
+      "Established a strong network within the artistic community in both Asia and Europe while being actively engaged in collaborations with fellow artists, fostering creative connections and cross-cultural exchanges."
     ]
   },
   {
