@@ -18,7 +18,7 @@ const reviews = [
   },
   {
     image: individual3,
-    name: "Ryan Gosling",
+    name: "Sanskar",
     review: "City of Stars :sparkles:"
   },
   {
