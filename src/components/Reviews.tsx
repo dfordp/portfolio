@@ -19,7 +19,7 @@ const reviews = [
   {
     image: individual3,
     name: "Sanskar",
-    review: "City of Stars :sparkles:"
+    review: "Truly a team player"
   },
   {
     image: individual4,
