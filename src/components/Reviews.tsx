@@ -33,7 +33,7 @@ const reviews = [
   },
   {
     image: individual6,
-    name: "Kajol Shah",
+    name: "Julia Roberts",
     review: "His ability to mentor inexperienced individuals is truely unmatched"
   },
 ];
