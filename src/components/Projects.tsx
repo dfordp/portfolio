@@ -15,6 +15,12 @@ const projects = [
     deployed_link : "https://langchain-project-two.vercel.app/",
   },
   {
+    name : "One Med (Personal Medical Repository)", 
+    description : "An Application which allows one to manage their own & their closed one's medical records with link sharing and onapp storage",
+    github_link : "https://github.com/dfordp/one-med-client",
+    deployed_link : "",
+  },
+  {
     name : "HackMate", 
     description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
     github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
