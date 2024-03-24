@@ -16,7 +16,7 @@ const projects = [
   },
   {
     name : "One Med (Personal Medical Repository)", 
-    description : "An Application which allows one to manage their own & their closed one's medical records with link sharing and onapp storage",
+    description : "An Application which allows one to manage one's medical records with link-sharing and in-app storage",
     github_link : "https://github.com/dfordp/one-med-client",
     deployed_link : "",
   },
