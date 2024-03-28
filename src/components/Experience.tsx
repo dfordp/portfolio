@@ -1,14 +1,14 @@
 const experiences = [
-  {
-    company: 'Zinx Ze',
-    role : 'Social Media Manager',
-    timePeriod : 'April 2021-April 2023',
-    points : [
-      "Developed and curated content for various creators, organizations, and my own agency & managed the end-to-end process of post creation, ensuring a cohesive and engaging online presence.",
-      "Achieved a significant online impact with nearly 200,000 impressions globally & implemented strategies to enhance visibility and reach across diverse audiences on a global scale..",
-      "Established a strong network within the artistic community in both Asia and Europe while being actively engaged in collaborations with fellow artists, fostering creative connections and cross-cultural exchanges."
-    ]
-  },
+  // {
+  //   company: 'Zinx Ze',
+  //   role : 'Social Media Manager',
+  //   timePeriod : 'April 2021-April 2023',
+  //   points : [
+  //     "Developed and curated content for various creators, organizations, and my own agency & managed the end-to-end process of post creation, ensuring a cohesive and engaging online presence.",
+  //     "Achieved a significant online impact with nearly 200,000 impressions globally & implemented strategies to enhance visibility and reach across diverse audiences on a global scale..",
+  //     "Established a strong network within the artistic community in both Asia and Europe while being actively engaged in collaborations with fellow artists, fostering creative connections and cross-cultural exchanges."
+  //   ]
+  // },
   {
     company : 'GeeksforGeeks',
     role : 'Student Coordinator',
@@ -30,16 +30,16 @@ const experiences = [
       "Responsible for the design and creation of posters and social media content for placement notifications and updates."
     ]
   },
-  {
-    company : 'United by Music for Charity',
-    role : 'Video Editor',
-    timePeriod : 'January 2023 - July 2023',
-    points : [
-      "Spearheaded the creation and management of compelling content across the organization's social media platforms, ensuring a cohesive and engaging online presence.",
-      "Facilitated global collaborations by connecting with multiple artists for the annual album release on December 8, fostering a diverse and inclusive creative community.",
-      ". Played a pivotal role in curating and showcasing the organization's identity on social media, contributing to increased visibility and resonance with a global audience."
-    ]
-  },
+  // {
+  //   company : 'United by Music for Charity',
+  //   role : 'Video Editor',
+  //   timePeriod : 'January 2023 - July 2023',
+  //   points : [
+  //     "Spearheaded the creation and management of compelling content across the organization's social media platforms, ensuring a cohesive and engaging online presence.",
+  //     "Facilitated global collaborations by connecting with multiple artists for the annual album release on December 8, fostering a diverse and inclusive creative community.",
+  //     ". Played a pivotal role in curating and showcasing the organization's identity on social media, contributing to increased visibility and resonance with a global audience."
+  //   ]
+  // },
   { 
     company: 'SimplifyNote',
     role: 'Full-Stack Developer Intern',

@@ -24,8 +24,8 @@ const Home = () => {
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const texts = ['Software Developer', 'Problem Solver', 'Designer', 'Video Editor','Writer', 'Photographer','Youtuber' ];
-  const sections = ['About', 'Projects', 'Reviews', 'Contact'];
+  const texts = ['Software Developer', 'Problem Solver', 'Open Source Contributer', 'Tech Enthusiast' ,'Artist' ];
+  const sections = ['About','Experience','Projects', 'Contact'];
 
   useEffect(() => {
     const timer = setInterval(() => {
