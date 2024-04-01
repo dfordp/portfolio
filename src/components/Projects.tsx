@@ -24,13 +24,7 @@ const projects = [
     name: "Aarchid", 
     description: "Provide plant care assistance with in-app chat and health checkups using Google's Gemini Pro models for vision and text analysis.",
     github_link : "https://github.com/dfordp/aarkid-client",
-    deployed_link : "https://aarkid-client.vercel.app/plants",
-  },
-  {
-    name : "HackMate", 
-    description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
-    github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
-    deployed_link : "",
+    deployed_link : "https://aarkid-client.vercel.app",
   },
   {
     name : "AI summariser", 
@@ -43,7 +37,13 @@ const projects = [
     description : "Implemented real-time chat features, instantaneous message delivery, synchronized data, private messaging, and scalable group chat capabilities.",
     github_link : "https://github.com/dfordp/messenger-app",
     deployed_link : "https://messenger-app-pi.vercel.app/",
-  }
+  },
+  {
+    name : "HackMate", 
+    description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
+    github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
+    deployed_link : "",
+  },
 ]
 
 const Projects = () => {
