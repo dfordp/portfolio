@@ -3,7 +3,7 @@ import {Button} from '@/components/ui/button';
 
 const projects = [
   {
-    name : "Ecommerce Admin Dashboard CMS", 
+    name : "E-commerce Admin Dashboard CMS", 
     description : "The service offers a comprehensive dashboard for retailers, supporting both product management and sales analysis.",
     github_link : "https://github.com/dfordp/e-commerce-admin",
     deployed_link : "https://e-commerce-admin-dfordp.vercel.app/",
@@ -20,6 +20,12 @@ const projects = [
     github_link : "https://github.com/dfordp/one-med-client",
     deployed_link : "https://one-med-client.vercel.app",
   },
+   {
+    name: "Aarchid", 
+    description: "Provide plant care assistance with in-app chat and health checkups using Google's Gemini Pro models for vision and text analysis.",
+    github_link : "https://github.com/dfordp/aarkid-client",
+    deployed_link : "https://aarkid-client.vercel.app/plants",
+  },
   {
     name : "HackMate", 
     description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
@@ -33,14 +39,8 @@ const projects = [
     deployed_link : "https://ai-summariser.vercel.app/",
   },
   {
-    name : "TreeTrooper", 
-    description : "The system allows users to monitor and manage their plants' health without prior knowledge, enabling immediate preventive actions.",
-    github_link : "https://github.com/dfordp/solution-challenge-2024",
-    deployed_link : "",
-  },
-  {
     name : "Messenger App", 
-    description : "Implemented real-time chat features,instantaneous message delivery, synchronized data, private messaging, and scalable group chat capabilities.",
+    description : "Implemented real-time chat features, instantaneous message delivery, synchronized data, private messaging, and scalable group chat capabilities.",
     github_link : "https://github.com/dfordp/messenger-app",
     deployed_link : "https://messenger-app-pi.vercel.app/",
   }
