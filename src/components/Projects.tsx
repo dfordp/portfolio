@@ -9,7 +9,7 @@ const projects = [
     deployed_link : "https://e-commerce-admin-dfordp.vercel.app/",
   },
   {
-    name : "AI Companion(GenAI ChatBot)", 
+    name : "AI Companion", 
     description : "A platform which uses Large Language Models(LLMs) to create interactive chat-bots based on real-world personalities.",
     github_link : "https://github.com/dfordp/langchain-project",
     deployed_link : "https://langchain-project-two.vercel.app/",
