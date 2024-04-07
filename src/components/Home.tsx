@@ -24,7 +24,7 @@ const Home = () => {
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const texts = ['Software Developer', 'Problem Solver', 'Open Source Contributer', 'Tech Enthusiast' ,'Creator' ];
+  const texts = [' Software Developer', ' Problem Solver', 'n Open Source Contributer', ' Tech Enthusiast' ,' Creator' ];
   const sections = ['About','Experience','Projects', 'Contact'];
 
   useEffect(() => {
@@ -87,7 +87,7 @@ const Home = () => {
             Dilpreet Grover
           </h1>
           <h3 className="scroll-m-20 text-sm md:text-2xl font-semibold tracking-tight px-1 py-2 text-left">
-            A {displayText}<span className="typing-cursor">|</span>
+            A{displayText}<span className="typing-cursor">|</span>
           </h3>
           <div className='flex flex-row gap-3 py-2 justify-center'>
             <a href="https://github.com/dfordp" target="_blank" rel="noopener noreferrer">
