@@ -27,6 +27,12 @@ const projects = [
     deployed_link : "https://aarkid-client.vercel.app",
   },
   {
+    name : "Compile Me Playground", 
+    description : "A codepen playground which compiles programs written in multiple popular languages & runs them at near-native speed",
+    github_link : "https://github.com/Ankan002/compile-me-playground",
+    deployed_link : "https://playground.compile-me.com/",
+  },
+  {
     name : "AI summariser", 
     description : "GPT-4 Summarizer: Automatically generates concise summaries of articles via API integration, enhancing content digestion and analysis",
     github_link : "https://github.com/dfordp/ai-summariser",
