@@ -3,6 +3,30 @@ import {Button} from '@/components/ui/button';
 
 const projects = [
   {
+    name: "Aarchid", 
+    description: "Provide plant care assistance with in-app chat and health checkups using Google's Gemini Pro models for vision and text analysis.",
+    github_link : "https://github.com/dfordp/aarkid-client",
+    deployed_link : "https://aarkid-client.vercel.app",
+  },
+  {
+    name : "HackMate", 
+    description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
+    github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
+    deployed_link : "",
+  },
+  {
+    name : "One Med", 
+    description : "A personal medical repo which allows one to manage their own & their family's records with link sharing and in-app storage",
+    github_link : "https://github.com/dfordp/one-med-client",
+    deployed_link : "https://one-med-client.vercel.app",
+  },
+  {
+    name : "Compile Me Playground", 
+    description : "A codepen playground which compiles programs written in multiple popular languages & runs them at near-native speed",
+    github_link : "https://github.com/Ankan002/compile-me-playground",
+    deployed_link : "https://playground.compile-me.com/",
+  },
+  {
     name : "E-commerce Admin Dashboard CMS", 
     description : "The service offers a comprehensive dashboard for retailers, supporting both product management and sales analysis.",
     github_link : "https://github.com/dfordp/e-commerce-admin",
@@ -15,24 +39,6 @@ const projects = [
     deployed_link : "https://langchain-project-two.vercel.app/",
   },
   {
-    name : "One Med", 
-    description : "A personal medical repo which allows one to manage their own & their family's records with link sharing and in-app storage",
-    github_link : "https://github.com/dfordp/one-med-client",
-    deployed_link : "https://one-med-client.vercel.app",
-  },
-   {
-    name: "Aarchid", 
-    description: "Provide plant care assistance with in-app chat and health checkups using Google's Gemini Pro models for vision and text analysis.",
-    github_link : "https://github.com/dfordp/aarkid-client",
-    deployed_link : "https://aarkid-client.vercel.app",
-  },
-  {
-    name : "Compile Me Playground", 
-    description : "A codepen playground which compiles programs written in multiple popular languages & runs them at near-native speed",
-    github_link : "https://github.com/Ankan002/compile-me-playground",
-    deployed_link : "https://playground.compile-me.com/",
-  },
-  {
     name : "AI summariser", 
     description : "GPT-4 Summarizer: Automatically generates concise summaries of articles via API integration, enhancing content digestion and analysis",
     github_link : "https://github.com/dfordp/ai-summariser",
@@ -43,12 +49,6 @@ const projects = [
     description : "Implemented real-time chat features, instantaneous message delivery, synchronized data, private messaging, and scalable group chat capabilities.",
     github_link : "https://github.com/dfordp/messenger-app",
     deployed_link : "https://messenger-app-pi.vercel.app/",
-  },
-  {
-    name : "HackMate", 
-    description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
-    github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
-    deployed_link : "",
   },
 ]
 
