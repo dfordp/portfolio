@@ -31,11 +31,11 @@ const reviews = [
     name: "Emma Stone",
     review: "Is this the start of something wonderful or new?"
   },
-  {
-    image: individual6,
-    name: "Julia Roberts",
-    review: "His ability to mentor inexperienced individuals is truely unmatched"
-  },
+  // {
+  //   image: individual6,
+  //   name: "Julia Roberts",
+  //   review: "His ability to mentor inexperienced individuals is truely unmatched"
+  // },
 ];
 
 const Reviews = () => {
