@@ -3,7 +3,7 @@ import individual2 from "@/assets/individual2.png"
 import individual3 from "@/assets/individual3.png"
 import individual4 from "@/assets/individual4.png"
 import individual5 from "@/assets/individual5.png"
-import individual6 from "@/assets/individual6.png"
+//import individual6 from "@/assets/individual6.png"
 
 const reviews = [
   {
