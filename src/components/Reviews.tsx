@@ -1,5 +1,5 @@
 import individual1 from "@/assets/individual1.png"
-import individual2 from "@/assets/individual2.png"
+//import individual2 from "@/assets/individual2.png"
 // import individual3 from "@/assets/individual3.png"
 // import individual4 from "@/assets/individual4.png"
 //import individual5 from "@/assets/individual5.png"
@@ -11,11 +11,11 @@ const reviews = [
     name: "Ankan Bhattacharaya",
     review: "His work & experience is exceptional"
   },
-  {
-    image: individual2,
-    name: "Manpreet Grover",
-    review: "His ability to bring new Ideas to the table & implement changes is truely mindblowing"
-  },
+ // {
+    //image: individual2,
+    //name: "Manpreet Grover",
+    //review: "His ability to bring new //Ideas to the table & implement changes is //truely mindblowing"
+  //},
   // {
   //   image: individual3,
   //   name: "Sanskar",
