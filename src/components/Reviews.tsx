@@ -1,4 +1,4 @@
-import individual1 from "@/assets/individual1.png"
+//import individual1 from "@/assets/individual1.png"
 //import individual2 from "@/assets/individual2.png"
 // import individual3 from "@/assets/individual3.png"
 // import individual4 from "@/assets/individual4.png"
@@ -6,11 +6,11 @@ import individual1 from "@/assets/individual1.png"
 //import individual6 from "@/assets/individual6.png"
 
 const reviews = [
-  {
-    image: individual1,
-    name: "Ankan Bhattacharaya",
-    review: "His work & experience is exceptional"
-  },
+  //{
+    //image: individual1,
+    //name: "Ankan Bhattacharaya",
+    //review: "His work & experience is //exceptional"
+  //},
  // {
     //image: individual2,
     //name: "Manpreet Grover",
