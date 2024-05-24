@@ -3,7 +3,7 @@
 // import individual3 from "@/assets/individual3.png"
 // import individual4 from "@/assets/individual4.png"
 //import individual5 from "@/assets/individual5.png"
-//import individual6 from "@/assets/individual6.png"
+import individual6 from "@/assets/individual6.png"
 
 const reviews = [
   //{
@@ -31,11 +31,11 @@ const reviews = [
     //name: "Emma Stone",
    // review: "Is this the start of something wonderful or new?"
   //},
-  // {
-  //   image: individual6,
-  //   name: "Julia Roberts",
-  //   review: "His ability to mentor inexperienced individuals is truely unmatched"
-  // },
+   {
+     image: individual6,
+     name: "Julia Roberts",
+     review: "His ability to mentor inexperienced individuals is truely unmatched"
+ },
 ];
 
 const Reviews = () => {
