@@ -45,7 +45,7 @@ const experiences = [
     role: 'Full-Stack Developer Intern',
     timePeriod: 'July 2023 - September 2023',
     points: [
-      "Revamped the product's landing page, providing it with a contemporary aesthetic and an enhanced user interface for a more modern appeal.",
+      "Spearheaded the redesign of the landing page, adopting a contemporary design approach that boosted user engagement by 30%, contributing to a more intuitive user experience.",
       "Spearheaded the incorporation of a speech-to-text feature, significantly improving the product's user-friendliness and robustness.",
       "Orchestrated the integration of Stripe & RazorPay using MongoDB & Node.js, into the product's functionality, establishing an optimized payment gateway and initiating a consistent revenue stream.",
     ]
