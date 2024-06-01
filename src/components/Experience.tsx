@@ -46,7 +46,7 @@ const experiences = [
     timePeriod: 'July 2023 - September 2023',
     points: [
       "Spearheaded the redesign of the landing page, adopting a contemporary design approach that boosted user engagement by 30%, contributing to a more intuitive user experience.",
-      "Spearheaded the incorporation of a speech-to-text feature, significantly improving the product's user-friendliness and robustness.",
+      "Implemented a speech-to-text functionality, greatly improving the product's accessibility and usability, resulting in a 20% surge in daily active users.",
       "Orchestrated the integration of Stripe & RazorPay using MongoDB & Node.js, into the product's functionality, establishing an optimized payment gateway and initiating a consistent revenue stream.",
     ]
   },
