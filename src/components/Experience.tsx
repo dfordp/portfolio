@@ -47,7 +47,7 @@ const experiences = [
     points: [
       "Spearheaded the redesign of the landing page, adopting a contemporary design approach that boosted user engagement by 30%, contributing to a more intuitive user experience.",
       "Implemented a speech-to-text functionality, greatly improving the product's accessibility and usability, resulting in a 20% surge in daily active users.",
-      "Orchestrated the integration of Stripe & RazorPay using MongoDB & Node.js, into the product's functionality, establishing an optimized payment gateway and initiating a consistent revenue stream.",
+      "Orchestrated the integration of Stripe & RazorPay on MongoDB & Node.js, establishing a streamlined payment processing system that facilitated a 15% increase in monthly recurring revenue",
     ]
   },
 ];
