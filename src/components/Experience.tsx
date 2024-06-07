@@ -49,6 +49,16 @@ const experiences = [
       "Implemented a speech-to-text functionality, greatly improving the product's accessibility and usability, resulting in a 20% surge in daily active users.",
       "Orchestrated the integration of Stripe & RazorPay on MongoDB & Node.js, establishing a streamlined payment processing system that facilitated a 15% increase in monthly recurring revenue",
     ]
+   },
+   { 
+    company: 'Meved HR Solutions',
+    role: 'Software Developer Intern',
+    timePeriod: 'February 2024 - May 2024',
+    points: [
+      "Designed and implemented the core architecture, achieving a 20% improvement in system efficiency and reducing operational expenses by 15%.",
+      "Integrated client software with our server infrastructure, minimizing downtime to less than 5 minutes during peak hours, thus ensuring uninterrupted service and enhancing user satisfaction by 25%.",
+      "Leveraged a technology stack to manage over 500 simultaneous users, demonstrating exceptional scalability and reliability, enhancing user experiences and operational efficiency.",
+    ]
   },
 ];
 
