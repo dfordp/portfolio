@@ -2,7 +2,7 @@
 //import individual2 from "@/assets/individual2.png"
 // import individual3 from "@/assets/individual3.png"
 //import individual4 from "@/assets/individual4.png"
-import individual5 from "@/assets/individual5.png"
+// import individual5 from "@/assets/individual5.png"
 import individual6 from "@/assets/individual6.png"
 
 const reviews = [
@@ -26,11 +26,11 @@ const reviews = [
     //name: "Manpreet Kaur",
     //review: "His simple, ergonomic & minimalistic approach to things opens up new paths in problem solving"
   //},
-  {
-    image: individual5,
-    name: "Emma Stone",
-   review: "Is this the start of something wonderful or new?"
-  },
+  // {
+  //   image: individual5,
+  //   name: "Emma Stone",
+  //  review: "Is this the start of something wonderful or new?"
+  // },
    {
      image: individual6,
      name: "Julia Roberts",
