@@ -13,9 +13,14 @@ const Projects = () => {
       </h1>
       <div className="flex flex-row gap-4 py-10 px-5 overflow-x-scroll custom-scrollbar">
         {projects.map((project, index) => (
-          <div key={index} className="w-48 md:w-80 md:h-56 flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
+          <div key={index} className="w-48 md:w-80 lg:h-96 md:h-56 flex-none dark:bg-[rgba(0,0,0,0.05)] outline outline-1 rounded-md">
             <div className="pt-3 flex flex-row">
               <p className="leading-7 [&:not(:first-child)]:pt-1 pl-4 font-bold ">{project.name}</p>
+            </div>
+            <div className='lg:block hidden'>
+              <div className='flex flex-row justify-center '>
+                <img src={project.illustration} className='h-40 w-72 px-2 py-1'/>
+              </div>
             </div>
             <p className="leading-7 [&:not(:first-child)]:py-2 pl-4 pr-2 font-medium text-xs">{project.description}</p>
             <div className="flex flex-col gap-3 md:flex-row md:justify-between p-4">

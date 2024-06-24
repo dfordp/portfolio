@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaBehance } from 'react-icons/fa';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -29,7 +30,8 @@ const Contact = () => {
       .catch((error) => {
         console.log(error.text);
       });
-  
+      
+      toast.success("Email Sent Successfully!")
       setForm({ name: '', email: '', message: '' });
     }
   };
