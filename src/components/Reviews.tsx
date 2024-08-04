@@ -33,7 +33,7 @@ const reviews = [
   // },
    {
      image: individual6,
-     name: "Julia Roberts",
+     name: "Julia Robert",
      review: "His ability to mentor inexperienced individuals is truely unmatched"
  },
 ];
