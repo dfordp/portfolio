@@ -1,9 +1,9 @@
 import Aboutme from "./components/Aboutme"
+import Blog from "./components/Blog"
 import Contact from "./components/Contact"
 import Experience from "./components/Experience"
 import Home from "./components/Home"
 import Projects from "./components/Projects"
-// import Reviews from "./components/Reviews"
 import TechStack from "./components/TechStack"
 
 const App = () => {
@@ -22,9 +22,9 @@ const App = () => {
         <div id="Projects">
           <Projects/>
         </div>
-        {/* <div id="Reviews">
-          <Reviews/>
-        </div> */}
+        <div id="Blog">
+          <Blog/>
+        </div>
         <div id="Contact">
           <Contact/>
         </div>
