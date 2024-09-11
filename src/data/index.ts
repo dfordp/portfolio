@@ -136,5 +136,9 @@ export const Blogs = [
     Title : "My Journey Through the Buildspace Challenge",
     Link  : "https://medium.com/@dilpreetgrover2/embracing-the-side-project-hustle-my-journey-through-the-buildspace-challenge-7cf6dba760bc"
   },
+  {
+    Title : "Experience using GenAI in software development", 
+    Link  :  "https://medium.com/@dilpreetgrover2/my-experience-using-genai-in-software-development-8e5271b38313"
+  }
 ]
 
