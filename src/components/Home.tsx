@@ -24,7 +24,7 @@ const Home = () => {
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const texts = [' Software Developer', ' Problem Solver', 'n Open Source Contributer', ' Tech Enthusiast' ,' Creator' ];
+  const texts = [' Software Developer', ' Problem Solver', 'n Open Source Advocate', ' Tech Enthusiast' ,' Indie Hacker' ];
   const sections = ['About','Experience','Projects', 'Contact'];
 
   useEffect(() => {
