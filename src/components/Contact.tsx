@@ -1,77 +1,22 @@
-import { useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaBehance } from 'react-icons/fa';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import toast from 'react-hot-toast';
+
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-
-  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setForm({ ...form, [(e.target as HTMLTextAreaElement).name]: e.target.value });
-  };
-
-  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    if (formRef.current) {
-      emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_PUBLIC_KEY
-      )
-      .then((result) => {
-        console.log(result.text);
-      })
-      .catch((error) => {
-        console.log(error.text);
-      });
-      
-      toast.success("Email Sent Successfully!")
-      setForm({ name: '', email: '', message: '' });
-    }
-  };
-
 
   return (
-    <div className='px-32'>
+    <div className='md:my-24 md:px-24'>
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-4xl justify-center py-16 flex flex-row">
         Contact
       </h1>
-      <form ref={formRef} onSubmit={handleSubmit} className='flex flex-col justify-center  items-center'>
-        <div className='flex flex-col md:flex-row gap-5 justify-center'>
-          <Textarea
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Name"
-            required
-            className='my-5 w-80 md:w-48'
-          />
-          <Textarea
-            name="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Email"
-            required
-            className='my-5 w-80'
-          />
-        </div>
-        <Textarea
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          placeholder="Message"
-          required
-          className='my-5 w-80 md:w-[675px] h-[200px]'
-        />
-        <Button type="submit" className="flex flex-row mt-4 mb-6" >Submit</Button>
-      </form>
-      <div className='flex flex-row gap-3 py-2 justify-center'>
+      <div className='md:my-8 md:px-20'>
+        <p className="leading-7 [&:not(:first-child)]:mt-4 text-xs md:text-base dark:text-gray-400">
+            Whether you're looking to collaborate, have questions about my work, or just want to say hello — feel free to reach out at 
+            <a href="mailto:dilpreetgrover2@gmail.com" className="text-blue-400 hover:underline"> dilpreetgrover2@gmail.com</a>. 
+            You can also check out my <a href="https://docs.google.com/document/u/0/d/1tJE6b6cyczan_LsaVxeK19GE_V2ne-dK/mobilebasic" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">resume </a> 
+            or <a href="https://cal.com/ce-61-dilpreet-grover-3037-4mmahp/let-s-jump-on-call" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">schedule a call</a> — I'd love to connect!
+        </p>
+       </div>
+      <div className='flex flex-row gap-3 py-2 justify-center mt-8'>
         <a href="https://github.com/dfordp" target="_blank" rel="noopener noreferrer">
           <FaGithub size={24} />
         </a>
@@ -91,7 +36,7 @@ const Contact = () => {
           <FaBehance size={24} />
         </a>
       </div>
-      <h3 className="scroll-m-20 font-semibold tracking-tight px-1 py-4 flex flex-row justify-center whitespace-nowrap"> © Dilpreet Grover 2024</h3>
+      <h3 className="scroll-m-20 font-semibold tracking-tight px-1 py-4 flex flex-row justify-center whitespace-nowrap"> © Dilpreet Grover 2025</h3>
     </div>
   );
 };

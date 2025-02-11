@@ -3,7 +3,7 @@ import Logo from "@/assets/Logo.png"
 import LogoDark from "@/assets/Logodark.png"
 import ProfilePhoto from "@/assets/Profile-Photo.png"
 import { ModeToggle } from "@/components/mode-toggle"
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube ,FaBehance} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube ,FaBehance, FaMedium} from 'react-icons/fa';
 import { VscListSelection } from "react-icons/vsc";
 import { IoIosArrowDown } from "react-icons/io";
 import {
@@ -107,6 +107,9 @@ const Home = () => {
             </a>
             <a href="https://www.behance.net/redjohn8" target="_blank" rel="noopener noreferrer">
               <FaBehance size={24} />
+            </a>
+            <a href="https://medium.com/@dilpreetgrover2" target="_blank" rel="noopener noreferrer">
+              <FaMedium size={24} />
             </a>
           </div>
         </div>

@@ -19,7 +19,7 @@ const Projects = () => {
             </div>
             <div className='lg:block hidden'>
               <div className='flex flex-row justify-center '>
-                <img src={project.illustration} className='h-40 w-72 px-2 py-1'/>
+                <img src={project.illustration} className='h-40 w-72 px-2 py-1 round'/>
               </div>
             </div>
             <p className="leading-7 [&:not(:first-child)]:py-2 pl-4 pr-2 font-medium text-xs">{project.description}</p>
