@@ -1,6 +1,3 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaBehance } from 'react-icons/fa';
-
-
 const Contact = () => {
 
   return (
