@@ -16,26 +16,6 @@ const Contact = () => {
             or <a href="https://cal.com/ce-61-dilpreet-grover-3037-4mmahp/let-s-jump-on-call" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">schedule a call</a> — I'd love to connect!
         </p>
        </div>
-      <div className='flex flex-row gap-3 py-2 justify-center mt-8'>
-        <a href="https://github.com/dfordp" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={24} />
-        </a>
-        <a href="https://www.linkedin.com/in/dilpreet-grover-17726b224" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={24} />
-        </a>
-        <a href="https://www.instagram.com/_dfordp_" target="_blank" rel="noopener noreferrer">
-          <FaInstagram size={24} />
-        </a>
-        <a href="https://twitter.com/FreakAnimated" target="_blank" rel="noopener noreferrer">
-          <FaTwitter size={24} />
-        </a>
-        <a href="https://www.youtube.com/@dfordp" target="_blank" rel="noopener noreferrer">
-          <FaYoutube size={24} />
-        </a>
-        <a href="https://www.behance.net/redjohn8" target="_blank" rel="noopener noreferrer">
-          <FaBehance size={24} />
-        </a>
-      </div>
       <h3 className="scroll-m-20 font-semibold tracking-tight px-1 py-4 flex flex-row justify-center whitespace-nowrap"> © Dilpreet Grover 2025</h3>
     </div>
   );
