@@ -24,7 +24,7 @@ const Home = () => {
 
   const [textIndex, setTextIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
-  const texts = [' Software Developer', ' Problem Solver', 'n Open Source Advocate', ' Tech Enthusiast' ,' Indie Hacker' ];
+  const texts = [' Software Engineer', ' Problem Solver', 'n Open Source Advocate', ' Tech Enthusiast' ,'n Indie Hacker' ];
   const sections = ['About','Experience','Projects', 'Contact'];
 
   useEffect(() => {
@@ -104,9 +104,6 @@ const Home = () => {
             </a>
             <a href="https://www.youtube.com/@dfordp" target="_blank" rel="noopener noreferrer">
               <FaYoutube size={24} />
-            </a>
-            <a href="https://www.behance.net/redjohn8" target="_blank" rel="noopener noreferrer">
-              <FaBehance size={24} />
             </a>
             <a href="https://medium.com/@dilpreetgrover2" target="_blank" rel="noopener noreferrer">
               <FaMedium size={24} />
