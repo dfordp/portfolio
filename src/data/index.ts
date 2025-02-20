@@ -9,7 +9,7 @@ import Messenger from "@/assets/Messenger.avif"
 import Buildspace from "@/assets/Buildspace.jpeg"
 import AI from "@/assets/AI_as_software.webp"
 import Blockchain from "@/assets/Untapped_Blockchain.webp"
-
+import QuantumComputing from "@/assets/QuantumComputing.jpg"
 
 export const projects = [
     {
@@ -175,6 +175,11 @@ export const Blogs = [
     Title : "Untapped Potential of Blockchain", 
     illustration : Blockchain,
     Link  :  "https://medium.com/@dilpreetgrover2/untapped-potential-of-blockchain-ae9744229d43"
+  },
+  {
+    Title : "Quantum Computing: Next Big Thing", 
+    illustration : QuantumComputing,
+    Link  :  "https://medium.com/@dilpreetgrover2/why-quantum-computing-is-the-next-big-thing-f4e6df20172a"
   },
 ]
 
