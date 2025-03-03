@@ -10,6 +10,7 @@ import Buildspace from "@/assets/Buildspace.jpeg"
 import AI from "@/assets/AI_as_software.webp"
 import Blockchain from "@/assets/Untapped_Blockchain.webp"
 import QuantumComputing from "@/assets/QuantumComputing.jpg"
+import AI_Benchmarks from "@/assets/AI_benchmarks.png"
 
 export const projects = [
     {
@@ -162,24 +163,34 @@ export const experiences = [
   
 export const Blogs = [
   {
-    Title : "Documenting the Buildspace Challenge",
-    illustration : Buildspace,
-    Link  : "https://medium.com/@dilpreetgrover2/embracing-the-side-project-hustle-my-journey-through-the-buildspace-challenge-7cf6dba760bc"
-  },
-  {
-    Title : "Experience using GenAI in Development", 
-    illustration : AI,
-    Link  :  "https://medium.com/@dilpreetgrover2/my-experience-using-genai-in-software-development-8e5271b38313"
-  },
-  {
-    Title : "Untapped Potential of Blockchain", 
-    illustration : Blockchain,
-    Link  :  "https://medium.com/@dilpreetgrover2/untapped-potential-of-blockchain-ae9744229d43"
+    Title : "Definitive Guide to AI Benchmarks",
+    illustration : AI_Benchmarks,
+    mediumLink : "",
+    devToLink  : "https://dev.to/dfordp/definitive-guide-to-ai-benchmarks-comparing-models-testing-your-own-and-understanding-the-future-4d9i"
   },
   {
     Title : "Quantum Computing: Next Big Thing", 
     illustration : QuantumComputing,
-    Link  :  "https://medium.com/@dilpreetgrover2/why-quantum-computing-is-the-next-big-thing-f4e6df20172a"
+    mediumLink  :  "https://medium.com/@dilpreetgrover2/why-quantum-computing-is-the-next-big-thing-f4e6df20172a",
+    devToLink :"https://dev.to/dfordp/why-quantum-computing-is-the-next-big-thing-3l63"
+  },
+  {
+    Title : "Untapped Potential of Blockchain", 
+    illustration : Blockchain,
+    mediumLink  :  "https://medium.com/@dilpreetgrover2/untapped-potential-of-blockchain-ae9744229d43",
+    devToLink : "https://dev.to/dfordp/untapped-potential-of-blockchain-a-world-beyond-cryptocurreny-3nm0"
+  },
+  {
+    Title : "Experience using GenAI in Development", 
+    illustration : AI,
+    mediumLink  :  "https://medium.com/@dilpreetgrover2/my-experience-using-genai-in-software-development-8e5271b38313",
+    devToLink :"https://dev.to/dfordp/my-experience-using-genai-in-software-development-6g0"
+  },
+  {
+    Title : "Documenting the Buildspace Challenge",
+    illustration : Buildspace,
+    mediumLink  : "https://medium.com/@dilpreetgrover2/embracing-the-side-project-hustle-my-journey-through-the-buildspace-challenge-7cf6dba760bc",
+    devToLink :"https://dev.to/dfordp/embracing-the-side-project-hustle-my-journey-through-the-buildspace-challenge-1hcc"
   },
 ]
 

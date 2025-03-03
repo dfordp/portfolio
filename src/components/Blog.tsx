@@ -1,5 +1,6 @@
 import { Blogs } from "@/data"
 import { Button } from "./ui/button"
+import { FaDev, FaMedium } from "react-icons/fa";
 
 const Blog = () => {
 
@@ -23,8 +24,13 @@ const Blog = () => {
                 <img src={blog.illustration} className='h-40 w-72 px-2 py-1'/>
               </div>
             </div>
-            <div className="flex flex-row justify-end gap-3 p-4">
-              <Button onClick={() => handleClick(blog.Link)} className=''>Blog Link</Button>
+            <div className="flex flex-row justify-between gap-3 p-4">
+              <div>
+                {blog.devToLink && <Button onClick={() => handleClick(blog.mediumLink)} className=''><FaDev  /></Button>}
+              </div>
+              <div>
+                  {blog.mediumLink && <Button onClick={() => handleClick(blog.mediumLink)} className=''><FaMedium /></Button>}
+              </div>
             </div>
           </div>
         ))}
