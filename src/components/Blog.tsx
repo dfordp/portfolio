@@ -26,7 +26,7 @@ const Blog = () => {
             </div>
             <div className="flex flex-row justify-between gap-3 p-4">
               <div>
-                {blog.devToLink && <Button onClick={() => handleClick(blog.mediumLink)} className=''><FaDev  /></Button>}
+                {blog.devToLink && <Button onClick={() => handleClick(blog.devToLink)} className=''><FaDev  /></Button>}
               </div>
               <div>
                   {blog.mediumLink && <Button onClick={() => handleClick(blog.mediumLink)} className=''><FaMedium /></Button>}
