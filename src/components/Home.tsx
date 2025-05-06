@@ -99,7 +99,7 @@ const Home = () => {
             <a href="https://www.instagram.com/_dfordp_" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={24} />
             </a>
-            <a href="https://twitter.com/FreakAnimated" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/dfordp11" target="_blank" rel="noopener noreferrer">
               <FaTwitter size={24} />
             </a>
             <a href="https://www.youtube.com/@dfordp" target="_blank" rel="noopener noreferrer">

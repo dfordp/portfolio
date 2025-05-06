@@ -1,5 +1,5 @@
 import Aarchid from "@/assets/Aarchid.jpg"
-import Hackmate from "@/assets/Hackmate.avif"
+import Kosu from "@/assets/Hackmate.avif"
 import OneMed from "@/assets/OneMed.jpg"
 import CompileMe from "@/assets/CompileMe.webp"
 import DashBoard from "@/assets/Dashboard.jpg"
@@ -13,6 +13,13 @@ import QuantumComputing from "@/assets/QuantumComputing.jpg"
 import AI_Benchmarks from "@/assets/AI_benchmarks.png"
 
 export const projects = [
+    {
+      name: "Kosu",
+      illustration : Kosu,
+      description: "AI-driven event platform with smart team matching and automated workflows, featuring blockchain-based rewards and NFT credentials.",
+      github_link : "https://github.com/dfordp/event-timepass",
+      deployed_link : "https://kosu-xi.vercel.app/",
+    },
     {
       name: "Aarchid",
       illustration : Aarchid,
@@ -42,14 +49,6 @@ export const projects = [
       deployed_link : "https://messenger-app-pi.vercel.app/",
     },
     {
-      name : "HackMate",
-      illustration : Hackmate,
-      description : "A platform facilitating collaborative learning and innovation among a diverse technical community for hackathon events.",
-      github_link : "https://github.com/dfordp/Hackmate-Intial-working-",
-      deployed_link : "",
-    },
-
-    {
       name : "Compile Me Playground",
       illustration : CompileMe,
       description : "A codepen playground which compiles programs written in multiple popular languages & runs them at near-native speed",
@@ -74,16 +73,6 @@ export const projects = [
 
 
 export const experiences = [
-    // {
-    //   company: 'Zinx Ze',
-    //   role : 'Founder',
-    //   timePeriod : 'April 2021-April 2023',
-    //   points : [
-    //     "Developed and curated content for various creators, organizations, and my own agency & managed the end-to-end process of post creation, ensuring a cohesive and engaging online presence.",
-    //     "Achieved a significant online impact with nearly 200,000 impressions globally & implemented strategies to enhance visibility and reach across diverse audiences on a global scale..",
-    //     "Established a strong network within the artistic community in both Asia and Europe while being actively engaged in collaborations with fellow artists, fostering creative connections and cross-cultural exchanges."
-    //   ]
-    // },
     {
       company : 'GeeksforGeeks',
       role : 'Student Coordinator',
@@ -104,16 +93,6 @@ export const experiences = [
         "Responsible for the design and creation of posters and social media content for placement notifications and updates."
       ]
     },
-    // {
-    //   company : 'United by Music for Charity',
-    //   role : 'Video Editor',
-    //   timePeriod : 'January 2023 - July 2023',
-    //   points : [
-    //     "Spearheaded the creation and management of compelling content across the organization's social media platforms, ensuring a cohesive and engaging online presence.",
-    //     "Facilitated global collaborations by connecting with multiple artists for the annual album release on December 8, fostering a diverse and inclusive creative community.",
-    //     "Played a pivotal role in curating and showcasing the organization's identity on social media, contributing to increased visibility and resonance with a global audience."
-    //   ]
-    // },
     { 
       company: 'SimplifyNote',
       role: 'Full-Stack Developer Intern',
@@ -145,18 +124,21 @@ export const experiences = [
       ]
     },
     {
+      company: 'Appleute Ltd.',
+      role: 'Software Developer Intern',
+      timePeriod: "January 2025 ‑  April 2025",
+      points: [
+        "Orchestrated a cloud-native, role-based trading & surveillance platform for European clients—leveraging microservices and real-time data pipelines to process €2.5K/min in rare-earth metal trades.",
+        "Developed core modules for an automated investment-plan engine, handling 200 weekly orders and improving order-to-delivery tracking by 15%.",
+        "Assisted in creating a surveillance tool that aggregated data from 10+ darknet sources and tracked live locations/social posts, cutting alert response time by 40%."
+      ]
+    },
+    {
       company: 'Fada Club',
       role : 'Co-Founder',
       timePeriod : 'June 2024-Present',
       points : [
         "Research organization, in order to facilitate and balance project development, enhancement and collaboration among professionals."
-      ]
-    },
-    {
-      company: 'Appleute Ltd.',
-      role: 'Software Developer Intern',
-      timePeriod: "January 2025 ‑  Present",
-      points: [
       ]
     },
   ];
@@ -165,7 +147,7 @@ export const Blogs = [
   {
     Title : "Definitive Guide to AI Benchmarks",
     illustration : AI_Benchmarks,
-    mediumLink : "",
+    mediumLink : "https://medium.com/gitconnected/definitive-guide-to-ai-benchmarks-comparing-models-testing-your-own-and-understanding-the-future-e61d4cf73a11",
     devToLink  : "https://dev.to/dfordp/definitive-guide-to-ai-benchmarks-comparing-models-testing-your-own-and-understanding-the-future-4d9i"
   },
   {
