@@ -95,22 +95,22 @@ export const experiences = [
     },
     { 
       company: 'SimplifyNote',
-      role: 'Full-Stack Developer Intern',
+      role: 'Full-Stack Developer',
       timePeriod: 'July 2023 - September 2023',
       points: [
-        "Redesigned the landing page UI/UX, leveraging modern design principles to achieve a 30% increase in user engagement, boosting product adoption and user retention metrics.",
-        "Developed a robust speech-to-text feature powered by NLP and voice command technology, leading to a 20% rise in daily active users and expanding product accessibility.",
-        "Integrated payment gateway systems at scale, driving a 15% increase in Monthly Recurring Revenue (MRR) by streamlining subscription management and transaction workflows.",
+        "Revamped frontend performance: Rewrote the frontend in NextJS, improving time-to-interactive on mobile by 40% through server-side rendering and dynamic imports.",
+        "Enabled accessibility with real-time transcriptions: Integrated Google Speech-to-Text API via FastAPI for seamless transcription, ensuring Web Speech API compliance for accessibility.",
+        "Transformed billing with custom Stripe integration: Replaced third-party logic with a custom Stripe module, slashing failed payment churn and optimizing recurring billing with webhook-based reconciliation.",
       ]
      },
      { 
       company: 'Meved HR Solutions',
-      role: 'Software Developer Intern',
+      role: 'Software Developer',
       timePeriod: 'February 2024 - May 2024',
       points: [
-        "Designed and implemented core architectural components, achieving a 20% boost in system efficiency and reducing operational costs by 15% through optimized resource allocation and streamlined processes.",
-        "Enhanced infrastructure scalability to support 500+ concurrent users with near-zero downtime, reducing peak-hour outages to less than 5 minutes, driving a 25% increase in user satisfaction.",
-        "Deployed and optimized middleware layers, improving API response times by 30%, significantly enhancing service delivery and client software integration.",
+        "Transformed recruitment with AI: Built an AI-powered resume screener using BERT NLP models, reducing manual shortlisting by 60% while staying within tight cloud budgets.",
+        "Scaled recruitment platform with zero downtime: Containerized services with Docker and ECS Fargate, managing 15,000+ users and optimizing autoscaling to remain under budget.",
+        "Boosted recruiter efficiency: Improved API performance by 30% through middleware optimizations, accelerating workflows for recruiters and enhancing AI module responsiveness.",
       ]
     },
     {
@@ -118,19 +118,19 @@ export const experiences = [
       role: 'Consultant',
       timePeriod: "September 2024 ‑  November 2024",
       points: [
-        "Automated code migration from Webpack to Rspack, Radix Vue to Reka-UI, and Enzyme to React Testing Library, delivering a 10-15% performance uplift across multiple high-traffic Netlify and Vercel projects.",
-        "Conducted comprehensive performance and reliability testing across popular repositories such as AWS-amplify (2.8k stars), Shadcn-vue(5.6k stars), and Swagger-UI(26.8k stars), identifying and optimizing for critical edge cases.",
-        "Trained and mentored a cohort of 20+ engineers in leveraging AST-based tools (ast-grep, jscodeshift) for large-scale code transformations, fostering expertise in AI-driven migration workflows. "
+        "Accelerated migrations with AI-powered tooling: Led Webpack to Rspack, Radix Vue to Reka-UI, and Enzyme to React Testing Library migrations, improving performance by 10-15% on Netlify and Vercel projects.",
+        "Ensured reliability at scale: Conducted performance tests on AWS-amplify and Swagger-UI, optimizing for edge cases and bolstering performance in high-traffic environments.",
+        "Fostered AI-driven development: Trained 20+ engineers on AST-based tools (ast-grep, jscodeshift) for large-scale migrations, driving adoption of AI-enhanced workflows."
       ]
     },
     {
       company: 'Appleute Ltd.',
-      role: 'Software Developer Intern',
+      role: 'Software Developer',
       timePeriod: "January 2025 ‑  April 2025",
       points: [
-        "Orchestrated a cloud-native, role-based trading & surveillance platform for European clients—leveraging microservices and real-time data pipelines to process €2.5K/min in rare-earth metal trades.",
-        "Developed core modules for an automated investment-plan engine, handling 200 weekly orders and improving order-to-delivery tracking by 15%.",
-        "Assisted in creating a surveillance tool that aggregated data from 10+ darknet sources and tracked live locations/social posts, cutting alert response time by 40%."
+        "Revolutionized trading with real-time cloud architecture: Engineered a high-performance, role-based trading platform using Microservices, Kafka, and AWS Lambda, processing €2.5K/min in rare-earth metal trades with ultra-low latency.",
+        "Optimized investment engine automation: Designed core modules with Spring Boot and PostgreSQL, processing 200+ weekly orders and boosting order-to-delivery tracking by 15%.",
+        "Enhanced darknet surveillance with AI: Integrated Falkor.ai, Scrapy, and Elasticsearch for dynamic social media and darknet tracking, slashing alert response time by 40%."
       ]
     },
     {
