@@ -136,7 +136,7 @@ export const experiences = [
     {
       company: 'Fada Club',
       role : 'Co-Founder',
-      timePeriod : 'June 2024-Present',
+      timePeriod : 'June 2024-May 2025',
       points : [
         "Research organization, in order to facilitate and balance project development, enhancement and collaboration among professionals."
       ]
