@@ -1,5 +1,8 @@
 import {Button} from '@/components/ui/button';
 import { projects } from '@/data';
+import { LucideGithub } from 'lucide-react';
+import { GrDeploy } from "react-icons/gr";
+
 
 const Projects = () => {
   const handleClick = (url: string) => {
@@ -24,8 +27,8 @@ const Projects = () => {
             </div>
             <p className="leading-7 [&:not(:first-child)]:py-2 pl-4 pr-2 font-medium text-xs">{project.description}</p>
             <div className="flex flex-col gap-3 md:flex-row md:justify-between p-4">
-              <Button onClick={() => handleClick(project.github_link)} className=''>GitHub</Button>
-              {project.deployed_link && <Button onClick={() => handleClick(project.deployed_link)}>Deployed</Button>}
+              <Button onClick={() => handleClick(project.github_link)} className=''><LucideGithub/></Button>
+              {project.deployed_link && <Button onClick={() => handleClick(project.deployed_link)}><GrDeploy/></Button>}
             </div>
           </div>
         ))}

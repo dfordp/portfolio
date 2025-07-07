@@ -1,5 +1,7 @@
 import Aarchid from "@/assets/Aarchid.jpg"
-import Kosu from "@/assets/Hackmate.avif"
+import Kosu from "@/assets/Kosu.avif"
+import Hackmate from "@/assets/Hackmate.jpg"
+import OnlyNerds from "@/assets/OnlyNerds.jpg"
 import OneMed from "@/assets/OneMed.jpg"
 import CompileMe from "@/assets/CompileMe.webp"
 import DashBoard from "@/assets/Dashboard.jpg"
@@ -14,10 +16,24 @@ import AI_Benchmarks from "@/assets/AI_benchmarks.png"
 
 export const projects = [
     {
+      name: "OnlyNerds",
+      illustration : OnlyNerds,
+      description: "Decentralized learning platform with AI-powered course delivery, fork-based content sharing, and verfiable skill credentials through dynamic NFTs.",
+      github_link : "https://github.com/dfordp/onlynerds",
+      deployed_link : "https://onlynerds-rose.vercel.app/",
+    },
+    {
+      name: "Hackmate",
+      illustration : Hackmate,
+      description: "A swipe-based matchmaking platform designed to help founders and builders discover potential co-founders, collaborators, or indie hackers",
+      github_link : "https://github.com/dfordp/hackmate-rework",
+      deployed_link : "https://hackmate-rework.vercel.app/",
+    },
+    {
       name: "Kosu",
       illustration : Kosu,
       description: "AI-driven event platform with smart team matching and automated workflows, featuring blockchain-based rewards and NFT credentials.",
-      github_link : "https://github.com/dfordp/event-timepass",
+      github_link : "https://github.com/dfordp/kosu-ai",
       deployed_link : "https://kosu-xi.vercel.app/",
     },
     {
@@ -139,6 +155,16 @@ export const experiences = [
       timePeriod : 'June 2024-May 2025',
       points : [
         "Research organization, in order to facilitate and balance project development, enhancement and collaboration among professionals."
+      ]
+    },
+    {
+      company: 'Hobit Technologies',
+      role : 'Software Development Engineer',
+      timePeriod : 'June 2024-May 2025',
+      points : [
+        "Scaled a high-traffic women’s fitness platform to 100,000+ active users across 30+ countries with backend API migrations that cut average response times by 30% and kept infra costs under ₹50K INR/month.",
+        "Engineered EVA, a real-time AI agent for dynamic database operations, by building Litechain, an in-house LangChain abstraction that eliminated boilerplate and enabled seamless AI-driven DB queries.",
+        "Optimized backend architecture with microservices and cloud-native patterns, boosting scalability and reducing infrastructure overhead by 40% compared to legacy monoliths."
       ]
     },
   ];

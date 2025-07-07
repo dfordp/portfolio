@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Logo from "@/assets/Logo.png"
 import LogoDark from "@/assets/Logodark.png"
-import ProfilePhoto from "@/assets/Profile-Photo.png"
+import ProfilePhoto from "@/assets/Profile-Photo.jpeg"
 import { ModeToggle } from "@/components/mode-toggle"
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaYoutube , FaMedium, FaDev} from 'react-icons/fa';
 import { VscListSelection } from "react-icons/vsc";
