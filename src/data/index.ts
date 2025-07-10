@@ -160,7 +160,7 @@ export const experiences = [
     {
       company: 'Hobit Technologies',
       role : 'Software Development Engineer',
-      timePeriod : 'June 2024-May 2025',
+      timePeriod : 'June 2025-Present',
       points : [
         "Scaled a high-traffic women’s fitness platform to 100,000+ active users across 30+ countries with backend API migrations that cut average response times by 30% and kept infra costs under ₹50K INR/month.",
         "Engineered EVA, a real-time AI agent for dynamic database operations, by building Litechain, an in-house LangChain abstraction that eliminated boilerplate and enabled seamless AI-driven DB queries.",
