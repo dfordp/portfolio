@@ -19,7 +19,7 @@ export const projects = [
     {
       name: "Echo",
       illustration : Echo,
-      description: "Cloud deployment system that lets content creators automatically spin up a public, branded website",
+      description: "Programmable Micro Context Protocol (MCP) server + Cloud deployment system that lets content creators automatically spin up a public, branded website",
       github_link : "https://github.com/dfordp/echo-rework",
       deployed_link : "https://echo-rework.vercel.app/",
     },
