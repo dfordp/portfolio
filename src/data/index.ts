@@ -13,8 +13,16 @@ import AI from "@/assets/AI_as_software.webp"
 import Blockchain from "@/assets/Untapped_Blockchain.webp"
 import QuantumComputing from "@/assets/QuantumComputing.jpg"
 import AI_Benchmarks from "@/assets/AI_benchmarks.png"
+import Echo from "@/assets/Echo.webp"
 
 export const projects = [
+    {
+      name: "Echo",
+      illustration : Echo,
+      description: "Cloud deployment system that lets content creators automatically spin up a public, branded website",
+      github_link : "https://github.com/dfordp/echo-rework",
+      deployed_link : "https://echo-rework.vercel.app/",
+    },
     {
       name: "OnlyNerds",
       illustration : OnlyNerds,
@@ -162,9 +170,11 @@ export const experiences = [
       role : 'Software Development Engineer',
       timePeriod : 'June 2025-Present',
       points : [
-        "Scaled a high-traffic women’s fitness platform to 100,000+ active users across 30+ countries with backend API migrations that cut average response times by 30% and kept infra costs under ₹50K INR/month.",
-        "Engineered EVA, a real-time AI agent for dynamic database operations, by building Litechain, an in-house LangChain abstraction that eliminated boilerplate and enabled seamless AI-driven DB queries.",
-        "Optimized backend architecture with microservices and cloud-native patterns, boosting scalability and reducing infrastructure overhead by 40% compared to legacy monoliths."
+        "Scaled global women’s fitness platform infrastructure: Migrated backend APIs and restructured critical services to support 100K+ active users across 30+ countries, reducing average response times by 60% while maintaining infra costs below ₹50K/month.",
+        "Built EVA, a real-time AI agent for DB operations: Developed Litechain, an in-house LangChain-like abstraction layer, to power EVA — enabling dynamic, zero-boilerplate AI-driven queries for personalized fitness recommendations and operational workflows.",
+        "Modernized backend with microservices & cloud-native patterns: Re-architected legacy monolith into scalable, containerized services, improving system elasticity and cutting infrastructure overhead by 40%.",
+        "Automated nutrition planning: Built a plan generation service that cut manual workload for dieticians by 60%, enabling faster personalization and smoother client communication — boosting retention and session throughput by 35%.",
+        "Scaled daily notifications: Built a distributed notification system for classes, health tips, and period tracking — handled 2M+ reminders/day with <200ms latency and 99.98% delivery rate, boosting DAUs by 22%."
       ]
     },
   ];
