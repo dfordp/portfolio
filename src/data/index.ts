@@ -14,12 +14,19 @@ import Blockchain from "@/assets/Untapped_Blockchain.webp"
 import QuantumComputing from "@/assets/QuantumComputing.jpg"
 import AI_Benchmarks from "@/assets/AI_benchmarks.png"
 import Echo from "@/assets/Echo.webp"
+import Fermion from "@/assets/HLS-call-streaming.jpg"
+import Quant from "@/assets/Quant-MBO.png"
+import CalMCP from "@/assets/Cal-MCP.jpeg"
+import Litechain from "@/assets/Litechain.png"
+import CrowdFunding from "@/assets/crowd-funding.jpg"
+import VideoSharing from "@/assets/Aeos.jpg"
+
 
 export const projects = [
     {
       name: "Echo",
       illustration : Echo,
-      description: "Programmable Micro Context Protocol (MCP) server + Cloud deployment system that lets content creators automatically spin up a public, branded website",
+      description: "Programmable Cloud deployment system that lets content creators automatically spin up a public, branded website",
       github_link : "https://github.com/dfordp/echo-rework",
       deployed_link : "https://echo-rework.vercel.app/",
     },
@@ -36,6 +43,48 @@ export const projects = [
       description: "A swipe-based matchmaking platform designed to help founders and builders discover potential co-founders, collaborators, or indie hackers",
       github_link : "https://github.com/dfordp/hackmate-rework",
       deployed_link : "https://hackmate-rework.vercel.app/",
+    },
+    {
+      name: "Video Call Streaming",
+      illustration : Fermion,
+      description: "Real-time video streaming with distinct streamer and viewer roles, scalable architecture, robust media support, and reliable low-latency delivery.",
+      github_link : "https://github.com/dfordp/fermion-timepass",
+      deployed_link : "https://youtu.be/ylq6JerMmDc",
+    },
+    {
+      name: "Litechain",
+      illustration : Litechain,
+      description: "A simple yet powerful drop-in to build powerful LLM agents with tools with a zero-boilerplate LLM framework for humans.",
+      github_link : "https://github.com/litechain-ai/litechain",
+      deployed_link : "https://www.npmjs.com/package/litechain?activeTab=readme",
+    },
+    {
+      name: "Meeting Scheduler MCP",
+      illustration : CalMCP,
+      description: "A Model Context Protocol (MCP) server that provides scheduling link discovery across Cal.com and Calendly platforms.",
+      github_link : "https://github.com/dfordp/mcp-timepass",
+      deployed_link : "",
+    },
+    {
+      name: "MBP-10 Order Book Reconstruction",
+      illustration : Quant,
+      description: "Reconstructs a Market by Price (MBP) order book with 10 depth levels per side, using a Market by Order (MBO) feed input",
+      github_link : "https://github.com/dfordp/quant-timepass",
+      deployed_link : "",
+    },
+    {
+      name: "Crowd Funding",
+      illustration : CrowdFunding,
+      description: "Crowdfunding platform enabling secure fundraising and automated payouts using smart contracts, with transparent tracking and decentralized management.",
+      github_link : "https://github.com/dfordp/crowd-funding-app",
+      deployed_link : "https://crowd-funding-app-nu.vercel.app/",
+    },
+    {
+      name: "Video Sharing Platform",
+      illustration : VideoSharing,
+      description: "Personal video hosting platform with HLS streaming, shared access control, and secure management for uploading, sharing, and viewing videos.",
+      github_link : "https://github.com/dfordp/aeos-timepass",
+      deployed_link : "https://aeos-timepass.vercel.app/",
     },
     {
       name: "Kosu",
