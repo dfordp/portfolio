@@ -70,7 +70,7 @@ export const projects = [
     {
       name: "Meeting Scheduler MCP",
       illustration : CalMCP,
-      description: "A Model Context Protocol (MCP) server that provides scheduling link discovery across Cal.com and Calendly platforms.",
+      description: "A Model Context Protocol (MCP) server that provides scheduling link discovery across Cal.com and Calendly platforms for organizations.",
       github_link : "https://github.com/dfordp/mcp-timepass",
       deployed_link : "",
     },
@@ -84,7 +84,7 @@ export const projects = [
     {
       name: "Super Grader",
       illustration : SuperGrader,
-      description: "Extracts questions from a PDF question paper, performs OCR on student answer scripts, cleans and aligns the answers, and grades them based on a predefined rubric.",
+      description: "Designed to automate the grading of answer script, extracts questions, aligns the answers, and grades them based on a predefined rubric.",
       github_link : "https://github.com/dfordp/super-grader-api",
       deployed_link : "",
     },
