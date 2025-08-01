@@ -20,6 +20,8 @@ import CalMCP from "@/assets/Cal-MCP.jpeg"
 import Litechain from "@/assets/Litechain.png"
 import CrowdFunding from "@/assets/crowd-funding.jpg"
 import VideoSharing from "@/assets/Aeos.jpg"
+import SuperGrader from "@/assets/super-grader.jpg"
+import Sarnet from "@/assets/sarnet.png"
 
 
 export const projects = [
@@ -59,6 +61,13 @@ export const projects = [
       deployed_link : "https://www.npmjs.com/package/litechain?activeTab=readme",
     },
     {
+      name: "Sarnet",
+      illustration : Sarnet,
+      description: "A deep learning model designed for data operations and colorization of SAR images, offering a fast and efficient service for optimized data collection.",
+      github_link : "https://github.com/dfordp/sarnet-api",
+      deployed_link : "",
+    },
+    {
       name: "Meeting Scheduler MCP",
       illustration : CalMCP,
       description: "A Model Context Protocol (MCP) server that provides scheduling link discovery across Cal.com and Calendly platforms.",
@@ -70,6 +79,13 @@ export const projects = [
       illustration : Quant,
       description: "Reconstructs a Market by Price (MBP) order book with 10 depth levels per side, using a Market by Order (MBO) feed input",
       github_link : "https://github.com/dfordp/quant-timepass",
+      deployed_link : "",
+    },
+    {
+      name: "Super Grader",
+      illustration : SuperGrader,
+      description: "Extracts questions from a PDF question paper, performs OCR on student answer scripts, cleans and aligns the answers, and grades them based on a predefined rubric.",
+      github_link : "https://github.com/dfordp/super-grader-api",
       deployed_link : "",
     },
     {
@@ -201,7 +217,7 @@ export const experiences = [
       role: 'Software Developer',
       timePeriod: "January 2025 ‑  April 2025",
       points: [
-        "Revolutionized trading with real-time cloud architecture: Engineered a high-performance, role-based trading platform using Microservices, Kafka, and AWS Lambda, processing €2.5K/min in rare-earth metal trades with ultra-low latency.",
+        "Architected trading with real-time cloud architecture: Engineered a high-performance, role-based trading platform using Microservices, Kafka, and AWS Lambda, processing €2.5K/min in rare-earth metal trades with ultra-low latency.",
         "Optimized investment engine automation: Designed core modules with Spring Boot and PostgreSQL, processing 200+ weekly orders and boosting order-to-delivery tracking by 15%.",
         "Enhanced darknet surveillance with AI: Integrated Falkor.ai, Scrapy, and Elasticsearch for dynamic social media and darknet tracking, slashing alert response time by 40%."
       ]
