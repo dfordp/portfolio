@@ -22,6 +22,7 @@ import CrowdFunding from "@/assets/crowd-funding.jpg"
 import VideoSharing from "@/assets/Aeos.jpg"
 import SuperGrader from "@/assets/super-grader.jpg"
 import Sarnet from "@/assets/sarnet.png"
+import SpotifyMCP from "@/assets/spotify-mcp.jpg"
 
 
 export const projects = [
@@ -72,6 +73,13 @@ export const projects = [
       illustration : CalMCP,
       description: "A Model Context Protocol (MCP) server that provides scheduling link discovery across Cal.com and Calendly platforms for organizations.",
       github_link : "https://github.com/dfordp/mcp-timepass",
+      deployed_link : "",
+    },
+    {
+      name: "Spotify Shadow Listener MCP",
+      illustration : SpotifyMCP,
+      description: "A Model Context Protocol (MCP) server that analyzes Spotify listening history, revealing listener identity, taste shifts, and future music trends without requiring Spotify Premium.",
+      github_link : "https://github.com/dfordp/spotify-shadow-listen-mcp",
       deployed_link : "",
     },
     {
