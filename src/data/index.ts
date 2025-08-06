@@ -76,11 +76,11 @@ export const projects = [
       deployed_link : "",
     },
     {
-      name: "Spotify Shadow Listener MCP",
+      name: "Spotify MCP",
       illustration : SpotifyMCP,
       description: "A Model Context Protocol (MCP) that analyzes listening history, revealing listener identity, taste shifts, and future music trends without Premium.",
       github_link : "https://github.com/dfordp/spotify-shadow-listen-mcp",
-      deployed_link : "",
+      deployed_link : "https://github.com/Klavis-AI/klavis/pull/233",
     },
     {
       name: "MBP-10 Order Book Reconstruction",
