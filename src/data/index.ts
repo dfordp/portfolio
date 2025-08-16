@@ -55,11 +55,11 @@ export const projects = [
       deployed_link : "https://youtu.be/ylq6JerMmDc",
     },
     {
-      name: "Litechain",
+      name: "ToolChainAI",
       illustration : Litechain,
       description: "A simple yet powerful drop-in to build powerful LLM agents with tools with a zero-boilerplate LLM framework for humans.",
-      github_link : "https://github.com/litechain-ai/litechain",
-      deployed_link : "https://www.npmjs.com/package/litechain?activeTab=readme",
+      github_link : "https://github.com/dfordp/toolchainai",
+      deployed_link : "https://www.npmjs.com/package/toolchainai",
     },
     {
       name: "Sarnet",
