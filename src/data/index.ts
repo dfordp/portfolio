@@ -17,7 +17,7 @@ import Echo from "@/assets/Echo.webp"
 import Fermion from "@/assets/HLS-call-streaming.jpg"
 import Quant from "@/assets/Quant-MBO.png"
 import CalMCP from "@/assets/Cal-MCP.jpeg"
-import Litechain from "@/assets/Litechain.png"
+import ToolChain from "@/assets/Litechain.png"
 import CrowdFunding from "@/assets/crowd-funding.jpg"
 import VideoSharing from "@/assets/Aeos.jpg"
 import SuperGrader from "@/assets/super-grader.jpg"
@@ -56,7 +56,7 @@ export const projects = [
     },
     {
       name: "ToolChainAI",
-      illustration : Litechain,
+      illustration : ToolChain,
       description: "A simple yet powerful drop-in to build powerful LLM agents with tools with a zero-boilerplate LLM framework for humans.",
       github_link : "https://github.com/dfordp/toolchainai",
       deployed_link : "https://www.npmjs.com/package/toolchainai",
@@ -239,12 +239,12 @@ export const experiences = [
       ]
     },
     {
-      company: 'Hobit Technologies',
+      company: 'Stealth Startup',
       role : 'Software Development Engineer',
       timePeriod : 'June 2025-Present',
       points : [
-        "Scaled global women’s fitness platform infrastructure: Migrated backend APIs and restructured critical services to support 100K+ active users across 30+ countries, reducing average response times by 60% while maintaining infra costs below ₹50K/month.",
-        "Built EVA, a real-time AI agent for DB operations: Developed Litechain, an in-house LangChain-like abstraction layer, to power EVA — enabling dynamic, zero-boilerplate AI-driven queries for personalized fitness recommendations and operational workflows.",
+        "Scaled global platform infrastructure: Migrated backend APIs and restructured critical services to support 100K+ active users across 30+ countries, reducing average response times by 60% while maintaining infra costs below ₹50K/month.",
+        "Built a real-time AI agent for DB operations: Developed Litechain, an in-house LangChain-like abstraction layer, to power — enabling dynamic, zero-boilerplate AI-driven queries for personalized fitness recommendations and operational workflows.",
         "Modernized backend with microservices & cloud-native patterns: Re-architected legacy monolith into scalable, containerized services, improving system elasticity and cutting infrastructure overhead by 40%.",
         "Automated nutrition planning: Built a plan generation service that cut manual workload for dieticians by 60%, enabling faster personalization and smoother client communication — boosting retention and session throughput by 35%.",
         "Scaled daily notifications: Built a distributed notification system for classes, health tips, and period tracking — handled 2M+ reminders/day with <200ms latency and 99.98% delivery rate, boosting DAUs by 22%."
