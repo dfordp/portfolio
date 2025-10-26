@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@dfordp11",
-    title: "Hackmate",
+    title: "Dilpreet Grover",
     description: "Find the perfect co-founder for your next startup idea.",
     images: [
       {
