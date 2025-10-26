@@ -7,7 +7,7 @@ Allow: /
 Crawl-delay: 1
 
 # Sitemaps
-Sitemap: https://www.kartiklabhshetwar.me/sitemap.xml
+Sitemap:https://www.dilpreetgrover.me/sitemap.xml
 
 # Host declaration (helps with canonicalization)
-Host: https://www.kartiklabhshetwar.me
+Host: https://www.dilpreetgrover.me/

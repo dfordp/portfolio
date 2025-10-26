@@ -4,25 +4,32 @@
   
   <!-- Main Pages -->
   <url>
-    <loc>https://www.kartiklabhshetwar.me/</loc>
+    <loc>https://www.dilpreetgrover.me/</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/open-graph.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/open-graph.png</image:loc>
       <image:title>Dilpreet Grover - Portfolio</image:title>
     </image:image>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects</loc>
+    <loc>https://www.dilpreetgrover.me/projects</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/blogs</loc>
+    <loc>https://www.dilpreetgrover.me/blogs</loc>
+    <lastmod>2025-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.dilpreetgrover.me/art</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -30,56 +37,56 @@
   
   <!-- Individual Project Pages -->
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects/mind-mentor</loc>
+    <loc>https://www.dilpreetgrover.me/projects/hackmate</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/images/mindmentorai.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/images/hackmate.JPG</image:loc>
       <image:title>Mind Mentor AI - AI-powered educational assistant</image:title>
     </image:image>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects/satya-check</loc>
+    <loc>https://www.dilpreetgrover.me/projects/onlynerds</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/images/satyacheck.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/images/onlynerds.jpeg</image:loc>
       <image:title>SatyaCheck - AI-powered fact-checking platform</image:title>
     </image:image>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects/donezo</loc>
+    <loc>https://www.dilpreetgrover.me/projects/openlens</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/images/donezo.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/images/openlens.png</image:loc>
       <image:title>Donezo - AI-powered weekly review email platform</image:title>
     </image:image>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects/learnx</loc>
+    <loc>https://www.dilpreetgrover.me/projects/kosu</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/images/learnx.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/images/kosu.png</image:loc>
       <image:title>LearnX - Comprehensive course marketplace platform</image:title>
     </image:image>
   </url>
   
   <url>
-    <loc>https://www.kartiklabhshetwar.me/projects/taskmaster</loc>
+    <loc>https://www.dilpreetgrover.me/projects/retold</loc>
     <lastmod>2025-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.kartiklabhshetwar.me/images/taskmaster.png</image:loc>
+      <image:loc>https://www.dilpreetgrover.me/images/retold.jpeg</image:loc>
       <image:title>TaskMaster - Dynamic task management platform</image:title>
     </image:image>
   </url>

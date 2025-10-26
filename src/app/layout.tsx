@@ -20,11 +20,11 @@ const instrumentSerif = Instrument_Serif({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://kartik017.vercel.app'),
+  metadataBase: new URL('https://www.dilpreetgrover.me/'),
   title: 'Dilpreet Grover',
   description: '',
   openGraph: {
-    url: 'https://kartik017.vercel.app/',
+    url: 'https://www.dilpreetgrover.me/',
     siteName: 'Dilpreet Grover Portfolio',
     locale: 'en_US',
     type: 'website',
@@ -34,6 +34,18 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Dilpreet Grover - Portfolio'
     }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@dfordp11",
+    title: "Hackmate",
+    description: "Find the perfect co-founder for your next startup idea.",
+    images: [
+      {
+        url: "https://www.dilpreetgrover.me/open-graph.png",  // Image URL
+        alt: "Dilpreet Grover - Portfolio"                // (Optional) Alt text
+      }
+    ]
   },
 };
 
