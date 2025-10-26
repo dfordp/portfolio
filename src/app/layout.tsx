@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@dfordp11",
     title: "Dilpreet Grover",
-    description: "Find the perfect co-founder for your next startup idea.",
+    description: "I’m someone who loves exploring ideas through code, design, and whatever medium feels right that day. I spend most of my time building things that make life a bit simpler or spark curiosity, often blending structure with imagination.",
     images: [
       {
         url: "https://www.dilpreetgrover.me/open-graph.png",  // Image URL
