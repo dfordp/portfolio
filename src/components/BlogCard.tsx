@@ -7,6 +7,20 @@ interface BlogCardProps {
 }
 
 export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
+
+    const getExternalLinks = (externalUrl: string[]) => {
+    if (!externalUrl) return []
+    if (Array.isArray(externalUrl)) {
+      return [
+        { label: 'Medium', url: externalUrl[0] },
+        externalUrl[1] ? { label: 'Dev.to', url: externalUrl[1] } : null,
+      ].filter((link): link is { label: string; url: string } => link !== null)
+    }
+    return [{ label: 'Medium', url: externalUrl }]
+  }
+
+   const externalLinks = getExternalLinks(blog.externalUrl ?? [])
+
   const CardContent = () => (
     <article className="group cursor-pointer touch-manipulation">
       {/* Swiss Design Grid Layout */}
@@ -52,13 +66,25 @@ export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
         </div>
 
         {/* External Link Indicator - Minimal */}
-        {blog.externalUrl && (
+        {externalLinks.length > 0 && (
           <div className="col-span-12 mt-4">
-            <div className="flex items-center gap-2 text-xs text-neutral-400 dark:text-neutral-500 uppercase tracking-wide">
-              <span>Medium</span>
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
+            <div className="flex items-center gap-4 text-xs text-neutral-400 dark:text-neutral-500 uppercase tracking-wide">
+              {externalLinks.map(link => (
+                <a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors"
+                  tabIndex={-1}
+                  aria-label={`Read on ${link.label}`}
+                >
+                  <span>{link.label}</span>
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              ))}
             </div>
           </div>
         )}
@@ -66,12 +92,9 @@ export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
     </article>
   )
 
-  if (blog.externalUrl) {
+  if (externalLinks.length > 0) {
     return (
-      <a 
-        href={blog.externalUrl} 
-        target="_blank" 
-        rel="noopener noreferrer"
+      <div
         className="block w-full touch-manipulation active:opacity-75"
         style={{ 
           WebkitTapHighlightColor: 'transparent',
@@ -81,7 +104,7 @@ export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
         }}
       >
         <CardContent />
-      </a>
+      </div>
     )
   }
 

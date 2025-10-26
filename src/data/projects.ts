@@ -2,8 +2,8 @@ import { Project } from '@/types/project'
 
 export const projects: Project[] = [
   {
-    id: 'mind-mentor',
-    title: "Mind Mentor AI",
+    id: 'onlynerds',
+    title: "OnlyNerds",
     description: "An AI-powered educational assistant that revolutionizes learning through advanced AI technology.",
     longDescription: "Harnesses the power of Groq AI and large language models for personalized learning experiences\n\nProvides intelligent study plan generation and dynamic resource curation\n\nBuilt with modern web technologies offering an intuitive interface\n\nSeamless interaction with AI-powered educational tools makes learning more efficient and engaging",
     liveLink: "https://mind-mentor-pearl.vercel.app/",

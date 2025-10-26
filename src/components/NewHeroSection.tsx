@@ -77,6 +77,9 @@ export default function NewHeroSection() {
                   <ContentParagraph className="mb-2">
                     <span className="font-medium dark:text-white text-black">Outside of work,</span> I am a part-time artist and a full-time cinephile and audiophile. I enjoy stories in all forms, whether that’s film, sound, or the small experiments that keep me inspired.
                   </ContentParagraph>
+                  <ContentParagraph className="mb-2">
+                    <span className="font-medium dark:text-white text-black">Currently open to part‑time and contract roles,</span> The kind that let me dive deep into interesting systems, build creative tools, or collaborate on experimental ideas.
+                  </ContentParagraph>
                 </ContentSection>
               </Reveal>
 
@@ -99,7 +102,7 @@ export default function NewHeroSection() {
                  {/* Technical Contributions */}
               <Reveal delay={0.1} duration={0.6} amount={0.2}>
                 <div className="sm:px-12 px-6 py-4">
-                  <h2 className="text-lg sm:text-xl mb-4 opacity-20 mt-8">Technical Contributions</h2>
+                  <h2 className="text-lg sm:text-xl mb-4 opacity-20 mt-8">Contributions</h2>
                   <div className="space-y-6 dark:text-white/70 text-black/70 pb-8">
                     <ContentParagraph>
                       I’ve spent the past few years moving between startups, open-source, and R&D labs, where experimentation meets scale.
@@ -115,7 +118,7 @@ export default function NewHeroSection() {
                     </ContentParagraph>
                     <ContentParagraph>
                       <span className="font-medium dark:text-white text-black">
-                        <Link href="https://github.com/dfordp" target='_blank' className="text-[#006FEE] hover:underline">0→100</Link> systems and ideas
+                        <Link href="https://x.com/dfordp11" target='_blank' className="text-[#006FEE] hover:underline">0→100</Link> systems and ideas
                       </span>
                       <span> building what I want to see exist.</span>
                     </ContentParagraph>
@@ -123,8 +126,6 @@ export default function NewHeroSection() {
                 </div>
               </Reveal>
 
-
-              
               <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
                 <SectionBorder className="mt-0 pt-0" />
               </Reveal>
@@ -133,17 +134,38 @@ export default function NewHeroSection() {
               <Reveal delay={0.1} duration={0.6} amount={0.2}>
                 <div className="sm:px-12 px-6 mt-4">
                   <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4">
-                    GitHub Contributions <span className="opacity-20">●</span> @KartikLabhshetwar
+                    GitHub Contributions <span className="opacity-20">●</span> @dfordp
                   </h2>
                   <div className="mb-6">
                     <ContributionsDisplay
-                      username="KartikLabhshetwar"
+                      username="dfordp"
                       variant="compact"
                       className="w-full"
                     />
                   </div>
                 </div>
               </Reveal>
+
+
+              
+                {/* <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
+                  <SectionBorder className="mt-0 pt-0" />
+                </Reveal>
+                
+                <Reveal delay={0.1} duration={0.6} amount={0.2}>
+                  <div className="sm:px-12 px-6 mt-4">
+                    <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4">
+                      Cool People I met Along with <span className="opacity-20">●</span> @dfordp
+                    </h2>
+                    <div className="mb-6">
+                      <ContributionsDisplay
+                        username="dfordp"
+                        variant="compact"
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
+                </Reveal> */}
               
               <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
                 <SectionBorder className="mt-0 pt-0" />

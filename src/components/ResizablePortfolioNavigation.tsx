@@ -24,10 +24,11 @@ export default function ResizablePortfolioNavigation() {
   const navItems = [
     { name: 'proof-of-work', link: '/projects' },
     { name: 'blogs', link: '/blogs' },
+    { name: 'art', link: '/art' },
   ];
 
   const mobileNavItems = [
-    { name: 'Home', link: '/' },
+    { name: 'home', link: '/' },
     { name: 'proof-of-work', link: '/projects' },
     { name: 'blogs', link: '/blogs' },
   ];
