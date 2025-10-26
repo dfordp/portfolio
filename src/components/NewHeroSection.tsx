@@ -11,7 +11,6 @@ import ExperienceContent from './ExperienceContent'
 import Reachout from './Reachout'
 import CallToAction from './CallToAction'
 import ContributionsDisplay from './ContributionsDisplay'
-import OpenSourceContributionsCard from './OpenSourceContributionsCard'
 import TechStackMarquee from './TechStackMarquee'
 import { Reveal } from './Reveal'
 
@@ -90,7 +89,7 @@ export default function NewHeroSection() {
                {/* Experience Section */}
               <Reveal delay={0.1} duration={0.6} amount={0.3}>
                 <div className="sm:px-12 px-6 py-4">
-                  <h2 className="text-lg sm:text-xl mb-4 opacity-20 mt-8">Professional Experience</h2>
+                  <h2 className="text-lg sm:text-xl mb-4 opacity-40 mt-8">Professional Experience</h2>
                   <ExperienceContent />
                 </div>
               </Reveal>
@@ -102,13 +101,16 @@ export default function NewHeroSection() {
                  {/* Technical Contributions */}
               <Reveal delay={0.1} duration={0.6} amount={0.2}>
                 <div className="sm:px-12 px-6 py-4">
-                  <h2 className="text-lg sm:text-xl mb-4 opacity-20 mt-8">Contributions</h2>
+                  <h2 className="text-lg sm:text-xl mb-4 opacity-40 mt-8">Contributions</h2>
                   <div className="space-y-6 dark:text-white/70 text-black/70 pb-8">
                     <ContentParagraph>
                       I’ve spent the past few years moving between startups, open-source, and R&D labs, where experimentation meets scale.
                     </ContentParagraph>
                     <ContentParagraph>
-                      <span className="font-medium dark:text-white text-black">At Odena,</span> I built a distributed microservice system handling 2M+ events per second, created a custom multimedia embedding model that processed 300 TB of data, and deployed LLM-driven classification pipelines tuned for high throughput on a tight budget.  <span className="font-medium dark:text-white text-black">At Hobfit,</span> I re-architected the platform into efficient containerized microservices, scaled to tens of thousands of users, and developed AI assistants powering thousands of daily coaching sessions.
+                      <span className="font-medium dark:text-white text-black">At Odena,</span> I built a distributed microservice system handling 2M+ events per second, created a custom multimedia embedding model that processed 300 TB of data, and deployed LLM-driven classification pipelines tuned for high throughput on a tight budget.  
+                      </ContentParagraph>
+                      <ContentParagraph>
+                      <span className="font-medium dark:text-white text-black">At Hobfit,</span> I re-architected the platform into efficient containerized microservices, scaled to tens of thousands of users, and developed AI assistants powering thousands of daily coaching sessions.
                     </ContentParagraph>
                      <ContentParagraph>
                       <span className="font-medium dark:text-white text-black">At Meved HR,</span> I led the core infrastructure design and backend automation for an AI-driven recruitment platform that remains unmatched in speed and reliability to this day, handling 15K+ users with zero downtime and massive cost efficiency.
@@ -145,27 +147,6 @@ export default function NewHeroSection() {
                   </div>
                 </div>
               </Reveal>
-
-
-              
-                {/* <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
-                  <SectionBorder className="mt-0 pt-0" />
-                </Reveal>
-                
-                <Reveal delay={0.1} duration={0.6} amount={0.2}>
-                  <div className="sm:px-12 px-6 mt-4">
-                    <h2 className="text-lg sm:text-xl opacity-20 leading-relaxed -tracking-[0.01em] mb-4">
-                      Cool People I met Along with <span className="opacity-20">●</span> @dfordp
-                    </h2>
-                    <div className="mb-6">
-                      <ContributionsDisplay
-                        username="dfordp"
-                        variant="compact"
-                        className="w-full"
-                      />
-                    </div>
-                  </div>
-                </Reveal> */}
               
               <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
                 <SectionBorder className="mt-0 pt-0" />
@@ -182,20 +163,6 @@ export default function NewHeroSection() {
                 <SectionBorder className="mt-0 pt-0" />
               </Reveal>
               
-              {/* Open Source Contributions Section */}
-              <Reveal delay={0.1} duration={0.6} amount={0.2}>
-                <div className="sm:px-12 px-6 mt-4">
-                  <h2 className="text-lg sm:text-xl opacity-20 mt-8 ml-5 leading-relaxed -tracking-[0.01em] mb-4">
-                    Open Source Contributions <span className="opacity-20">●</span> {new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
-                  </h2>
-                  <OpenSourceContributionsCard />
-                </div>
-              </Reveal>
-              
-              <Reveal delay={0.05} duration={0.4} y={15} amount={0.8}>
-                <SectionBorder className="mt-4 pt-0" />
-              </Reveal>
-
               {/* call to action*/}
               <Reveal delay={0.1} duration={0.6} amount={0.4}>
                 <CallToAction/>

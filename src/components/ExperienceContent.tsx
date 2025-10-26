@@ -32,7 +32,7 @@ export default function ExperienceContent() {
     },
     {
       company: "Future Tech Design",
-      position: "PLM Engineer Intern",
+      position: "Engineering Intern",
       duration: "April 2025 – June 2025",
       description: "",
       href: "https://ftdplm.com/",

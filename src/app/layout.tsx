@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { ScrollToTop } from "@/components/ui/ScrollAnimations"
 import BackgroundMusic from "@/components/BackgroundMusicWrapper"
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter_Tight({
   weight: '400',
@@ -55,6 +56,7 @@ export default function RootLayout({
         >
             <div className="relative z-10">
               {children}
+              <Analytics/>
             </div>
             <ScrollToTop />
             <BackgroundMusic />

@@ -1,11 +1,19 @@
-'use client'
+"use client"
 
-import dynamic from 'next/dynamic'
+import { useEffect, useRef } from "react";
+import { setBackgroundMusicController } from "@/components/ui/resizable-navbar";
 
-// Dynamically import BackgroundMusic with no SSR
-const BackgroundMusic = dynamic(() => import('./BackgroundMusic'), {
-  ssr: false,
-  loading: () => null
-})
+const BackgroundMusic = () => {
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-export default BackgroundMusic
+  useEffect(() => {
+    setBackgroundMusicController({
+      pause: () => audioRef.current?.pause(),
+      play: () => audioRef.current?.play(),
+    });
+  }, []);
+
+  return <audio ref={audioRef} src="/Akeboshi.mp3" autoPlay loop />;
+};
+
+export default BackgroundMusic;

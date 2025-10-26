@@ -12,6 +12,7 @@ import {
   MobileNavMenu,
   MobileNavToggle,
   NavbarLogo,
+  MusicToggle,
 } from './ui/resizable-navbar';
 
 export default function ResizablePortfolioNavigation() {
@@ -31,6 +32,7 @@ export default function ResizablePortfolioNavigation() {
     { name: 'home', link: '/' },
     { name: 'proof-of-work', link: '/projects' },
     { name: 'blogs', link: '/blogs' },
+    { name: 'art', link: '/art' },
   ];
 
   return (
@@ -70,7 +72,10 @@ export default function ResizablePortfolioNavigation() {
               </div>
             ))}
             <div className="pt-4 mt-2 border-t border-neutral-200 dark:border-neutral-700">
-              <ModeToggle />
+              <div className='flex flex-row gap-2'>
+                <MusicToggle/>
+                <ModeToggle />
+              </div>
             </div>
           </div>
         </MobileNavMenu>
