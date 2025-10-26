@@ -113,7 +113,7 @@ export default function NewHeroSection() {
                       <span className="font-medium dark:text-white text-black">At Hobfit,</span> I re-architected the platform into efficient containerized microservices, scaled to tens of thousands of users, and developed AI assistants powering thousands of daily coaching sessions.
                     </ContentParagraph>
                      <ContentParagraph>
-                      <span className="font-medium dark:text-white text-black">At Meved HR,</span> I led the core infrastructure design and backend automation for an AI-driven recruitment platform that remains unmatched in speed and reliability to this day, handling 15K+ users with zero downtime and massive cost efficiency.
+                      <span className="font-medium dark:text-white text-black">At Meved HR,</span> I led the core infrastructure design and backend automation for an AI-driven recruitment platform handling 15K+ users with zero downtime and massive cost efficiency.
                     </ContentParagraph>
                     <ContentParagraph>
                       Earlier at <span className="font-medium dark:text-white text-black"> Appleute</span> and <span className="font-medium dark:text-white text-black"> Codemod</span>, I shipped real-time trading platforms, automated large-scale code migrations, and mentored developers adopting new stacks. I also founded <span className="font-medium dark:text-white text-black"> Fada Club</span>, a creative-tech community, and co‑ran <span className="font-medium dark:text-white text-black">Zinex Ze</span>, an art-led collective that reached millions online.
