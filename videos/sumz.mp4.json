@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\2025-10-26-20-24-53.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "GaGuGGAhiiSlaSEr5Pg1KlvVSu9OmabexO5k7mrIcGI",
+      "playbackId": "4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE"
+    }
+  },
+  "createdAt": 1751177693000,
+  "updatedAt": 1751177693000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE/thumbnail.webp",
+  "blurDataURL": ""
+}

@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\onlynerds.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "jDysbgVa0281gsRYrROrxaz5NWjJWqXXCVa4iwa8Nhug",
+      "playbackId": "1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA"
+    }
+  },
+  "createdAt": 1751173320000,
+  "updatedAt": 1751173320000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA/thumbnail.webp",
+  "blurDataURL": ""
+}

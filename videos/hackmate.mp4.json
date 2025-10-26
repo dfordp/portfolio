@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\hackmate.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "SSRdPvcbhqc5jhe2oOxEqIYY6LZw5HoSx4Uu02FWnhGM",
+      "playbackId": "x026jWIyD39GBVKayr4me3AX6nozxHKI02DaVuCHm7RVQ"
+    }
+  },
+  "createdAt": 1751174281000,
+  "updatedAt": 1751174281000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/x026jWIyD39GBVKayr4me3AX6nozxHKI02DaVuCHm7RVQ.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/x026jWIyD39GBVKayr4me3AX6nozxHKI02DaVuCHm7RVQ/thumbnail.webp",
+  "blurDataURL": ""
+}

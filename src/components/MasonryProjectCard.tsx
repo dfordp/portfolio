@@ -6,14 +6,11 @@ import Image from "next/image";
 import Video from "next-video";
 import { motion } from 'framer-motion';
 import { useHapticFeedback } from '@/hooks/useHapticFeedback';
-import donezovideo from '/videos/donezo.mp4';
-import mindMentorVideo from '/videos/mind-mentor.mp4';
-import satyaCheckVideo from '/videos/satya-check.mp4';
-import fleethq from '/videos/fleethq.mp4';
-import rebatr from '/videos/rebatr-short.mp4';
-import lazycommitVideo from '/videos/lazycommit-video.mp4';
-import gocache from '/videos/gocache.mp4';
-import quotick from '/videos/quotick.mp4'
+import onlynerds from '/videos/onlynerds.mp4';
+import hackmate from '/videos/hackmate.mp4';
+import kosu from '/videos/kosu.mp4';
+import sumz from '/videos/sumz.mp4';
+
 interface MasonryProjectCardProps {
   project: Project;
   className?: string;
@@ -22,22 +19,14 @@ interface MasonryProjectCardProps {
 // Map video IDs to imported video assets
 const getVideoSource = (videoId: string) => {
   switch (videoId) {
-    case 'donezo':
-      return donezovideo;
-    case 'mind-mentor':
-      return mindMentorVideo;
-    case 'satya-check':
-      return satyaCheckVideo;
-    case 'fleethq':
-      return fleethq;
-    case 'rebatr-short':
-      return rebatr;
-    case 'lazycommit-video':
-      return lazycommitVideo;
-    case 'gocache':
-      return gocache;
-    case 'quotick':
-      return quotick;
+    case 'onlynerds':
+      return onlynerds;
+    case 'hackmate':
+      return hackmate;
+    case 'kosu':
+      return kosu;
+    case 'sumz':
+      return sumz
     default:
       return null;
   }
