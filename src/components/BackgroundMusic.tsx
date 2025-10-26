@@ -2,18 +2,18 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Howl } from 'howler'
+import { setBackgroundMusicController } from './ui/resizable-navbar'
 
-// Singleton pattern to ensure only one audio instance
 let isInitialized = false
+let globalSound: Howl | null = null
 
 export default function BackgroundMusic() {
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [, setIsPlaying] = useState(false)
   const [hasStarted, setHasStarted] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const retryCountRef = useRef(0)
   const maxRetries = 3
 
-  // Ensure we're on the client side
   useEffect(() => {
     setIsClient(true)
   }, [])
@@ -21,141 +21,98 @@ export default function BackgroundMusic() {
   useEffect(() => {
     if (!isClient || hasStarted || isInitialized) return
 
-    // Prevent multiple initializations
     isInitialized = true
 
-    // Create a single Howl instance with Web Audio API (more reliable)
     const sound = new Howl({
       src: ['/Akeboshi.mp3'],
       loop: true,
-      volume: 0.05, // Very low volume for subtle background audio
+      volume: 0.05,
       autoplay: false,
       preload: true,
-      html5: false, // Use Web Audio API to avoid HTML5 pool issues
-      // Audio quality settings for cleaner playback
-      rate: 1.0, // Normal playback rate
+      html5: false,
+      rate: 1.0,
+      onload: () => {
+        console.log('🎵 Audio loaded successfully')
+      },
       onplay: () => {
         setIsPlaying(true)
         setHasStarted(true)
         retryCountRef.current = 0
-        console.log('🎵 Background music started successfully')
-        
-        // Apply smooth fade-in for cleaner audio experience
-        sound.fade(0, 0.05, 2000)
+        console.log('🎵 Playing successfully')
       },
-      onplayerror: (id: number, error: unknown) => {
-        console.log('Play error:', error)
-        retryCountRef.current++
-        
-        if (retryCountRef.current <= maxRetries) {
-          console.log(`Retry attempt ${retryCountRef.current}/${maxRetries}`)
-          
-          // Wait for unlock event and try again
-          const delay = Math.pow(2, retryCountRef.current) * 1000
-          sound.once('unlock', () => {
-            setTimeout(() => {
-              if (!hasStarted) {
-                console.log(`Retrying after ${delay}ms delay`)
-                sound.play()
-              }
-            }, delay)
-          })
-        } else {
-          console.log('Max retries reached, waiting for user interaction')
+      onstop: () => {
+        setIsPlaying(false)
+        console.log('🎵 Stopped')
+      },
+      onpause: () => {
+        setIsPlaying(false)
+        console.log('🎵 Paused')
+      },
+      onplayerror: () => {
+        console.log('Play error, retrying...')
+        if (retryCountRef.current < maxRetries) {
+          retryCountRef.current++
+          setTimeout(() => {
+            if (!hasStarted) sound.play()
+          }, 1000)
         }
-      },
-      onloaderror: (id: number, error: unknown) => {
-        console.log('Load error:', error)
       }
     })
 
-    // Store reference to prevent garbage collection
+    globalSound = sound
 
-    // Function to start music with smooth fade-in
+    // Set up the controller for the navbar
+    setBackgroundMusicController({
+      pause: () => {
+        sound.fade(0.05, 0, 1000)
+        setTimeout(() => sound.pause(), 1000)
+      },
+      play: () => {
+        sound.play()
+        sound.fade(0, 0.05, 1000)
+      }
+    })
+
+    // Try to start automatically
     const startMusic = () => {
-      try {
-        // Start with volume 0 and fade in smoothly
+      if (sound.state() === 'loaded') {
         sound.volume(0)
         sound.play()
-        sound.fade(0, 0.05, 2000) // Fade to very low volume over 2 seconds
-        return true
-      } catch {
-        console.log('Autoplay blocked, waiting for user interaction...')
-        return false
+        sound.fade(0, 0.05, 2000)
       }
     }
 
-    // Function to handle user interaction
-    const handleUserInteraction = () => {
-      if (!hasStarted && !isPlaying) {
-        // First try to unlock the audio context
-        sound.once('unlock', () => {
-          console.log('🎵 Audio unlocked, attempting to play')
-          try {
-            sound.volume(0)
-            sound.play()
-            sound.fade(0, 0.05, 2000) // Smooth fade-in to very low volume
-          } catch {
-            console.log('Still blocked after unlock')
-          }
-        })
-        
-        // Trigger unlock by attempting to play
-        try {
-          sound.volume(0)
-          sound.play()
-          sound.fade(0, 0.05, 2000) // Smooth fade-in to very low volume
-        } catch {
-          console.log('Triggering unlock mechanism')
-        }
+    // Handle user interactions
+    const handleInteraction = () => {
+      if (!hasStarted) {
+        startMusic()
       }
     }
 
-    // Add event listeners for user interaction
-    const events = ['click', 'keydown', 'touchstart', 'scroll', 'mousemove', 'focus']
-    const removeEventListeners = () => {
-      events.forEach(event => {
-        document.removeEventListener(event, handleUserInteraction)
-        window.removeEventListener(event, handleUserInteraction)
-      })
-    }
-
-    // Add listeners
+    // Add interaction listeners
+    const events = ['click', 'touchstart', 'keydown']
     events.forEach(event => {
-      document.addEventListener(event, handleUserInteraction, { once: true })
-      window.addEventListener(event, handleUserInteraction, { once: true })
+      document.addEventListener(event, handleInteraction, { once: true })
     })
 
-    // Try to start music with progressive delays
-    const tryStartMusic = () => {
-      if (startMusic()) return
-
-      // Try again after delays
-      const delays = [500, 1000, 2000]
-      delays.forEach((delay) => {
-        setTimeout(() => {
-          if (!hasStarted && retryCountRef.current <= maxRetries) {
-            startMusic()
-          }
-        }, delay)
-      })
+    // Initial attempt
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', startMusic)
     }
 
-    // Start trying immediately
-    tryStartMusic()
-
-    // Cleanup
     return () => {
-      removeEventListeners()
-      // Don't unload the global instance here, let it persist
+      events.forEach(event => {
+        document.removeEventListener(event, handleInteraction)
+      })
+      window.removeEventListener('load', startMusic)
     }
-  }, [isClient, hasStarted, isPlaying])
+  }, [isClient, hasStarted])
 
   // Don't render anything on server side
-  if (!isClient) {
-    return null
-  }
+  if (!isClient) return null
 
-  return null // Howler.js handles the audio element internally
+  return null
 }
 
+// Export a function to access the global sound instance
+export const getGlobalSound = () => globalSound
