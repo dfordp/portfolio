@@ -4,19 +4,19 @@
   "provider": "mux",
   "providerMetadata": {
     "mux": {
-      "assetId": "GaGuGGAhiiSlaSEr5Pg1KlvVSu9OmabexO5k7mrIcGI",
-      "playbackId": "4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE"
+      "assetId": "uGXyICJ300GtngGF01H006MavdtVie6LQ019EE00fVfujmGI",
+      "playbackId": "R00enWBQkknKWDYbgbnmX45Km1YXrWiEa7e4AtOu2J6I"
     }
   },
-  "createdAt": 1751177693000,
-  "updatedAt": 1751177693000,
+  "createdAt": 1751330820000,
+  "updatedAt": 1751330820000,
   "size": 0,
   "sources": [
     {
-      "src": "https://stream.mux.com/4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE.m3u8",
+      "src": "https://stream.mux.com/R00enWBQkknKWDYbgbnmX45Km1YXrWiEa7e4AtOu2J6I.m3u8",
       "type": "application/x-mpegURL"
     }
   ],
-  "poster": "https://image.mux.com/4lNxL9bYDtcebKKHZOBM27J02BrlMlZO3p4CLQlQ84hE/thumbnail.webp",
+  "poster": "https://image.mux.com/R00enWBQkknKWDYbgbnmX45Km1YXrWiEa7e4AtOu2J6I/thumbnail.webp",
   "blurDataURL": ""
 }

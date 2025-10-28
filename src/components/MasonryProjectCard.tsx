@@ -10,6 +10,8 @@ import onlynerds from '/videos/onlynerds.mp4';
 import hackmate from '/videos/hackmate.mp4';
 import kosu from '/videos/kosu.mp4';
 import sumz from '/videos/sumz.mp4';
+import blackhole from '/videos/blackhole.mp4';
+import goserve from '/videos/goserve.mp4';
 
 interface MasonryProjectCardProps {
   project: Project;
@@ -26,7 +28,11 @@ const getVideoSource = (videoId: string) => {
     case 'kosu':
       return kosu;
     case 'sumz':
-      return sumz
+      return sumz;
+    case 'blackhole':
+      return blackhole;
+    case 'goserve':
+      return goserve;
     default:
       return null;
   }
