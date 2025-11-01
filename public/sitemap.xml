@@ -43,7 +43,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.dilpreetgrover.me/images/hackmate.JPG</image:loc>
-      <image:title>Mind Mentor AI - AI-powered educational assistant</image:title>
+      <image:title>Hackmate - Tinder for co-founders</image:title>
     </image:image>
   </url>
   
@@ -54,7 +54,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.dilpreetgrover.me/images/onlynerds.jpeg</image:loc>
-      <image:title>SatyaCheck - AI-powered fact-checking platform</image:title>
+      <image:title>OnlyNerds - A decentralized and forkable community based platform</image:title>
     </image:image>
   </url>
   
@@ -65,7 +65,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.dilpreetgrover.me/images/openlens.png</image:loc>
-      <image:title>Donezo - AI-powered weekly review email platform</image:title>
+      <image:title>OpenLens - Github Repo health and analyzer</image:title>
     </image:image>
   </url>
   
@@ -76,7 +76,7 @@
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.dilpreetgrover.me/images/kosu.png</image:loc>
-      <image:title>LearnX - Comprehensive course marketplace platform</image:title>
+      <image:title>Kosu - The decentralized event platform</image:title>
     </image:image>
   </url>
   

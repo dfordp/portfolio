@@ -23,7 +23,7 @@ export default function Reachout({
     github: "https://github.com/dfordp",
     linkedin: "https://www.linkedin.com/in/dilpreet-grover-17726b224",
     resume: "https://docs.google.com/document/d/1K93ilxfHvfv7_4ueDFV9CrUaHQnr7Thd/edit?usp=sharing&ouid=113178507201676811124&rtpof=true&sd=true",
-    mail: "mailto:kartik.labhshetwar@gmail.com",
+    mail: "mailto:dilpreetgrover2@gmail.com",
   }
 }: ReachoutProps) {
   const { triggerHaptic, isMobile } = useHapticFeedback();
