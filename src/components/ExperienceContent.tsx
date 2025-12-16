@@ -19,8 +19,8 @@ export default function ExperienceContent() {
       position: "Consultant",
       duration: "September 2025 – Present",
       description: "",
-      href: "https://www.linkedin.com/company/odena",
-      logoUrl: "/odena.JPG",
+      href: "https://www.odena.io/",
+      logoUrl: "/odena.png",
     },
     {
       company: "Hobfit",
