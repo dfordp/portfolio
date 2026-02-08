@@ -36,7 +36,7 @@ export default function NewHeroSection() {
           <Reveal delay={0.2} duration={0.7} amount={0.3}>
             <ProfileHeader 
               name="Dilpreet Grover"
-              age="21"
+              age="22"
               title="ideas • systems • stories"
               profileImage="/Dilpreet.jpeg"
               socialLinks={{

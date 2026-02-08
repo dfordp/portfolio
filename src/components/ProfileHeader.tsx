@@ -19,7 +19,7 @@ interface ProfileHeaderProps {
 
 export default function ProfileHeader({
   name = "Dilpreet Grover",
-  age = "21",
+  age = "22",
   title = "engineer • developer • builder",
   profileImage = "/Dilpreet.jpeg",
   socialLinks = {
