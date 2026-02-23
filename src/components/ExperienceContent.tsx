@@ -18,31 +18,16 @@ interface ExperienceItem {
 
 export default function ExperienceContent() {
   const experiences: ExperienceItem[] = [
-      {
-      company: "Future Tech Design",
-      positions: [
-        {
-          title: "Consultant",
-          duration: "January 2026 – Present",
-        },
-        {
-          title: "Engineering Intern",
-          duration: "April 2025 – June 2025",
-        }
-      ],
-      href: "https://ftdplm.com/",
-      logoUrl: "/ftd.jpeg",
-    },
     {
-      company: "Odena",
+      company: "Global Consulting Associates",
       positions: [
         {
-          title: "Principal Consultant",
-          duration: "September 2025 – December 2025",
+          title: "AI Consultant",
+          duration: "September 2025 – Present",
         }
       ],
-      href: "https://www.odena.io/",
-      logoUrl: "/odena.png",
+      href: "",
+      logoUrl: "/gca.jpeg",
     },
     {
       company: "Hobfit",
