@@ -107,7 +107,7 @@ export default function NewHeroSection() {
                       I’ve spent the past few years moving between startups, open-source, and R&D labs, where experimentation meets scale.
                     </ContentParagraph>
                     <ContentParagraph>
-                        <span className="font-medium dark:text-white text-black">At Global Consulting Associates, </span> I build high-throughput backend and AI systems, designing deterministic event-sourced workflow engines processing 200K–500K events/day (<100 ms p99), architecting distributed microservices handling 2M+ events/sec, training multimedia embedding models over ~300 TB of data, and deploying LLM-powered classification systems serving millions of low-latency queries on self-hosted infrastructure at minimal cost.                      
+                        <span className="font-medium dark:text-white text-black">At Global Consulting Associates, </span> I build high-throughput backend and AI systems, designing deterministic event-sourced workflow engines processing 200K–500K events/day (less than 100 ms p99), architecting distributed microservices handling 2M+ events/sec, training multimedia embedding models over ~300 TB of data, and deploying LLM-powered classification systems serving millions of low-latency queries on self-hosted infrastructure at minimal cost.                      
                       </ContentParagraph>
                       <ContentParagraph>
                       <span className="font-medium dark:text-white text-black">At Hobfit,</span> I re-architected the platform into efficient containerized microservices, scaled to tens of thousands of users, and developed AI assistants powering thousands of daily coaching sessions.
