@@ -1,6 +1,19 @@
 import { BlogPost } from '@/types/blog'
 
 export const blogs: BlogPost[] = [
+   {
+    id: 'ai-productivity-paradox',
+    title: 'The AI Productivity Paradox: Why Efficiency is Skyrocketing While Employees are Burning Out',
+    description: 'We pull from the latest peer-reviewed research,to understand why our AI “copilots” may be making us crash.',
+    content: "",
+    date: '2025-03-07',
+    author: 'Dilpreet Grover',
+    tags: ['Artificial Intelligence', 'Future Of Work', 'Productivity', 'Mental Health', "Technology"], 
+    readTime: '14 min read',
+    externalUrl: [
+      'https://medium.com/@dilpreetgrover2/the-ai-productivity-paradox-why-efficiency-is-skyrocketing-while-employees-are-burning-out-3747c44910d3'
+    ]
+  },
   {
     id: 'guide-to-ai-benchmarks',
     title: 'Definitive Guide to AI Benchmarks: Comparing Models, Testing Your Own, and Understanding the Future',
@@ -8,7 +21,7 @@ export const blogs: BlogPost[] = [
     content: "",
     date: '2025-03-07',
     author: 'Dilpreet Grover',
-    tags: ['AI', 'Benchmarking Process', 'Testing', 'Model Evaluation'], 
+    tags: ['Artificial Intelligence', 'Benchmarking Process', 'Testing', 'Model Evaluation'], 
     readTime: '7 min read',
     externalUrl: [
       'https://levelup.gitconnected.com/definitive-guide-to-ai-benchmarks-comparing-models-testing-your-own-and-understanding-the-future-e61d4cf73a11',
@@ -64,7 +77,7 @@ export const blogs: BlogPost[] = [
     content: "",
     date: '2024-07-29',
     author: 'Dilpreet Grover',
-    tags: ['Buildspace', 'AI', 'Research', 'Community'], 
+    tags: ['Buildspace', 'Artificial Intelligence', 'Research', 'Community'], 
     readTime: '7 min read',
     externalUrl: [
       'https://medium.com/@dilpreetgrover2/embracing-the-side-project-hustle-my-journey-through-the-buildspace-challenge-7cf6dba760bc',
