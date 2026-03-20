@@ -2,6 +2,19 @@ import { BlogPost } from '@/types/blog'
 
 export const blogs: BlogPost[] = [
    {
+    id: 'the_ai-mirage',
+    title: 'The AI Mirage: Power Grids, Paper Billions, and the Global Reality Check.',
+    description: 'This is a report about friction between the digital and the physical, between the promise and the proof, between the hype and the hardware.',
+    content: "",
+    date: '2025-03-07',
+    author: 'Dilpreet Grover',
+    tags: ['Artificial Intelligence', "Technology", "Startup", "Data Science", "Business"], 
+    readTime: '18 min read',
+    externalUrl: [
+      'https://medium.com/@dilpreetgrover2/the-ai-mirage-power-grids-paper-billions-and-the-global-reality-check-c9aa12ffc532'
+    ]
+  },
+   {
     id: 'ai-productivity-paradox',
     title: 'The AI Productivity Paradox: Why Efficiency is Skyrocketing While Employees are Burning Out',
     description: 'We pull from the latest peer-reviewed research,to understand why our AI “copilots” may be making us crash.',
