@@ -1,12 +1,25 @@
 import { BlogPost } from '@/types/blog'
 
 export const blogs: BlogPost[] = [
+  {
+    id: 'decentralized-os-on-my-own',
+    title: 'I tried making a decentralized OS on my own and failed miserably',
+    description: 'This is not a success story. This is a physics lesson.',
+    content: "",
+    date: '2026-03-23',
+    author: 'Dilpreet Grover',
+    tags: ['Programming', "Technology", "Decentralized ", "Hardware", "Software Development"], 
+    readTime: '12 min read',
+    externalUrl: [
+      'https://medium.com/gitconnected/i-tried-making-a-decentralized-os-on-my-own-and-failed-miserably-60d58dc4d807'
+    ]
+  },
    {
     id: 'the_ai-mirage',
     title: 'The AI Mirage: Power Grids, Paper Billions, and the Global Reality Check.',
     description: 'This is a report about friction between the digital and the physical, between the promise and the proof, between the hype and the hardware.',
     content: "",
-    date: '2025-03-07',
+    date: '2026-03-20',
     author: 'Dilpreet Grover',
     tags: ['Artificial Intelligence', "Technology", "Startup", "Data Science", "Business"], 
     readTime: '18 min read',
@@ -19,7 +32,7 @@ export const blogs: BlogPost[] = [
     title: 'The AI Productivity Paradox: Why Efficiency is Skyrocketing While Employees are Burning Out',
     description: 'We pull from the latest peer-reviewed research,to understand why our AI “copilots” may be making us crash.',
     content: "",
-    date: '2025-03-07',
+    date: '2026-03-18',
     author: 'Dilpreet Grover',
     tags: ['Artificial Intelligence', 'Future Of Work', 'Productivity', 'Mental Health', "Technology"], 
     readTime: '14 min read',
