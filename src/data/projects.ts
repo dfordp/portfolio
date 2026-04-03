@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Hackmate",
     description: "Hackmate is a swipe-based matchmaking platform designed for founders and builders to meet potential co-founders, collaborators, and indie hackers.Instead of social media profiles and endless bios, Hackmate focuses on skills, intent, and mutual interest. Users create lightweight profiles, swipe to express interest, and get matched in real time if there is mutual alignment.The app was built to make collaboration faster and more intentional for startup ecosystems, hackathons, and builder communities.",
     liveLink: "https://www.hackmate.space/",
-    githubLink: "https://github.com/dfordp/hackmate-rework",
+    githubLink: "https://github.com/dfordp/hackmate-space",
     video: 'hackmate',
     image: '/images/hackmate.JPG',
     tweetUrl: "https://x.com/dfordp11/status/1970075146204450873",
