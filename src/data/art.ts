@@ -28,9 +28,11 @@ export const art: ArtPost[] = [
       `<iframe width="560" height="315" src="https://www.youtube.com/embed/ykfIzflcBsc?si=bJOSImej5g6cgSch" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
       `<iframe width="560" height="315" src="https://www.youtube.com/embed/PlY7xaZF7Mk?si=3i-8awFGF4dJidhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
       `<iframe width="560" height="315" src="https://www.youtube.com/embed/R51daZr3nqY?si=dmtQPUuhUfzQA_Du" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+      `<iframe width="560" height="315" src="https://www.youtube.com/embed/-ERdcDGxWqg?si=rvWnaJ4NRLjHf2RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
       `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/Jk3k53Us6MM" frameborder="0"></iframe></div>`,
       `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/3tkIM84blHo" frameborder="0"></iframe></div>`,
-      `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/4QaNy63KNbI" frameborder="0"></iframe></div>`
+      `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/4QaNy63KNbI" frameborder="0"></iframe></div>`,
+      `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/Dq9jKsICn3k" frameborder="0"></iframe></div>`,
     ]
   },
   {
