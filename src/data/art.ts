@@ -33,6 +33,7 @@ export const art: ArtPost[] = [
       `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/3tkIM84blHo" frameborder="0"></iframe></div>`,
       `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/4QaNy63KNbI" frameborder="0"></iframe></div>`,
       `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/Dq9jKsICn3k" frameborder="0"></iframe></div>`,
+      `<div id='tpYtContainer'><iframe width="340" height="620" src="https://www.youtube.com/embed/-Wt0FUnJfVo" frameborder="0"></iframe></div>`,
     ]
   },
   {
