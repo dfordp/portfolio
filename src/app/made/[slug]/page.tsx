@@ -12,6 +12,8 @@ import { Play } from '@/components/icons';
 
 type Props = { params: Promise<{ slug: string }> };
 
+const STAGE = { shipped: 'shipped', going: 'still going', shut: 'shut down' } as const;
+
 // Only the recent projects have story pages. Brewing and older ones link straight
 // out; their old URLs forward to the live site so shared links still land somewhere.
 export async function generateStaticParams() {
@@ -61,7 +63,7 @@ export default async function ProjectPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="crumb">
         <Link className="back" href="/">back to the sketchbook</Link>
-        <span className="status done">shipped</span>
+        <span className={`status${p.stage === 'going' ? '' : ' done'}`}>{STAGE[p.stage ?? 'shipped']}</span>
       </div>
       <h1 className="ptitle serif">{p.title}</h1>
       <div className="tag hand" style={{ fontSize: 26 }}>{p.oneLiner}</div>
@@ -113,6 +115,21 @@ export default async function ProjectPage({ params }: Props) {
           </>
         )}
 
+        {p.reading.length > 0 && (
+          <>
+            <h2 className="sec">the research behind it</h2>
+            <ul className="reading">
+              {p.reading.map((r) => (
+                <li key={r.title}>
+                  {r.url ? <a href={r.url} target="_blank" rel="noopener">{r.title}</a> : <b>{r.title}</b>}
+                  {r.who && <span className="who">{r.who}</span>}
+                  {r.note && <p>{r.note}</p>}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
         {p.stack.length > 0 && (
           <>
             <h2 className="sec">made with</h2>
@@ -126,7 +143,7 @@ export default async function ProjectPage({ params }: Props) {
           <span>written by</span><span>DP (Dilpreet)</span>
           {p.published && <><span>first published</span><span>{shortDate(p.published.slice(0, 10), true)}</span></>}
           {p.updated && <><span>last updated</span><span>{shortDate(p.updated, true)}</span></>}
-          <span>filed under</span><span>code</span>
+          <span>filed under</span><span>code · {STAGE[p.stage ?? 'shipped']}</span>
           {p.link && <><span>visit</span><span><a href={p.link} target="_blank" rel="noopener">{p.linkLabel || p.link.replace(/^https?:\/\/(www\.)?/, '')}</a></span></>}
         </div>
         <div className="nav">

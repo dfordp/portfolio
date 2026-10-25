@@ -4,22 +4,40 @@
   "order": 1,
   "year": "2025",
   "oneLiner": "tells tired maintainers which prs are real and which are someone farming green squares.",
-  "problem": "popular repos get buried in low-effort and duplicate pull requests.",
-  "whatItDoes": "it looks at community health and contribution quality, and flags the spam and the duplicates, so maintainers spend their time merging real work.",
+  "problem": "popular repos get buried in spam prs, duplicates and low-effort contributions. maintainers end up sorting instead of merging.",
+  "whatItDoes": "it's a github app. you load a repo, it pulls in the open prs and issues and stores them as embeddings in postgres. then, for every pr, it shows similar past prs or issues, whether the contributor is new or returning, and small red flags like a missing linked issue or a suspiciously thin description.",
   "cover": "openlens",
   "figCaption": "fig. 1: two prs, crossed out",
   "tags": [
     "github api"
   ],
-  "stack": [],
-  "link": null,
-  "linkLabel": "",
+  "stack": [
+    "fastapi",
+    "next.js",
+    "tailwind",
+    "postgres + pgvector",
+    "github app"
+  ],
+  "link": "https://github.com/dfordp/Sentinel",
+  "linkLabel": "source",
   "published": null,
   "updated": "2026-10-24",
   "story": [
     {
+      "date": "jul 2025",
+      "text": "started it as a github app, then called sentinel."
+    },
+    {
       "date": "oct 2025",
-      "text": "the demo goes up on the technical channel."
+      "text": "made a demo video for the technical channel."
+    },
+    {
+      "date": "after that",
+      "text": "got to talk about it at a few college events."
+    },
+    {
+      "date": "now",
+      "text": "my first project where i negotiated with companies to run it on their own servers. that is the direction i am taking it."
     }
   ],
   "evidence": [
@@ -35,5 +53,7 @@
       "image": "/media/made/openlens.png",
       "videoId": ""
     }
-  ]
+  ],
+  "stage": "going",
+  "reading": []
 }

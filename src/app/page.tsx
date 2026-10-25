@@ -88,13 +88,13 @@ export default async function Home() {
 
       <section id="how">
         <div className="lbl"><b>04</b></div>
-        <h2 className="serif">how i work <span className="hand">two diamonds and a loop</span></h2>
+        <h2 className="serif">how i work <span className="hand">apps, edits, posters. same loop</span></h2>
         <DoubleDiamond />
         <div className="phases">
-          <div className="ph4"><small>01</small><b>discover</b><p>poke at the problem. read, try the bad existing apps, ask people who have it.</p></div>
-          <div className="ph4"><small>02</small><b>define</b><p>pick the one annoying thing worth fixing.</p></div>
-          <div className="ph4"><small>03</small><b>develop</b><p>try a few ways to build it. most get thrown out.</p></div>
-          <div className="ph4"><small>04</small><b>deliver</b><p>ship one. watch what breaks. go back to the start.</p></div>
+          <div className="ph4"><small>01</small><b>discover</b><p>notice what bugs me or grabs me. a clunky app, a scene i keep rewatching, a sky worth shooting.</p></div>
+          <div className="ph4"><small>02</small><b>define</b><p>pick the one thing worth making. a problem to fix, a feeling to cut to, a frame to design.</p></div>
+          <div className="ph4"><small>03</small><b>develop</b><p>try a few versions of it. most get thrown out.</p></div>
+          <div className="ph4"><small>04</small><b>deliver</b><p>ship the app, post the edit, print the poster. see what breaks, then start again.</p></div>
         </div>
       </section>
 

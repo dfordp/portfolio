@@ -22,7 +22,24 @@
   "linkLabel": "onlynerds",
   "published": null,
   "updated": "2026-10-24",
-  "story": [],
+  "story": [
+    {
+      "date": "may 2025",
+      "text": "built at a bnb chain ai hackathon."
+    },
+    {
+      "date": "after launch",
+      "text": "it grew to around 250 users across the world."
+    },
+    {
+      "date": "later",
+      "text": "shut it down when the partnership behind it didn't work out."
+    },
+    {
+      "date": "now",
+      "text": "re-experimenting with the idea in a different direction."
+    }
+  ],
   "evidence": [
     {
       "caption": "the demo",
@@ -36,5 +53,7 @@
       "image": "/media/made/onlynerds.jpeg",
       "videoId": ""
     }
-  ]
+  ],
+  "stage": "shut",
+  "reading": []
 }

@@ -23,7 +23,7 @@ Status key: `draft` (wording proposed, not approved) · `approved` · `needs-inf
 | Bio, line 1 | approved | my friends call me dp. forms call me dilpreet. ("dilpreet" is redacted by default; hover or tap reveals it) |
 | Bio, line 2 | approved | i build small apps for things that annoy me. |
 | Bio, line 3 | approved | i also edit videos using stuff i shot myself, tv series, movies and random media. |
-| Bio, line 4 | approved | i design posters and cover art too. |
+| Bio, line 4 | approved | sometimes i explore new aesthetics through cover art, my apps' design and personal graphic design. |
 | Bio, line 5 | approved | some of it's useful. most of it's just fun. |
 | Footer line | draft | made with too much chai |
 | Footer right | approved | © 2026 DP · madebydp.com |

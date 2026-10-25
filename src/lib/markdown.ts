@@ -58,6 +58,7 @@ export async function projectMarkdown(slug: string) {
     p.problem && `## The problem\n\n${p.problem}`,
     p.whatItDoes && `## What it does\n\n${p.whatItDoes}`,
     p.story.length ? `## The story so far\n\n${p.story.map((s) => `- ${s.date}: ${s.text}`).join('\n')}` : '',
+    p.reading.length ? `## The research behind it\n\n${p.reading.map((r) => `- ${r.url ? `[${r.title}](${r.url})` : r.title}${r.who ? `, ${r.who}` : ''}${r.note ? `: ${r.note}` : ''}`).join('\n')}` : '',
     p.stack.length ? `## Made with\n\n${p.stack.join(', ')}` : '',
     p.link ? `## Link\n\n${p.link}` : '',
   ].filter(Boolean).join('\n\n');

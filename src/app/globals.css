@@ -192,11 +192,11 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .foot .hand { font-size: 21px; color: var(--ink-2); }
 
 /* dock */
-.dock { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 2px; background: var(--ink); padding: 6px; border-radius: 999px; z-index: 40; }
-.dock a, .dock button { all: unset; cursor: pointer; color: #e9e0cc; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; transition: background .15s, transform .15s; }
-.dock svg { width: 19px; height: 19px; }
-.dock a:hover, .dock button:hover { background: #463f36; transform: translateY(-2px); }
-.dock a:focus-visible, .dock button:focus-visible { outline: 2px solid var(--hl); }
+.dock { position: fixed; bottom: 18px; left: 0; right: 0; margin: 0 auto; width: max-content; display: flex; align-items: center; gap: 2px; background: var(--ink); padding: 6px; border-radius: 999px; z-index: 40; }
+.dock > button, .dock .music > button { all: unset; cursor: pointer; color: #e9e0cc; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; transition: background .15s, transform .15s; }
+.dock > button svg, .dock .music > button svg { width: 19px; height: 19px; }
+.dock > button:hover, .dock .music > button:hover { background: #463f36; transform: translateY(-2px); }
+.dock > button:focus-visible, .dock .music > button:focus-visible { outline: 2px solid var(--hl); }
 .dock .cur { color: #fff; background: #3a342c; }
 .dock [data-tip]:hover::after { content: attr(data-tip); position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%); background: var(--ink); color: var(--paper); font: 500 12px var(--font-sans); padding: 3px 9px; border-radius: 6px; white-space: nowrap; }
 .music { display: flex; align-items: center; background: var(--red); border-radius: 999px; margin: 0 6px; }
@@ -304,6 +304,12 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .ev .pl { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
 .ev .pl span { width: 52px; height: 52px; border-radius: 50%; background: var(--card); border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; }
 .ev .pl svg { width: 22px; height: 22px; }
+.reading { list-style: none; padding: 0; margin: 8px 0 0; }
+.reading li { padding: 12px 0; border-bottom: 1.5px dashed var(--rule); }
+.reading a, .reading b { font-family: var(--font-serif); font-weight: 400; font-size: 22px; line-height: 1.2; color: var(--ink); text-decoration: none; }
+.reading a:hover { color: var(--red); }
+.reading .who { display: block; font-size: 13.5px; color: var(--ink-3); margin-top: 2px; }
+.reading p { font-size: 16px; color: var(--ink-2); margin: 6px 0 0; }
 .stack { display: flex; gap: 8px; flex-wrap: wrap; }
 .stack span { font-size: 14px; border: 1.5px solid var(--ink); background: var(--card); padding: 2px 11px; }
 .pfoot { margin-top: 72px; border-top: 1.5px solid var(--ink); padding-top: 18px; font-size: 14px; color: var(--ink-2); }
@@ -332,10 +338,15 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
   .older { columns: 1; }
   .phases { grid-template-columns: 1fr 1fr; }
   .tab { padding: 8px 11px 7px; font-size: 15px; }
-  .dock a, .dock button { width: 34px; height: 34px; }
-  .dock.playing .np { max-width: 120px; }
-  .np-t { max-width: 70px; }
-  .player .card { width: min(300px, calc(100vw - 32px)); }
+  .dock > button, .dock .music > button { width: 34px; height: 34px; }
+  .dock { bottom: 12px; }
+  .dock.playing .np { max-width: 130px; padding-right: 10px; }
+  .np-t { max-width: 96px; font-size: 12px; }
+  .player .card,
+  .player.open .card { position: fixed; left: 12px; right: 12px; bottom: 76px; width: auto; transform: none; }
+  .player .card { transform: translateY(12px); }
+  .player.open .card { transform: translateY(0); }
+  .player .card::after { display: none; }
   .redact .stamp-r { display: none; }
 }
 

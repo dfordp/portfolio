@@ -71,6 +71,15 @@ export default config({
           defaultValue: 'recent',
         }),
         order: fields.integer({ label: 'Order (lower shows first)', defaultValue: 50 }),
+        stage: fields.select({
+          label: 'Stamp on the story page',
+          options: [
+            { label: 'shipped', value: 'shipped' },
+            { label: 'still going', value: 'going' },
+            { label: 'shut down', value: 'shut' },
+          ],
+          defaultValue: 'shipped',
+        }),
         year: fields.text({ label: 'Year' }),
         oneLiner: fields.text({ label: 'One-liner (handwritten)' }),
         problem: fields.text({ label: 'The problem', multiline: true }),
@@ -91,6 +100,15 @@ export default config({
           { label: 'The story so far', itemLabel: (p) => `${p.fields.date.value} · ${p.fields.text.value}` },
         ),
         evidence,
+        reading: fields.array(
+          fields.object({
+            title: fields.text({ label: 'Title' }),
+            who: fields.text({ label: 'Who / where (authors, journal, year)' }),
+            url: fields.url({ label: 'Link' }),
+            note: fields.text({ label: 'Why it matters (one line)' }),
+          }),
+          { label: 'The research behind it', itemLabel: (p) => p.fields.title.value || 'reading' },
+        ),
       },
     }),
 

@@ -47,6 +47,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const audio = useRef<HTMLAudioElement>(null);
   const pending = useRef<string | null>(null);
   const closeTimer = useRef<number | null>(null);
+  const autoNext = useRef(false); // a song ended: play whatever comes next
   const [playing, setPlaying] = useState(false);
   const [track, setTrack] = useState(0);
   const [open, setOpen] = useState(false);
@@ -99,7 +100,8 @@ export default function Dock({ songs }: { songs: Song[] }) {
   // Changing tracks swaps the <audio> src; keep playing if we were.
   useEffect(() => {
     const a = audio.current;
-    if (a && playing) a.play().catch(() => setPlaying(false));
+    if (a && (playing || autoNext.current)) a.play().catch(() => setPlaying(false));
+    autoNext.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [track]);
 
@@ -223,7 +225,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
       <audio
         ref={audio} src={song.src} preload="metadata"
         onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
-        onEnded={() => go(idx + 1)} onError={() => setPlaying(false)}
+        onEnded={() => { autoNext.current = true; go(idx + 1); }} onError={() => setPlaying(false)}
         onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)}
         onLoadedMetadata={(e) => setLength(e.currentTarget.duration)}
       />

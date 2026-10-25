@@ -5,14 +5,16 @@
   "year": "2025",
   "oneLiner": "feed it a three-hour movie. get a trailer back.",
   "problem": "sometimes you want the story of a film, not all three hours of it.",
-  "whatItDoes": "you give it a full movie or a long video. it finds the big moments and cuts a short trailer, plus a retelling of the story in plain words. it runs on openai's multimodal models.",
+  "whatItDoes": "you drop a full movie or a long video in. it reads the subtitles or script, finds the emotional and story beats, writes a retelling the way a film critic would, then cuts a short trailer to match. narration comes from elevenlabs, the writing from openai's multimodal models.",
   "cover": "retold",
   "figCaption": "fig. 1: three hours in, one minute out",
   "tags": [
     "openai"
   ],
   "stack": [
-    "openai multimodal models"
+    "python",
+    "openai multimodal models",
+    "elevenlabs"
   ],
   "link": "https://www.youtube.com/@retold-dfordp",
   "linkLabel": "the retold youtube channel",
@@ -21,7 +23,11 @@
   "story": [
     {
       "date": "oct 2025",
-      "text": "five trailers go up on its own youtube channel."
+      "text": "five trailers go up on its own youtube channel: the silence of the lambs, sharknado, beetlejuice, circle and citizen kane."
+    },
+    {
+      "date": "after that",
+      "text": "went through an ai influencer phase: experimenting with ai characters that front the retellings."
     }
   ],
   "evidence": [
@@ -55,5 +61,7 @@
       "image": null,
       "videoId": "EIUzHvSvFA0"
     }
-  ]
+  ],
+  "stage": "shipped",
+  "reading": []
 }
