@@ -56,14 +56,14 @@ Each needs: one-liner, the problem, what it does, timeline entries, stack, link,
 - **Facts** (site + YouTube): photo-based plant ID with a health score; per-plant profile ("digital twin") with photo journal and care history; reports that cite sources; watering reminders that move when rain is forecast; filter plants by room; three tiers (Starter, Enthusiast, Collector); early-bird waitlist. First demo video "Aarchid Demo" posted 2024-09-09 on the technical channel (JRoQtHEF_oY).
 - **One-liner:** a personal botanist on your phone
 - **The problem:** plant apps say water on tuesdays. plants don't know what a tuesday is.
-- **What it does:** you snap a photo and it tells you the species and how the plant is doing. reminders skip the days it's going to rain anyway.
+- **What it does:** it's a plant-care harness. it takes into account where you are, which plant it is and how old it is, so the care it suggests fits that plant, in that place, at that age. (DP's description, oct 2026)
 - **Needs Dilpreet:** the real origin story (the mockup's "killed two basil plants" line is invented, remove unless true), stack, 2025 timeline.
 
 ### status widgets · status-widgets.com · `draft`
 - **Facts** (from the site): monitors third-party providers (AI APIs, payment gateways) in real time; lets the app's UI adapt during outages (cached results, automatic retries, in-context banners) instead of a generic error; framework agnostic, edge-native; "400+ developers on the waitlist".
-- **One-liner:** calm ui for when apis aren't
-- **The problem:** when an ai provider or a payment gateway has a bad day, your app says "something went wrong" and people panic.
-- **What it does:** it watches the services your app depends on. when one wobbles, your app shows a cached answer or a short note instead of an error.
+- **One-liner:** so your users stop blaming you for someone else's outage
+- **The problem:** when something your app depends on goes down, your users blame you for things you can't control.
+- **What it does:** it's event-driven. it watches your apps and infrastructure, and when something goes down it tells your users automatically, so they always know what's wrong. (DP's description, oct 2026: not a cache layer)
 - **Needs Dilpreet:** start date, stack, timeline.
 
 ## 4. Stuff i made → code

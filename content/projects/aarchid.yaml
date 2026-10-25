@@ -5,7 +5,7 @@
   "year": "2026",
   "oneLiner": "a personal botanist on your phone",
   "problem": "plant apps tell you to water on tuesdays. plants don't know what a tuesday is.",
-  "whatItDoes": "you snap a photo and it tells you the species and how the plant is doing. reminders skip the days it's going to rain anyway.",
+  "whatItDoes": "it's a plant-care harness. it takes into account where you are, which plant it is and how old it is, so the care it suggests fits that plant, in that place, at that age.",
   "cover": "aarchid",
   "figCaption": "",
   "tags": [],
