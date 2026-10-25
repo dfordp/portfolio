@@ -62,6 +62,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const [track, setTrack] = useState(0); // position in the play order
   const [order, setOrder] = useState<number[] | null>(null); // shuffled on load
   const [open, setOpen] = useState(false);
+  const [nudge, setNudge] = useState(false); // "this page has a soundtrack" hint
   const [time, setTime] = useState(0);
   const [length, setLength] = useState(0);
   const [volume, setVolume] = useState(0.7);
@@ -111,6 +112,19 @@ export default function Dock({ songs }: { songs: Song[] }) {
     try { localStorage.setItem('dp-volume', String(volume)); } catch { /* private mode */ }
   }, [volume, muted]);
 
+  // Point people at the play button a moment after load, unless they've played before.
+  useEffect(() => {
+    let seen = false;
+    try { seen = localStorage.getItem('dp-played') === '1'; } catch { /* private mode */ }
+    if (seen) return;
+    const t = window.setTimeout(() => setNudge(true), 2200);
+    return () => window.clearTimeout(t);
+  }, []);
+  const dismissNudge = () => {
+    setNudge(false);
+    try { localStorage.setItem('dp-played', '1'); } catch { /* private mode */ }
+  };
+
   // Every visitor gets their own shuffle on load, so the song shown on top is the
   // one that plays. It runs after hydration (the server can't know the order).
   useEffect(() => {
@@ -139,6 +153,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
     const a = audio.current;
     if (!a) return;
     restoreVolume();
+    dismissNudge();
     if (a.paused) a.play().catch(() => setPlaying(false));
     else a.pause();
   };
@@ -241,7 +256,16 @@ export default function Dock({ songs }: { songs: Song[] }) {
             </div>
           </div>
         </div>
-        <div className="music">
+        {nudge && !open && (
+          <div className="nudge" role="note">
+            <button type="button" className="nudge-x" onClick={dismissNudge} aria-label="dismiss">×</button>
+            <span className="hand">psst. this page has a soundtrack</span>
+            <svg width="34" height="30" viewBox="0 0 34 30" aria-hidden="true">
+              <path filter="url(#rough)" d="M6 3C4 14 12 22 24 25M24 25l-7 2M24 25l-3-6" fill="none" stroke="#C8452B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+        )}
+        <div className={`music${nudge && !playing ? ' pulse' : ''}`}>
           <button type="button" onClick={() => { toggle(); show(); }} aria-label={playing ? 'pause music' : 'play my favourites'} aria-pressed={playing} aria-expanded={open}>
             {playing ? <Pause /> : <Play />}
           </button>

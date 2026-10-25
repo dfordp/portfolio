@@ -206,6 +206,16 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .dock.playing .np { max-width: 180px; padding-right: 12px; }
 .np-t { max-width: 130px; overflow: hidden; text-overflow: ellipsis; }
 
+/* "psst. this page has a soundtrack" hint above the play button */
+.nudge { position: absolute; bottom: calc(100% + 14px); left: 50%; transform: translateX(calc(-100% + 10px)) rotate(-3deg); display: flex; align-items: flex-end; gap: 2px; white-space: nowrap; pointer-events: auto; animation: nudge-in .5s cubic-bezier(.2, .8, .3, 1.3) both; }
+.nudge .hand { font-size: 22px; color: var(--red); background: var(--paper); padding: 0 6px; line-height: 1.2; }
+.nudge svg { margin-bottom: -18px; }
+.nudge-x { all: unset; cursor: pointer; align-self: flex-start; margin-right: 2px; font-size: 16px; line-height: 1; color: var(--ink-3); padding: 2px 4px; }
+.nudge-x:hover { color: var(--ink); }
+@keyframes nudge-in { from { opacity: 0; transform: translateX(calc(-100% + 10px)) translateY(8px) rotate(-3deg); } }
+.music.pulse { animation: pulse 1.8s ease-out infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 #c8452b88; } 80%, 100% { box-shadow: 0 0 0 12px #c8452b00; } }
+
 /* player card: opens above the dock on hover/focus/tap, folds away after */
 .player { position: relative; display: flex; align-items: center; }
 .player .card {
@@ -360,10 +370,12 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
   .player.open .card { transform: translateY(0); }
   .player .card::after { display: none; }
   .redact .stamp-r { display: none; }
+  .nudge { transform: translateX(calc(-100% + 10px)) rotate(-3deg); }
+  .nudge .hand { font-size: 19px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .settle { opacity: 1; translate: none; rotate: none; transition: none; }
-  .np .eq i, .vinyl.spin { animation: none; }
+  .np .eq i, .vinyl.spin, .music.pulse, .nudge { animation: none; }
   * { transition-duration: 0s !important; }
 }
