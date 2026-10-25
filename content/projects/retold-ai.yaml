@@ -19,7 +19,7 @@
   "link": "https://www.youtube.com/@retold-dfordp",
   "linkLabel": "the retold youtube channel",
   "published": null,
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "story": [
     {
       "date": "oct 2025",
@@ -27,7 +27,7 @@
     },
     {
       "date": "after that",
-      "text": "built a harness for an ai influencer: a character with its own thoughts and opinions that kept posting on its own. made a few unlisted shorts with it."
+      "text": "built a harness for an ai influencer: a character with its own thoughts and opinions that kept posting on its own. it made shorts about founders and startups (three of them are in the evidence below)."
     },
     {
       "date": "what i learned",
@@ -64,6 +64,24 @@
       "kind": "youtube",
       "image": null,
       "videoId": "EIUzHvSvFA0"
+    },
+    {
+      "caption": "ai influencer: scaling to 200k mrr without vc",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "Dq9jKsICn3k"
+    },
+    {
+      "caption": "ai influencer: the $300m startup yc delisted",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "-Wt0FUnJfVo"
+    },
+    {
+      "caption": "ai influencer: a six-figure board game business",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "5ytQXzshlx0"
     }
   ],
   "stage": "shipped",
