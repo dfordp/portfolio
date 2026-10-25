@@ -21,7 +21,7 @@
   "link": "https://github.com/dfordp/Sentinel",
   "linkLabel": "source",
   "published": null,
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "story": [
     {
       "date": "jul 2025",
@@ -36,8 +36,12 @@
       "text": "got to talk about it at a few college events."
     },
     {
+      "date": "jul 2026",
+      "text": "built a complete version for a client and sold it for $2,500. the first project i've ever sold."
+    },
+    {
       "date": "now",
-      "text": "my first project where i negotiated with companies to run it on their own servers. that is the direction i am taking it."
+      "text": "negotiating with companies to run it on their own servers. that is the direction i am taking it."
     }
   ],
   "evidence": [
@@ -46,6 +50,13 @@
       "kind": "youtube",
       "image": null,
       "videoId": "rJBH-l3n2CA"
+    },
+    {
+      "caption": "the day it sold, jul 2026",
+      "kind": "image",
+      "image": "/media/made/openlens-sold.jpg",
+      "videoId": "",
+      "link": "https://x.com/dfordp11/status/2076027960302481730"
     },
     {
       "caption": "the dashboard",

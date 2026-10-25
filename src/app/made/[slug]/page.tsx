@@ -107,7 +107,10 @@ export default async function ProjectPage({ params }: Props) {
                   );
                 }
                 if (e.image) {
-                  return <div key={n} className="ev settle"><div className="shot"><Image src={e.image} alt={e.caption} fill sizes="(max-width: 640px) 100vw, 340px" /></div><div className="c">{e.caption}</div></div>;
+                  const shot = <><div className="shot"><Image src={e.image} alt={e.caption} fill sizes="(max-width: 640px) 100vw, 340px" /></div><div className="c">{e.caption}{e.link && ' ↗'}</div></>;
+                  return e.link
+                    ? <a key={n} className="ev settle" href={e.link} target="_blank" rel="noopener">{shot}</a>
+                    : <div key={n} className="ev settle">{shot}</div>;
                 }
                 return null;
               })}

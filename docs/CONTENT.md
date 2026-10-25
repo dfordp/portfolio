@@ -75,7 +75,7 @@ Recent (cards):
 
 | Project | Facts | Links | Draft one-liner |
 |---|---|---|---|
-| openlens | Repo health for maintainers: contribution quality, filters spam and duplicate PRs. Repo "Sentinel". Demo 2025-10-08 (rJBH-l3n2CA). | demo video | tells tired maintainers which prs are real and which are someone farming green squares. |
+| openlens | Sold a complete version to a client for $2,500 (jul 2026, x.com/dfordp11/status/2076027960302481730): DP's first sold project. Repo health for maintainers: contribution quality, filters spam and duplicate PRs. Repo "Sentinel". Demo 2025-10-08 (rJBH-l3n2CA). | demo video | tells tired maintainers which prs are real and which are someone farming green squares. |
 | retold ai | Turns full movies/long videos into AI trailers and story retellings with OpenAI's multimodal models. Own YouTube channel (@retold-dfordp, 5 trailers, 2025-10-12). Its project page holds those trailers. | youtube channel | feed it a three-hour movie. get a trailer back. |
 | black hole simulation engine | Black hole physics and gravitational lensing in 2D/3D; C++17, CMake; CPU/GPU geodesics. | source only | i watch too much interstellar. so i made light bend around a black hole in c++. |
 | spotify mcp | MCP server that analyses listening history: taste shifts, trends, no Premium needed. | tbd | tells you how your music taste has shifted. no premium needed. |

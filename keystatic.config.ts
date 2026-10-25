@@ -22,6 +22,7 @@ const evidence = fields.array(
     }),
     image: fields.image({ label: 'Image', directory: 'public/media/made', publicPath: '/media/made/' }),
     videoId: fields.text({ label: 'YouTube id or Mux playback id' }),
+    link: fields.url({ label: 'Link (optional, e.g. the original post)' }),
   }),
   { label: 'Evidence', itemLabel: (p) => p.fields.caption.value || 'evidence' },
 );
