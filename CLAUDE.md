@@ -46,7 +46,7 @@ Home, top to bottom (each section has a small red index number):
 There is no third-person "facts" section; it was dropped because it read as written about DP, not by DP.
 
 Detail pages:
-- `/made/[slug]` project page, only for `recent` projects (Retold AI's page holds its five AI-cut trailers as evidence). Brewing/older slugs redirect to their link: title, one-liner, byline (photo, "by DP", published date + time, updated date, read time), doodle cover, the problem, what it does, the story so far (timeline), evidence (taped screenshots / demo videos), made with, footer (written by / first published / last updated / filed under / visit link, prev/next).
+- `/made/[slug]` project page, only for `recent` projects (Retold AI's page holds its five AI-cut trailers as evidence). Brewing/older slugs redirect to their link: title, one-liner, byline (photo, "by DP", published date + time, updated date, read time), doodle cover, the problem, what it does, the story so far (timeline), evidence (taped screenshots / demo videos), the research behind it (when there is any), footer (written by / first published / last updated / filed under / visit link, prev/next).
 - `/words/[slug]` blog post: same byline and footer pattern.
 
 Global: one fixed theme (no light/dark toggle), bottom icon dock with the music play button in the center (plays the favourites queue, skip, pause anytime). Dock buttons scroll smoothly and never put `#section` in the URL. The oneko cat follows the cursor (hidden on touch screens). Dock and cat are hidden on `/keystatic`.

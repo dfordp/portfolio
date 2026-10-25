@@ -322,8 +322,6 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .reading a:hover { color: var(--red); }
 .reading .who { display: block; font-size: 13.5px; color: var(--ink-3); margin-top: 2px; }
 .reading p { font-size: 16px; color: var(--ink-2); margin: 6px 0 0; }
-.stack { display: flex; gap: 8px; flex-wrap: wrap; }
-.stack span { font-size: 14px; border: 1.5px solid var(--ink); background: var(--card); padding: 2px 11px; }
 .pfoot { margin-top: 72px; border-top: 1.5px solid var(--ink); padding-top: 18px; font-size: 14px; color: var(--ink-2); }
 .pfoot .meta { display: grid; grid-template-columns: auto 1fr; gap: 5px 20px; }
 .pfoot .meta > span:nth-child(odd) { color: var(--ink-3); }

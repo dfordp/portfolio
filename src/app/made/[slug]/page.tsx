@@ -130,12 +130,6 @@ export default async function ProjectPage({ params }: Props) {
           </>
         )}
 
-        {p.stack.length > 0 && (
-          <>
-            <h2 className="sec">made with</h2>
-            <div className="stack">{p.stack.map((t) => <span key={t}>{t}</span>)}</div>
-          </>
-        )}
       </div>
 
       <div className="pfoot">
