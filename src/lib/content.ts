@@ -40,9 +40,12 @@ export const getArt = cache(async () => {
 
 export const getSongs = cache(async () => {
   const all = await reader.collections.songs.all();
-  return all
+  const songs = all
     .map(({ slug, entry }) => ({ slug, title: entry.title, artist: entry.artist, src: entry.file, order: entry.order ?? 50 }))
     .sort((a, b) => a.order - b.order);
+  // Only queue songs whose file is actually in public/ (a missing mp3 can't play).
+  const present = await Promise.all(songs.map((s) => fs.access(path.join(process.cwd(), 'public', s.src)).then(() => true, () => false)));
+  return songs.filter((_, i) => present[i]);
 });
 export type Song = Awaited<ReturnType<typeof getSongs>>[number];
 

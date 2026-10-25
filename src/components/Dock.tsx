@@ -34,7 +34,8 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const [current, setCurrent] = useState('top');
   const pathname = usePathname();
   const router = useRouter();
-  const song = songs[track];
+  const idx = songs.length ? track % songs.length : 0; // stays valid if the queue changes
+  const song = songs[idx];
 
   useEffect(() => {
     if (pathname !== '/') return;
@@ -72,10 +73,10 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const toggle = () => {
     const a = audio.current;
     if (!a) return;
-    if (a.paused) void a.play();
+    if (a.paused) a.play().catch(() => setPlaying(false));
     else a.pause();
   };
-  const next = () => setTrack((t) => (t + 1) % songs.length);
+  const next = () => setTrack((idx + 1) % songs.length);
   const item = ({ id, tip, Icon }: { id: string; tip: string; Icon: typeof Home }) => (
     <button key={id} type="button" onClick={() => jump(id)} data-tip={tip} aria-label={tip} className={pathname === '/' && current === id ? 'cur' : undefined}>
       <Icon />
@@ -92,9 +93,9 @@ export default function Dock({ songs }: { songs: Song[] }) {
         <div className="np" aria-live="polite">
           <span className="eq" aria-hidden="true"><i /><i /><i /></span>
           <span className="np-t">{song.title.toLowerCase()} · {song.artist.toLowerCase()}</span>
-          <span className="np-n">{track + 1}/{songs.length}</span>
+          <span className="np-n">{idx + 1}/{songs.length}</span>
           {songs.length > 1 && (
-            <button type="button" className="skip" onClick={next} data-tip={`next: ${songs[(track + 1) % songs.length].title.toLowerCase()}`} aria-label="next song">
+            <button type="button" className="skip" onClick={next} data-tip={`next: ${songs[(idx + 1) % songs.length].title.toLowerCase()}`} aria-label="next song">
               <Skip />
             </button>
           )}
