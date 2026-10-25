@@ -25,11 +25,15 @@
   "story": [
     {
       "date": "may 2025",
-      "text": "built at a bnb chain ai hackathon: forkable courses, ai tutors and skill nfts, end to end."
+      "text": "built it over a hackathon weekend at a bnb chain ai hackathon with aditya, priyanshu and one more teammate. forkable courses, ai tutors and skill nfts, end to end. aditya's verdict on me: \"sucks at vibe coding but normally W.\""
+    },
+    {
+      "date": "jun 2025",
+      "text": "we came out runners-up nationally. kind of my last hackathon, as it turned out."
     },
     {
       "date": "after that",
-      "text": "a small experiment. it stayed one."
+      "text": "a small experiment. it stayed one. priyanshu wrote a whole thread on how that weekend changed things."
     }
   ],
   "evidence": [
@@ -38,6 +42,20 @@
       "kind": "mux",
       "image": null,
       "videoId": "1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA"
+    },
+    {
+      "caption": "pitching it on stage",
+      "kind": "image",
+      "image": "/media/made/onlynerds-pitch.jpg",
+      "videoId": "",
+      "link": "https://x.com/priyanshudotsol/status/1937093765149188424"
+    },
+    {
+      "caption": "the day we came runners-up",
+      "kind": "image",
+      "image": "/media/made/onlynerds-runners-up.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1937031042256286090"
     },
     {
       "caption": "the landing page",
