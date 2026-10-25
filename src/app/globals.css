@@ -209,7 +209,7 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 /* player card: opens above the dock on hover/focus/tap, folds away after */
 .player { position: relative; display: flex; align-items: center; }
 .player .card {
-  position: absolute; bottom: calc(100% + 16px); left: 50%; width: 560px;
+  position: absolute; bottom: calc(100% + 16px); left: 50%; width: min(560px, calc(100vw - 32px));
   background: var(--card); color: var(--ink); border: 1.5px solid var(--ink); padding: 14px 16px 12px;
   transform: translateX(-50%) translateY(10px) rotate(-.6deg); opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .25s ease-out, transform .3s cubic-bezier(.2, .8, .3, 1.2), visibility 0s .3s;
@@ -218,7 +218,7 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .player .card::before { content: ''; position: absolute; top: -10px; left: 50%; width: 58px; height: 19px; margin-left: -29px; background: #ecdfb7d9; transform: rotate(-3deg); }
 .player .card::after { content: ''; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; } /* hover bridge to the pill */
 .player.open .card { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0) rotate(-.6deg); transition-delay: 0s; }
-.card button { all: unset; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 50%; }
+.card button { all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 50%; }
 .card button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 .card-h { display: flex; justify-content: space-between; align-items: center; }
 .card-h .hand { font-size: 19px; color: var(--ink-3); }
@@ -248,7 +248,7 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .card-r { border-left: 1.5px dashed var(--rule); padding-left: 16px; display: flex; flex-direction: column; min-width: 0; }
 .q-h { font-size: 18px; color: var(--ink-3); margin: 2px 0 4px; }
-.queue { list-style: none; padding: 0 4px 0 0; margin: 0; height: 196px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
+.queue { list-style: none; padding: 0 4px 0 0; margin: 0; height: 196px; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
 .queue button { width: 100%; justify-content: flex-start; gap: 10px; padding: 5px 4px; border-radius: 6px; }
 .queue button:hover { background: var(--tint); }
 .queue .vinyl { width: 32px; height: 32px; flex-shrink: 0; }
@@ -322,6 +322,13 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .pfoot .nav small { display: block; color: var(--ink-3); font-size: 12px; }
 .pfoot .nav b { font-family: var(--font-serif); font-weight: 400; font-size: 30px; color: var(--ink); }
 .pfoot .nav a:hover b { color: var(--red); }
+
+@media (max-width: 900px) and (min-width: 641px) {
+  .player .card,
+  .player.open .card { position: fixed; left: 0; right: 0; margin: 0 auto; bottom: 80px; }
+  .player .card { transform: translateY(10px) rotate(-.6deg); }
+  .player.open .card { transform: translateY(0) rotate(-.6deg); }
+}
 
 /* ---------- small screens ---------- */
 @media (max-width: 640px) {
