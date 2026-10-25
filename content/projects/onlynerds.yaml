@@ -44,11 +44,25 @@
       "videoId": "1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA"
     },
     {
-      "caption": "pitching it on stage",
+      "caption": "the team, hackathon weekend",
       "kind": "image",
-      "image": "/media/made/onlynerds-pitch.jpg",
+      "image": "/media/made/onlynerds-team.jpg",
       "videoId": "",
-      "link": "https://x.com/priyanshudotsol/status/1937093765149188424"
+      "link": "https://x.com/adxtyahq/status/1926635226190455096"
+    },
+    {
+      "caption": "where it happened",
+      "kind": "image",
+      "image": "/media/made/onlynerds-venue.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1926635226190455096"
+    },
+    {
+      "caption": "the landing page",
+      "kind": "image",
+      "image": "/media/made/onlynerds-landing.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1937031042256286090"
     },
     {
       "caption": "the day we came runners-up",
@@ -58,10 +72,11 @@
       "link": "https://x.com/adxtyahq/status/1937031042256286090"
     },
     {
-      "caption": "the landing page",
+      "caption": "pitching it on stage",
       "kind": "image",
-      "image": "/media/made/onlynerds.jpeg",
-      "videoId": ""
+      "image": "/media/made/onlynerds-pitch.jpg",
+      "videoId": "",
+      "link": "https://x.com/priyanshudotsol/status/1937093765149188424"
     }
   ],
   "stage": "shipped",
