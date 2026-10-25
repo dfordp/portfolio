@@ -13,6 +13,10 @@ export const Pencil = (p: P) => <S {...p}><path d="M4 20h4L18.5 9.5a2.8 2.8 0 0 
 export const Smile = (p: P) => <S {...p}><circle cx="12" cy="12" r="9" /><path d="M9 10h.01M15 10h.01" /><path d="M9.5 15a3.5 3.5 0 0 0 5 0" /></S>;
 export const Play = (p: P) => <S {...p}><path d="M7 4v16l13-8z" /></S>;
 export const Skip = (p: P) => <S {...p}><path d="M4 5v14l11-7z" /><path d="M20 5v14" /></S>;
+export const Back = (p: P) => <S {...p}><path d="M20 5v14L9 12z" /><path d="M4 5v14" /></S>;
+export const Volume = (p: P) => <S {...p}><path d="M15 8a5 5 0 0 1 0 8" /><path d="M17.7 5a9 9 0 0 1 0 14" /><path d="M6 15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2l3.5-4.5A.8.8 0 0 1 11 5v14a.8.8 0 0 1-1.5.5L6 15" /></S>;
+export const Mute = (p: P) => <S {...p}><path d="M6 15H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2l3.5-4.5A.8.8 0 0 1 11 5v14a.8.8 0 0 1-1.5.5L6 15" /><path d="M16 10l4 4m0-4l-4 4" /></S>;
+export const ChevronDown = (p: P) => <S {...p}><path d="M6 9l6 6 6-6" /></S>;
 export const Pause = (p: P) => <S {...p}><rect x="6" y="5" width="4" height="14" rx="1" /><rect x="14" y="5" width="4" height="14" rx="1" /></S>;
 export const Code = (p: P) => <S {...p}><path d="M7 8l-4 4 4 4" /><path d="M17 8l4 4-4 4" /><path d="M14 4l-4 16" /></S>;
 export const Movie = (p: P) => <S {...p}><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M8 4v16M16 4v16M4 8h4M4 16h4M4 12h16M16 8h4M16 16h4" /></S>;

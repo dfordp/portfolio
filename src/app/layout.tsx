@@ -15,11 +15,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const site = await getSite();
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: 'DP · madebydp', template: '%s · DP' },
+    title: { default: 'Made by DP', template: '%s · Made by DP' },
     description: site.description,
     authors: [{ name: 'Dilpreet Grover', url: SITE_URL }],
     alternates: { canonical: '/', types: { 'application/rss+xml': '/words/rss.xml' } },
-    openGraph: { siteName: 'madebydp', locale: 'en_US', type: 'website', url: SITE_URL },
+    openGraph: { siteName: 'Made by DP', locale: 'en_US', type: 'website', url: SITE_URL },
     twitter: { card: 'summary_large_image', creator: '@dfordp11' },
   };
 }

@@ -203,16 +203,54 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .dock .music button { color: #fff; }
 .dock .music button:hover { background: #b23b23; }
 .np { display: flex; align-items: center; gap: 8px; max-width: 0; overflow: hidden; transition: max-width .4s ease-out; color: #fff; font-size: 12.5px; white-space: nowrap; }
-.dock.playing .np { max-width: 300px; padding-right: 4px; }
-.np-t { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
-.np-n { opacity: .7; font-variant-numeric: tabular-nums; }
-.dock .music .skip { width: 30px; height: 30px; }
-.dock .music .skip svg { width: 15px; height: 15px; }
-.np .eq { display: flex; gap: 2px; align-items: flex-end; height: 12px; }
-.np .eq i { width: 3px; background: var(--hl); animation: eq .9s ease-in-out infinite; }
-.np .eq i:nth-child(2) { animation-delay: .2s; }
-.np .eq i:nth-child(3) { animation-delay: .4s; }
-@keyframes eq { 0%, 100% { height: 3px; } 50% { height: 12px; } }
+.dock.playing .np { max-width: 180px; padding-right: 12px; }
+.np-t { max-width: 130px; overflow: hidden; text-overflow: ellipsis; }
+
+/* player card: opens above the dock on hover/focus/tap, folds away after */
+.player { position: relative; display: flex; align-items: center; }
+.player .card {
+  position: absolute; bottom: calc(100% + 16px); left: 50%; width: 300px;
+  background: var(--card); color: var(--ink); border: 1.5px solid var(--ink); padding: 14px 16px 12px;
+  transform: translateX(-50%) translateY(10px) rotate(-.6deg); opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .25s ease-out, transform .3s cubic-bezier(.2, .8, .3, 1.2), visibility 0s .3s;
+  cursor: default; text-align: left;
+}
+.player .card::before { content: ''; position: absolute; top: -10px; left: 50%; width: 58px; height: 19px; margin-left: -29px; background: #ecdfb7d9; transform: rotate(-3deg); }
+.player .card::after { content: ''; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; } /* hover bridge to the pill */
+.player.open .card { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0) rotate(-.6deg); transition-delay: 0s; }
+.card button { all: unset; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink); border-radius: 50%; }
+.card button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.card-h { display: flex; justify-content: space-between; align-items: center; }
+.card-h .hand { font-size: 19px; color: var(--ink-3); }
+.card .fold { width: 26px; height: 26px; }
+.card .fold:hover { background: var(--tint); }
+.card .fold svg { width: 18px; height: 18px; }
+.now-row { display: flex; gap: 12px; align-items: center; margin: 8px 0 10px; }
+.now-row .vinyl { width: 52px; height: 52px; flex-shrink: 0; }
+.vinyl.spin { animation: spin 3.2s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.now-t { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.now-t b { font-family: var(--font-serif); font-weight: 400; font-size: 22px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.now-t span { font-size: 13px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card input[type='range'] { -webkit-appearance: none; appearance: none; width: 100%; height: 4px; background: linear-gradient(var(--red), var(--red)) 0 / var(--p, 0%) 100% no-repeat, var(--rule); border-radius: 2px; cursor: pointer; margin: 0; }
+.card input[type='range']::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); border: 2px solid var(--card); }
+.card input[type='range']::-moz-range-thumb { width: 10px; height: 10px; border-radius: 50%; background: var(--ink); border: 2px solid var(--card); }
+.times { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--ink-3); margin-top: 4px; font-variant-numeric: tabular-nums; }
+.ctrls { display: flex; justify-content: center; align-items: center; gap: 18px; margin: 6px 0 8px; }
+.ctrls button { width: 34px; height: 34px; }
+.ctrls button:hover { background: var(--tint); }
+.ctrls svg { width: 18px; height: 18px; }
+.ctrls .big { width: 44px; height: 44px; background: var(--red); color: #fff; }
+.ctrls .big:hover { background: #b23b23; }
+.vol { display: flex; align-items: center; gap: 8px; }
+.vol button { width: 28px; height: 28px; flex-shrink: 0; }
+.vol svg { width: 17px; height: 17px; }
+.q-h { font-size: 18px; color: var(--ink-3); margin: 10px 0 2px; border-top: 1.5px dashed var(--rule); padding-top: 8px; }
+.queue { list-style: none; padding: 0; margin: 0; max-height: 172px; overflow-y: auto; }
+.queue button { width: 100%; justify-content: flex-start; gap: 10px; padding: 5px 4px; border-radius: 6px; }
+.queue button:hover { background: var(--tint); }
+.queue .vinyl { width: 32px; height: 32px; flex-shrink: 0; }
+.queue .now-t b { font-size: 17px; }
 
 #neko { width: 32px; height: 32px; position: fixed; pointer-events: none; image-rendering: pixelated; background-image: url(/oneko.gif); z-index: 60; }
 
@@ -295,13 +333,14 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
   .phases { grid-template-columns: 1fr 1fr; }
   .tab { padding: 8px 11px 7px; font-size: 15px; }
   .dock a, .dock button { width: 34px; height: 34px; }
-  .dock.playing .np { max-width: 170px; }
+  .dock.playing .np { max-width: 120px; }
   .np-t { max-width: 70px; }
+  .player .card { width: min(300px, calc(100vw - 32px)); }
   .redact .stamp-r { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .settle { opacity: 1; translate: none; rotate: none; transition: none; }
-  .np .eq i { animation: none; }
+  .np .eq i, .vinyl.spin { animation: none; }
   * { transition-duration: 0s !important; }
 }
