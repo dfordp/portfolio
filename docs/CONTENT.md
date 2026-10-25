@@ -38,7 +38,6 @@ Dropped: "makes things, then edits the evidence", "small apps, big batman energy
 | draft | taking a break between coding and experimenting. |
 | draft | trying new things on purpose: ai-first videos, tiny tools, whatever sticks. |
 | draft | figuring out which of the three brewing things gets the next month. |
-| draft | working away from home for a while. same laptop, worse wifi. |
 
 ## 3. Currently brewing
 
