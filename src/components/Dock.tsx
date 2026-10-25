@@ -29,6 +29,16 @@ function scrollTo(id: string) {
   else document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
+/** Fisher–Yates shuffle of 0..n-1 (called from the play click, never during render). */
+function shuffle(n: number) {
+  const out = [...Array(n).keys()];
+  for (let i = n - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
 const clock = (s: number) => (Number.isFinite(s) ? `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}` : '0:00');
 
 function Vinyl({ color, spin }: { color: string; spin: boolean }) {
@@ -49,7 +59,8 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const closeTimer = useRef<number | null>(null);
   const autoNext = useRef(false); // a song ended: play whatever comes next
   const [playing, setPlaying] = useState(false);
-  const [track, setTrack] = useState(0);
+  const [track, setTrack] = useState(0); // position in the play order
+  const [order, setOrder] = useState<number[] | null>(null); // shuffled on first play
   const [open, setOpen] = useState(false);
   const [time, setTime] = useState(0);
   const [length, setLength] = useState(0);
@@ -58,7 +69,10 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const [current, setCurrent] = useState('top');
   const pathname = usePathname();
   const router = useRouter();
-  const idx = songs.length ? track % songs.length : 0; // stays valid if the queue changes
+  const n = songs.length;
+  const pos = n ? track % n : 0; // stays valid if the queue changes
+  const at = (p: number) => (order && order.length === n ? order[(p + n) % n] : (p + n) % n);
+  const idx = at(pos);
   const song = songs[idx];
 
   useEffect(() => {
@@ -97,13 +111,14 @@ export default function Dock({ songs }: { songs: Song[] }) {
     try { localStorage.setItem('dp-volume', String(volume)); } catch { /* private mode */ }
   }, [volume, muted]);
 
-  // Changing tracks swaps the <audio> src; keep playing if we were.
+  // Changing songs swaps the <audio> src; keep playing if we were.
+  const src = song?.src;
   useEffect(() => {
     const a = audio.current;
     if (a && (playing || autoNext.current)) a.play().catch(() => setPlaying(false));
     autoNext.current = false;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [track]);
+  }, [src]);
 
   useEffect(() => () => { if (closeTimer.current) window.clearTimeout(closeTimer.current); }, []);
 
@@ -117,19 +132,27 @@ export default function Dock({ songs }: { songs: Song[] }) {
     const a = audio.current;
     if (!a) return;
     restoreVolume();
+    if (!order && n > 1) {
+      // Every visitor gets their own shuffle, starting from a random song.
+      const shuffled = shuffle(n);
+      setOrder(shuffled);
+      setTrack(0);
+      if (shuffled[0] !== idx) { autoNext.current = true; setTime(0); return; }
+    }
     if (a.paused) a.play().catch(() => setPlaying(false));
     else a.pause();
   };
-  const go = (to: number) => { setTime(0); setTrack((to + songs.length) % songs.length); };
+  const go = (to: number) => { setTime(0); setTrack((to + n) % n); };
   const back = () => {
     const a = audio.current;
     if (a && a.currentTime > 3) { a.currentTime = 0; return; }
-    go(idx - 1);
+    go(pos - 1);
   };
-  const pick = (i: number) => {
-    if (i === idx) { toggle(); return; }
+  const pick = (p: number) => {
+    if (p === pos) { toggle(); return; }
+    restoreVolume();
     setPlaying(true);
-    go(i);
+    go(p);
   };
   const show = () => {
     restoreVolume();
@@ -140,7 +163,8 @@ export default function Dock({ songs }: { songs: Song[] }) {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
     closeTimer.current = window.setTimeout(() => setOpen(false), CLOSE_DELAY);
   };
-  const upNext = songs.map((s, i) => ({ s, i })).slice(idx + 1).concat(songs.map((s, i) => ({ s, i })).slice(0, idx));
+  // Up next follows the play order (the shuffle, once it exists), wrapping round.
+  const upNext = Array.from({ length: n - 1 }, (_, k) => { const p = (pos + 1 + k) % n; return { p, i: at(p), s: songs[at(p)] }; });
 
   const item = ({ id, tip, Icon }: { id: string; tip: string; Icon: typeof Home }) => (
     <button key={id} type="button" onClick={() => jump(id)} data-tip={tip} aria-label={tip} className={pathname === '/' && current === id ? 'cur' : undefined}>
@@ -165,51 +189,57 @@ export default function Dock({ songs }: { songs: Song[] }) {
               <ChevronDown />
             </button>
           </div>
-          <div className="now-row">
-            <Vinyl color={DISC[idx % DISC.length]} spin={playing} />
-            <div className="now-t">
-              <b>{song.title.toLowerCase()}</b>
-              <span>{song.artist.toLowerCase()}</span>
+          <div className="card-body">
+            <div className="card-l">
+              <div className="now-row">
+                <Vinyl color={DISC[idx % DISC.length]} spin={playing} />
+                <div className="now-t">
+                  <b>{song.title.toLowerCase()}</b>
+                  <span>{song.artist.toLowerCase()}</span>
+                </div>
+              </div>
+              <div className="seek">
+                <input
+                  type="range" min={0} max={length || 0} step={0.1} value={Math.min(time, length || 0)}
+                  onChange={(e) => { const a = audio.current; if (a) a.currentTime = Number(e.target.value); }}
+                  aria-label="seek" tabIndex={open ? 0 : -1}
+                  style={{ ['--p' as string]: `${length ? (time / length) * 100 : 0}%` }}
+                />
+                <div className="times"><span>{clock(time)}</span><span>{clock(length)}</span></div>
+              </div>
+              <div className="ctrls">
+                <button type="button" onClick={back} aria-label="previous song" tabIndex={open ? 0 : -1}><Back /></button>
+                <button type="button" className="big" onClick={toggle} aria-label={playing ? 'pause' : 'play'} tabIndex={open ? 0 : -1}>{playing ? <Pause /> : <Play />}</button>
+                <button type="button" onClick={() => go(pos + 1)} aria-label="next song" tabIndex={open ? 0 : -1}><Skip /></button>
+              </div>
+              <div className="vol">
+                <button type="button" onClick={() => setMuted((m) => !m)} aria-label={muted ? 'unmute' : 'mute'} tabIndex={open ? 0 : -1}>{muted || volume === 0 ? <Mute /> : <Volume />}</button>
+                <input
+                  type="range" min={0} max={1} step={0.01} value={muted ? 0 : volume}
+                  onChange={(e) => { setMuted(false); setVolume(Number(e.target.value)); }}
+                  aria-label="volume" tabIndex={open ? 0 : -1}
+                  style={{ ['--p' as string]: `${(muted ? 0 : volume) * 100}%` }}
+                />
+              </div>
+            </div>
+            <div className="card-r">
+              {upNext.length > 0 && (
+                <>
+                  <div className="hand q-h">up next</div>
+                  <ol className="queue">
+                    {upNext.map(({ p, i, s }) => (
+                      <li key={s.src}>
+                        <button type="button" onClick={() => pick(p)} tabIndex={open ? 0 : -1}>
+                          <Vinyl color={DISC[i % DISC.length]} spin={false} />
+                          <span className="now-t"><b>{s.title.toLowerCase()}</b><span>{s.artist.toLowerCase()}</span></span>
+                        </button>
+                      </li>
+                    ))}
+                  </ol>
+                </>
+              )}
             </div>
           </div>
-          <div className="seek">
-            <input
-              type="range" min={0} max={length || 0} step={0.1} value={Math.min(time, length || 0)}
-              onChange={(e) => { const a = audio.current; if (a) a.currentTime = Number(e.target.value); }}
-              aria-label="seek" tabIndex={open ? 0 : -1}
-              style={{ ['--p' as string]: `${length ? (time / length) * 100 : 0}%` }}
-            />
-            <div className="times"><span>{clock(time)}</span><span>{clock(length)}</span></div>
-          </div>
-          <div className="ctrls">
-            <button type="button" onClick={back} aria-label="previous song" tabIndex={open ? 0 : -1}><Back /></button>
-            <button type="button" className="big" onClick={toggle} aria-label={playing ? 'pause' : 'play'} tabIndex={open ? 0 : -1}>{playing ? <Pause /> : <Play />}</button>
-            <button type="button" onClick={() => go(idx + 1)} aria-label="next song" tabIndex={open ? 0 : -1}><Skip /></button>
-          </div>
-          <div className="vol">
-            <button type="button" onClick={() => setMuted((m) => !m)} aria-label={muted ? 'unmute' : 'mute'} tabIndex={open ? 0 : -1}>{muted || volume === 0 ? <Mute /> : <Volume />}</button>
-            <input
-              type="range" min={0} max={1} step={0.01} value={muted ? 0 : volume}
-              onChange={(e) => { setMuted(false); setVolume(Number(e.target.value)); }}
-              aria-label="volume" tabIndex={open ? 0 : -1}
-              style={{ ['--p' as string]: `${(muted ? 0 : volume) * 100}%` }}
-            />
-          </div>
-          {upNext.length > 0 && (
-            <>
-              <div className="hand q-h">up next</div>
-              <ol className="queue">
-                {upNext.map(({ s, i }) => (
-                  <li key={s.src}>
-                    <button type="button" onClick={() => pick(i)} tabIndex={open ? 0 : -1}>
-                      <Vinyl color={DISC[i % DISC.length]} spin={false} />
-                      <span className="now-t"><b>{s.title.toLowerCase()}</b><span>{s.artist.toLowerCase()}</span></span>
-                    </button>
-                  </li>
-                ))}
-              </ol>
-            </>
-          )}
         </div>
         <div className="music">
           <button type="button" onClick={() => { toggle(); show(); }} aria-label={playing ? 'pause music' : 'play my favourites'} aria-pressed={playing} aria-expanded={open}>
@@ -225,7 +255,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
       <audio
         ref={audio} src={song.src} preload="metadata"
         onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)}
-        onEnded={() => { autoNext.current = true; go(idx + 1); }} onError={() => setPlaying(false)}
+        onEnded={() => { autoNext.current = true; go(pos + 1); }} onError={() => setPlaying(false)}
         onTimeUpdate={(e) => setTime(e.currentTarget.currentTime)}
         onLoadedMetadata={(e) => setLength(e.currentTarget.duration)}
       />

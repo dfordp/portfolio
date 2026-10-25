@@ -209,7 +209,7 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 /* player card: opens above the dock on hover/focus/tap, folds away after */
 .player { position: relative; display: flex; align-items: center; }
 .player .card {
-  position: absolute; bottom: calc(100% + 16px); left: 50%; width: 300px;
+  position: absolute; bottom: calc(100% + 16px); left: 50%; width: 560px;
   background: var(--card); color: var(--ink); border: 1.5px solid var(--ink); padding: 14px 16px 12px;
   transform: translateX(-50%) translateY(10px) rotate(-.6deg); opacity: 0; visibility: hidden; pointer-events: none;
   transition: opacity .25s ease-out, transform .3s cubic-bezier(.2, .8, .3, 1.2), visibility 0s .3s;
@@ -245,8 +245,10 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .vol { display: flex; align-items: center; gap: 8px; }
 .vol button { width: 28px; height: 28px; flex-shrink: 0; }
 .vol svg { width: 17px; height: 17px; }
-.q-h { font-size: 18px; color: var(--ink-3); margin: 10px 0 2px; border-top: 1.5px dashed var(--rule); padding-top: 8px; }
-.queue { list-style: none; padding: 0; margin: 0; max-height: 172px; overflow-y: auto; }
+.card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.card-r { border-left: 1.5px dashed var(--rule); padding-left: 16px; display: flex; flex-direction: column; min-width: 0; }
+.q-h { font-size: 18px; color: var(--ink-3); margin: 2px 0 4px; }
+.queue { list-style: none; padding: 0 4px 0 0; margin: 0; height: 196px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
 .queue button { width: 100%; justify-content: flex-start; gap: 10px; padding: 5px 4px; border-radius: 6px; }
 .queue button:hover { background: var(--tint); }
 .queue .vinyl { width: 32px; height: 32px; flex-shrink: 0; }
@@ -344,6 +346,9 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
   .np-t { max-width: 96px; font-size: 12px; }
   .player .card,
   .player.open .card { position: fixed; left: 12px; right: 12px; bottom: 76px; width: auto; transform: none; }
+  .card-body { grid-template-columns: 1fr; gap: 10px; }
+  .card-r { border-left: 0; padding-left: 0; border-top: 1.5px dashed var(--rule); padding-top: 8px; }
+  .queue { height: 132px; }
   .player .card { transform: translateY(12px); }
   .player.open .card { transform: translateY(0); }
   .player .card::after { display: none; }
