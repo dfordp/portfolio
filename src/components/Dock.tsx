@@ -60,7 +60,7 @@ export default function Dock({ songs }: { songs: Song[] }) {
   const autoNext = useRef(false); // a song ended: play whatever comes next
   const [playing, setPlaying] = useState(false);
   const [track, setTrack] = useState(0); // position in the play order
-  const [order, setOrder] = useState<number[] | null>(null); // shuffled on first play
+  const [order, setOrder] = useState<number[] | null>(null); // shuffled on load
   const [open, setOpen] = useState(false);
   const [time, setTime] = useState(0);
   const [length, setLength] = useState(0);
@@ -111,6 +111,13 @@ export default function Dock({ songs }: { songs: Song[] }) {
     try { localStorage.setItem('dp-volume', String(volume)); } catch { /* private mode */ }
   }, [volume, muted]);
 
+  // Every visitor gets their own shuffle on load, so the song shown on top is the
+  // one that plays. It runs after hydration (the server can't know the order).
+  useEffect(() => {
+    if (n < 2) return;
+    queueMicrotask(() => { setOrder(shuffle(n)); setTrack(0); });
+  }, [n]);
+
   // Changing songs swaps the <audio> src; keep playing if we were.
   const src = song?.src;
   useEffect(() => {
@@ -132,13 +139,6 @@ export default function Dock({ songs }: { songs: Song[] }) {
     const a = audio.current;
     if (!a) return;
     restoreVolume();
-    if (!order && n > 1) {
-      // Every visitor gets their own shuffle, starting from a random song.
-      const shuffled = shuffle(n);
-      setOrder(shuffled);
-      setTrack(0);
-      if (shuffled[0] !== idx) { autoNext.current = true; setTime(0); return; }
-    }
     if (a.paused) a.play().catch(() => setPlaying(false));
     else a.pause();
   };
