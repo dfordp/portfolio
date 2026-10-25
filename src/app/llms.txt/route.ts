@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 export async function GET() {
   const [projects, words] = await Promise.all([getProjects(), getWords()]);
   return createLlmsTxtHandler({
-    brandName: 'DP (Dilpreet Grover)',
+    brandName: 'DP',
     description: 'DP builds small apps, cuts video edits and writes long essays about tech. Every page has a markdown version: add .md to the URL.',
     sections: [
       { title: 'Pages', links: [{ title: 'Home', href: `${SITE_URL}/` }, { title: 'All writing', href: `${SITE_URL}/words` }] },

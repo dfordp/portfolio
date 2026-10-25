@@ -16,7 +16,7 @@ For why the site is being rebuilt this way (goals, decisions, what was rejected,
 **Voice**
 - Lowercase, casual, first person, a little silly. Short sentences. Self-deprecating is fine; corporate is not.
 - Write like a person explaining their thing to a friend: what annoyed them, what they built, what happened.
-- Lead with **DP**: the hero, bylines ("by DP") and share images use "DP". "Dilpreet" appears once in the bio ("my friends call me dp. forms call me dilpreet.") and in metadata/JSON-LD for search. Body copy stays lowercase.
+- Lead with **DP**: the hero, bylines ("by DP") and share images use "DP". "Dilpreet" appears once in the bio ("my friends call me dp. forms call me dilpreet.") and as the JSON-LD `alternateName`. **Never write the full name "Dilpreet Grover"** anywhere: copy, metadata, JSON-LD, llms.txt, markdown twins, post sign-offs. Use "DP" (or "dilpreet"). Body copy stays lowercase.
 - Avoid: "passionate", "leverage", "revolutionize", "seamless", "cutting-edge", "I'm a founder who…".
 - Pronouns: refer to Dilpreet by name in third-person copy (e.g. facts); don't assume pronouns.
 

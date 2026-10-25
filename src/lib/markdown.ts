@@ -9,7 +9,7 @@ export async function homeMarkdown() {
   const [site, projects, videos, words] = await Promise.all([getSite(), getProjects(), getVideos(), getWords()]);
   const by = (s: string) => projects.filter((p) => p.status === s);
   return [
-    '# DP (Dilpreet Grover)',
+    '# DP',
     '',
     `> ${site.tagline}. ${site.taglineSmall}`,
     '',
@@ -54,7 +54,7 @@ export async function projectMarkdown(slug: string) {
   return [
     `# ${p.title}`,
     `> ${p.oneLiner}`,
-    'By DP (Dilpreet Grover).',
+    'By DP.',
     p.problem && `## The problem\n\n${p.problem}`,
     p.whatItDoes && `## What it does\n\n${p.whatItDoes}`,
     p.story.length ? `## The story so far\n\n${p.story.map((s) => `- ${s.date}: ${s.text}`).join('\n')}` : '',
@@ -68,5 +68,5 @@ export async function postMarkdown(slug: string) {
   if (!post) return null;
   const raw = await fs.readFile(path.join(process.cwd(), 'content/words', `${slug}.mdoc`), 'utf8');
   const body = raw.replace(/^---[\s\S]*?---\s*/, '').replace(/\]\(\/media\//g, `](${SITE_URL}/media/`);
-  return `# ${post.title}\n\nBy DP (Dilpreet Grover), ${post.date}. ${post.minutes} min read.\n\n${body}`;
+  return `# ${post.title}\n\nBy DP, ${post.date}. ${post.minutes} min read.\n\n${body}`;
 }
