@@ -40,8 +40,12 @@
       "text": "built a complete version for a client and sold it for $2,500. the first project i've ever sold."
     },
     {
+      "date": "why sell",
+      "text": "the idea had already been copied a lot, and there were plenty of funded competitors. racing them didn't seem worth it, so i let it go."
+    },
+    {
       "date": "now",
-      "text": "negotiating with companies to run it on their own servers. that is the direction i am taking it."
+      "text": "not taking openlens further. poking at other corners of the same space instead."
     }
   ],
   "evidence": [
@@ -65,6 +69,6 @@
       "videoId": ""
     }
   ],
-  "stage": "going",
+  "stage": "shipped",
   "reading": []
 }

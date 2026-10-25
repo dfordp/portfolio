@@ -5,7 +5,7 @@
   "year": "2025",
   "oneLiner": "tinder, but for co-founders. swipe right on someone who also wants to stay up till 4am fixing prod.",
   "problem": "finding someone to build with usually means reading long bios on platforms built for something else.",
-  "whatItDoes": "you make a small profile around skills and intent, swipe, and get matched in real time when it goes both ways.",
+  "whatItDoes": "you make a small profile around your skills and what you want to build, then swipe. matching runs on language models and embeddings, so it lines people up by what they can do and what they want, not by follower counts. when it goes both ways, you match in real time.",
   "cover": "hackmate",
   "figCaption": "fig. 1: it is always 4 am",
   "tags": [
@@ -24,8 +24,29 @@
   "link": "https://www.hackmate.space/",
   "linkLabel": "hackmate.space",
   "published": null,
-  "updated": "2026-10-24",
-  "story": [],
+  "updated": "2026-10-25",
+  "story": [
+    {
+      "date": "summer 2025",
+      "text": "started as an experiment with nlp and matching people on many dimensions at once: skills, experience, intent. built it in the evenings next to a full-time job, and cut a few corners to get it out."
+    },
+    {
+      "date": "22 sep 2025",
+      "text": "launched on peerlist with a friend, and posted the build-in-public story on x. that post crossed 10k views."
+    },
+    {
+      "date": "the next weeks",
+      "text": "people signed up mostly to \"see who's my match\". the launch post, peerlist and word of mouth took it to around 250 users across the world."
+    },
+    {
+      "date": "later",
+      "text": "paused it. the experiment had answered its question, and the partnership behind it didn't work out."
+    },
+    {
+      "date": "now",
+      "text": "re-experimenting with the idea in a different direction."
+    }
+  ],
   "evidence": [
     {
       "caption": "the demo",
@@ -41,5 +62,5 @@
     }
   ],
   "reading": [],
-  "stage": "shipped"
+  "stage": "shut"
 }

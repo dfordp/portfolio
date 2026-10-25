@@ -21,23 +21,15 @@
   "link": "https://onlynerds-rose.vercel.app/",
   "linkLabel": "onlynerds",
   "published": null,
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "story": [
     {
       "date": "may 2025",
-      "text": "built at a bnb chain ai hackathon."
+      "text": "built at a bnb chain ai hackathon: forkable courses, ai tutors and skill nfts, end to end."
     },
     {
-      "date": "after launch",
-      "text": "it grew to around 250 users across the world."
-    },
-    {
-      "date": "later",
-      "text": "shut it down when the partnership behind it didn't work out."
-    },
-    {
-      "date": "now",
-      "text": "re-experimenting with the idea in a different direction."
+      "date": "after that",
+      "text": "a small experiment. it stayed one."
     }
   ],
   "evidence": [
@@ -54,6 +46,6 @@
       "videoId": ""
     }
   ],
-  "stage": "shut",
+  "stage": "shipped",
   "reading": []
 }

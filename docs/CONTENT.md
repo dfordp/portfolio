@@ -75,19 +75,19 @@ Recent (cards):
 
 | Project | Facts | Links | Draft one-liner |
 |---|---|---|---|
-| openlens | Sold a complete version to a client for $2,500 (jul 2026, x.com/dfordp11/status/2076027960302481730): DP's first sold project. Repo health for maintainers: contribution quality, filters spam and duplicate PRs. Repo "Sentinel". Demo 2025-10-08 (rJBH-l3n2CA). | demo video | tells tired maintainers which prs are real and which are someone farming green squares. |
+| openlens | Sold a complete version to a client for $2,500 (jul 2026, x.com/dfordp11/status/2076027960302481730): DP's first sold project. Sold because the idea had been copied a lot and funded competitors were everywhere; DP isn't taking it further and is exploring other angles in the same space. Repo health for maintainers: contribution quality, filters spam and duplicate PRs. Repo "Sentinel". Demo 2025-10-08 (rJBH-l3n2CA). | demo video | tells tired maintainers which prs are real and which are someone farming green squares. |
 | retold ai | Turns full movies/long videos into AI trailers and story retellings with OpenAI's multimodal models. Own YouTube channel (@retold-dfordp, 5 trailers, 2025-10-12). Its project page holds those trailers. | youtube channel | feed it a three-hour movie. get a trailer back. |
 | black hole simulation engine | Black hole physics and gravitational lensing in 2D/3D; C++17, CMake; CPU/GPU geodesics. | source only | i watch too much interstellar. so i made light bend around a black hole in c++. |
 | spotify mcp | MCP server that analyses listening history: taste shifts, trends, no Premium needed. | tbd | tells you how your music taste has shifted. no premium needed. |
-| hackmate | Swipe-based matchmaking for founders and builders. Next.js, Postgres, Redis, Clerk. | hackmate.space | tinder, but for co-founders. swipe right on someone who also wants to stay up till 4am fixing prod. |
-| onlynerds | Decentralized AI learning platform: fork courses, AI tutors, skill NFTs. BNB Chain AI hackathon. | onlynerds-rose.vercel.app | not what the name suggests. you fork a course, remix it and learn it with an ai tutor. |
+| hackmate | Swipe-based matchmaking for founders and builders. Next.js, Postgres, Redis, Clerk. An NLP / multidimensional matching experiment, launched on Peerlist with a friend on 22 Sep 2025 (build-in-public X post, 10k+ views), grew to ~250 users across the world via that post, Peerlist and word of mouth. Paused once the experiment answered its question and the partnership didn't work out; DP is re-experimenting in a new direction. | hackmate.space | tinder, but for co-founders. swipe right on someone who also wants to stay up till 4am fixing prod. |
+| onlynerds | Decentralized AI learning platform: fork courses, AI tutors, skill NFTs. BNB Chain AI hackathon (may 2025); stayed a small experiment. | onlynerds-rose.vercel.app | not what the name suggests. you fork a course, remix it and learn it with an ai tutor. |
 
-Older stuff: direct links only, no pages. toolchainai → npm package; sarnet, super grader, one med → GitHub repos; sumz → ai-summariser.vercel.app; goserve → compile-me.ankn.dev; video call streaming → streaming-timepass.vercel.app (**needs DP: confirm**); meeting scheduler mcp, crowd funding, ai companion → **needs DP: links**. Removed on DP's call: echo (never deployed), video sharing platform, kosu, messenger app, e-commerce admin dashboard, mbp-10 order book.
+Older stuff: direct links only, no pages. toolchainai → npm package; sarnet, super grader, one med → GitHub repos; sumz → ai-summariser.vercel.app; goserve → compile-me.ankn.dev; video call streaming → github.com/dfordp/fermion-timepass (WebRTC with a mediasoup SFU); meeting scheduler mcp, crowd funding, ai companion → **needs DP: links**. Removed on DP's call: echo (never deployed), video sharing platform, kosu, messenger app, e-commerce admin dashboard, mbp-10 order book.
 
 | Project | Draft line |
 |---|---|
 | toolchainai | llm agents with tools, minus the boilerplate. |
-| video call streaming | live video with separate streamer and viewer roles. |
+| video call streaming | webrtc rooms where one person streams and everyone else watches. |
 | meeting scheduler mcp | finds the cal.com and calendly links inside an organization, so an ai can book the meeting. |
 | sarnet | colours in black-and-white radar satellite images. |
 | super grader | reads answer scripts and grades them against a rubric. |
