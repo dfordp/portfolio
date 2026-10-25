@@ -203,7 +203,11 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
 .dock .music button { color: #fff; }
 .dock .music button:hover { background: #b23b23; }
 .np { display: flex; align-items: center; gap: 8px; max-width: 0; overflow: hidden; transition: max-width .4s ease-out; color: #fff; font-size: 12.5px; white-space: nowrap; }
-.dock.playing .np { max-width: 200px; padding-right: 10px; }
+.dock.playing .np { max-width: 300px; padding-right: 4px; }
+.np-t { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+.np-n { opacity: .7; font-variant-numeric: tabular-nums; }
+.dock .music .skip { width: 30px; height: 30px; }
+.dock .music .skip svg { width: 15px; height: 15px; }
 .np .eq { display: flex; gap: 2px; align-items: flex-end; height: 12px; }
 .np .eq i { width: 3px; background: var(--hl); animation: eq .9s ease-in-out infinite; }
 .np .eq i:nth-child(2) { animation-delay: .2s; }
@@ -291,7 +295,8 @@ h2 .hand { font-size: 22px; color: var(--ink-3); letter-spacing: 0; }
   .phases { grid-template-columns: 1fr 1fr; }
   .tab { padding: 8px 11px 7px; font-size: 15px; }
   .dock a, .dock button { width: 34px; height: 34px; }
-  .dock.playing .np { max-width: 120px; }
+  .dock.playing .np { max-width: 170px; }
+  .np-t { max-width: 70px; }
   .redact .stamp-r { display: none; }
 }
 

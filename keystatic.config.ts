@@ -148,6 +148,19 @@ export default config({
       },
     }),
 
+    songs: collection({
+      label: 'Songs (dock queue)',
+      path: 'content/songs/*',
+      slugField: 'title',
+      format: 'yaml',
+      schema: {
+        title: fields.slug({ name: { label: 'Title' } }),
+        artist: fields.text({ label: 'Artist' }),
+        file: fields.file({ label: 'MP3', directory: 'public/music', publicPath: '/music/', validation: { isRequired: true } }),
+        order: fields.integer({ label: 'Queue position (lower plays first)', defaultValue: 50 }),
+      },
+    }),
+
     art: collection({
       label: 'Art',
       path: 'content/art/*',

@@ -38,6 +38,14 @@ export const getArt = cache(async () => {
     .sort((a, b) => (a.order ?? 50) - (b.order ?? 50));
 });
 
+export const getSongs = cache(async () => {
+  const all = await reader.collections.songs.all();
+  return all
+    .map(({ slug, entry }) => ({ slug, title: entry.title, artist: entry.artist, src: entry.file, order: entry.order ?? 50 }))
+    .sort((a, b) => a.order - b.order);
+});
+export type Song = Awaited<ReturnType<typeof getSongs>>[number];
+
 const WPM = 230;
 async function readTime(slug: string) {
   const raw = await fs.readFile(path.join(process.cwd(), 'content/words', `${slug}.mdoc`), 'utf8');

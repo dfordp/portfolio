@@ -3,7 +3,7 @@ import { Instrument_Serif, Caveat, Inter_Tight } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import Dock from '@/components/Dock';
 import Oneko from '@/components/Oneko';
-import { getSite } from '@/lib/content';
+import { getSite, getSongs } from '@/lib/content';
 import { SITE_URL } from '@/lib/seo';
 import './globals.css';
 
@@ -26,7 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export const viewport: Viewport = { themeColor: '#f3ede0' };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const songs = (await getSongs()).map(({ title, artist, src }) => ({ title, artist, src }));
   return (
     <html lang="en" className={`${serif.variable} ${hand.variable} ${sans.variable}`}>
       <body>
@@ -49,7 +50,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </filter>
         </svg>
         {children}
-        <Dock />
+        <Dock songs={songs} />
         <Oneko />
         <Analytics />
       </body>

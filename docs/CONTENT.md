@@ -22,7 +22,7 @@ Status key: `draft` (wording proposed, not approved) · `approved` · `needs-inf
 | Tagline, second line (smaller) | approved | no superpowers. no plot armor. |
 | Bio, line 1 | approved | my friends call me dp. forms call me dilpreet. ("dilpreet" is redacted by default; hover or tap reveals it) |
 | Bio, line 2 | approved | i build small apps for things that annoy me. |
-| Bio, line 3 | approved | i also edit videos using stuff i shot myself and tv series. |
+| Bio, line 3 | approved | i also edit videos using stuff i shot myself, tv series, movies and random media. |
 | Bio, line 4 | approved | i design posters and cover art too. |
 | Bio, line 5 | approved | some of it's useful. most of it's just fun. |
 | Footer line | draft | made with too much chai |
@@ -220,7 +220,13 @@ Social links sit next to their content instead of in one crowded list: the youtu
 
 ## 11. Music
 
-One song for now: Akeboshi, "Wind" (the existing `public/Akeboshi.mp3`). Playlist parked by DP. Note: it's a commercial track, so it stays a placeholder until replaced.
+A queue of DP's all-time favourites, in this order (CMS: Songs):
+
+1. Gabru, Yo Yo Honey Singh ft. J Star (`/music/gabru.mp3`)
+2. Bombay Dreams, KSHMR & Lost Stories (`/music/bombay-dreams.mp3`)
+3. Wind, Akeboshi (`/music/wind.mp3`)
+
+Commercial tracks, hosted on DP's call (takedown risk noted).
 
 ## 12. Share images (OG)
 

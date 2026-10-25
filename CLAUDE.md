@@ -49,7 +49,7 @@ Detail pages:
 - `/made/[slug]` project page, only for `recent` projects (Retold AI's page holds its five AI-cut trailers as evidence). Brewing/older slugs redirect to their link: title, one-liner, byline (photo, "by DP", published date + time, updated date, read time), doodle cover, the problem, what it does, the story so far (timeline), evidence (taped screenshots / demo videos), made with, footer (written by / first published / last updated / filed under / visit link, prev/next).
 - `/words/[slug]` blog post: same byline and footer pattern.
 
-Global: one fixed theme (no light/dark toggle), bottom icon dock with the music play button in the center (one song, loops, pause anytime). Dock buttons scroll smoothly and never put `#section` in the URL. The oneko cat follows the cursor (hidden on touch screens). Dock and cat are hidden on `/keystatic`.
+Global: one fixed theme (no light/dark toggle), bottom icon dock with the music play button in the center (plays the favourites queue, skip, pause anytime). Dock buttons scroll smoothly and never put `#section` in the URL. The oneko cat follows the cursor (hidden on touch screens). Dock and cat are hidden on `/keystatic`.
 
 ## Design tokens (sketchbook theme)
 
@@ -83,7 +83,7 @@ Do not copy location fields from these profiles (Letterboxd lists one).
 | Instagram, Behance (art) | no keyless API: imported with a local script into `public/media/`, then edited in the CMS | Instagram CDN links expire; never hotlink |
 | Blog | written in the CMS (Medium posts migrated once) | |
 
-Music: one song for now (`public/Akeboshi.mp3`, "Wind"), played from the center dock button. A bigger playlist is parked. If it comes back: hosted files must be public-domain/CC recordings (e.g. classical pieces from DP's Instrumental playlist); anything else goes through a visible YouTube player (YouTube's terms forbid hidden audio-only playback).
+Music: a small queue of DP's all-time favourites (`content/songs/`, files in `public/music/`, editable in the CMS). The center dock button starts it; it plays in order, skips, and loops. Current queue: Gabru (Yo Yo Honey Singh ft. J Star), Bombay Dreams (KSHMR & Lost Stories), Wind (Akeboshi). These are commercial tracks hosted on DP's call; a takedown notice is the realistic risk, so keep the queue short and swap anything that gets flagged.
 
 ## Where things live in the code
 
