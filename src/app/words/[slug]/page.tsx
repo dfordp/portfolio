@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: p.title,
     description,
     alternates: { canonical: `/words/${p.slug}` },
-    openGraph: { type: 'article', title: p.title, description, publishedTime: p.date, authors: ['DP (Dilpreet Grover)'], tags: [...p.tags] },
+    openGraph: { type: 'article', title: p.title, description, url: `/words/${p.slug}`, siteName: 'Made by DP', locale: 'en_US', publishedTime: p.date, authors: ['DP (Dilpreet Grover)'], tags: [...p.tags] },
   };
 }
 
