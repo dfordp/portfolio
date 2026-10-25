@@ -1,0 +1,22 @@
+{
+  "title": "spotify mcp",
+  "status": "recent",
+  "order": 3,
+  "year": "",
+  "oneLiner": "tells you how your music taste has shifted. no premium needed.",
+  "problem": "spotify knows exactly how your taste changed over the years. it just never tells you.",
+  "whatItDoes": "an mcp server that reads your listening history and talks about it: who you are as a listener, how your taste moved, and where it might go next.",
+  "cover": "spotify",
+  "figCaption": "fig. 1: taste, over time",
+  "tags": [
+    "mcp",
+    "spotify api"
+  ],
+  "stack": [],
+  "link": "https://github.com/dfordp/spotify-shadow-listen-mcp",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

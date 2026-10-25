@@ -1,0 +1,145 @@
+---
+title: "Why Most AI Workflows Fail (And Nobody Wants to Talk About It)"
+date: 2026-06-05
+teaser: "most ai workflows die quietly after the demo, and the pitch decks never mention it."
+description: "most ai workflows die quietly after the demo, and the pitch decks never mention it."
+tags:
+  - "startup"
+  - "technology"
+  - "software development"
+  - "future of work"
+  - "artificial intelligence"
+cover: /media/words/why-most-ai-workflows-fail/1.png
+mediumUrl: "https://levelup.gitconnected.com/why-most-ai-workflows-fail-and-nobody-wants-to-talk-about-it-ac298e43747f"
+---
+
+![](/media/words/why-most-ai-workflows-fail/1.png)
+
+This is not a doom piece. It is not a hype piece either. It is just an honest look at something I have been thinking about for a while, something most people building in AI avoid saying out loud.
+
+### The Thing Nobody Mentions at the AI Conference
+
+![](/media/words/why-most-ai-workflows-fail/2.png)
+
+Every AI pitch sounds the same. Seamless automation. Intelligent workflows. Transformative productivity. The demo is clean. The slide deck is polished. The numbers look great.
+
+Then it hits production. And quietly, slowly, it falls apart.
+
+Not with a loud crash. Just a slow fade. A Slack message that says “we’re moving in a different direction.” A startup that pivots for the fourth time. A workflow that still requires three people to babysit it. The graveyard is full, but nobody holds a funeral.
+
+I want to talk about why that keeps happening. And it starts somewhere nobody expects.
+
+### Humans Evolved Away From Documentation For a Reason
+
+![](/media/words/why-most-ai-workflows-fail/3.png)
+
+Here is something that almost never comes up in AI implementation conversations: humans stopped needing to document things because they got very good at transferring knowledge without writing it down.
+
+Watch someone do something once. You get it. Not because everything was explained, but because you filled in the gaps using context, pattern recognition, and shared cultural assumptions. Apprenticeship worked for thousands of years. Trades passed down across generations without a single README file.
+
+Toyota spent decades building one of the most efficient manufacturing systems in the world, the Toyota Production System. When they tried to document it formally, something interesting happened. A lot of it did not survive the translation. The knowledge lived in the people, in the practice, in the doing. The document was always an approximation.
+
+This is not a flaw in how humans work. It is a feature. We got so good at tacit knowledge transfer that writing things down started to feel redundant.
+
+Then AI showed up and needed exactly the thing we stopped doing.
+
+AI cannot watch someone work and fill in the gaps. It cannot pick up on unspoken cues. It needs explicit written context, stated intent, documented edge cases, defined scope. It needs the manual for things that never had a manual because they never needed one.
+
+Asking an organization to implement AI is, at its core, asking them to undo hundreds of years of how knowledge actually moves between people. That is not a small ask.
+
+![](/media/words/why-most-ai-workflows-fail/4.png)
+
+### The Hidden Incentive Nobody Talks About
+
+![](/media/words/why-most-ai-workflows-fail/5.png)
+
+Now layer in something worse.
+
+The people who most need to document their work are often the ones with the most rational reason not to.
+
+Institutional knowledge is leverage. If you are the only person in the room who knows how the legacy billing system actually works, that knowledge is your job security. It is your seat at the table. It is why you get the call at midnight when something breaks.
+
+Asking that person to document everything for an AI implementation is not just asking for their time. It is asking them to hand over their competitive advantage. To write down the thing that makes them irreplaceable and give it to a system that might be used to replace them.
+
+This is not paranoia. The job market anxiety around AI is real and documented. And when people feel threatened, they protect themselves. Slowly. Quietly. Completely reasonably.
+
+So you end up with documentation that covers the surface level, the easy stuff, the things that were already written down somewhere. The deep tacit knowledge, the judgment calls, the “we tried that in 2019, and it was a disaster” institutional memory, that stays in people’s heads. And that is exactly the knowledge AI needs most.
+
+### The Demo to Production Gap Nobody Advertises
+
+![](/media/words/why-most-ai-workflows-fail/1.png)
+
+Assume you somehow solve the documentation problem. You still have to survive the gap between what AI looks like in a demo and what it actually does in your environment.
+
+In a demo, the data is clean. The use case is narrow. The prompt is engineered. The edge cases are invisible. Everything works because everything has been set up to work.
+
+In production, the data is a mess. The use case has six undocumented exceptions. The legacy codebase has comments from 2014 that contradict the current implementation. The business logic lives in someone’s email thread from three years ago.
+
+Take coding AI as the clearest example. GitHub Copilot, Cursor, every major coding assistant has had years of focused investment poured into it. Purpose-built models. Benchmark optimization. Entire companies built around the single use case of helping engineers write code. And it still requires a skilled engineer watching it, catching confidently wrong suggestions, understanding when it has gone completely off the rails.
+
+The “software engineers are done” narrative that ran hot for two years skipped about fifteen hard steps between “AI can generate plausible code” and “AI can replace the judgment of someone who understands the system.”
+
+Every timeline got shortened by hype. Investors expected ROI on cycles that the actual work required years for. Companies tried to sprint to a destination that needs a long, careful walk. The funding ran out in the middle.
+
+### The Valuation Game
+
+![](/media/words/why-most-ai-workflows-fail/6.png)
+
+Here is the layer that makes everything worse and rarely gets discussed openly.
+
+A significant portion of AI’s apparent success is held together by circular money.
+
+A venture firm invests in an AI company. That AI company uses cloud infrastructure from another portfolio company. The portfolio company logs revenue. Both look like they are growing. Neither has real external validation. The numbers are technically accurate and completely misleading.
+
+The Microsoft and OpenAI relationship is the highest-profile version of this. Microsoft invests billions into OpenAI. OpenAI spends heavily on Azure, Microsoft’s cloud platform. Microsoft reports Azure revenue growth. OpenAI reports usage. Both point to the relationship as proof of traction. The circularity is not hidden; it is just rarely named plainly.
+
+Below that flagship example sits hundreds of smaller versions of the same structure. AI startups whose primary customers are other AI startups. Evaluations conducted by firms that have a financial interest in positive results. Benchmarks designed by the companies being benchmarked.
+
+The result is a market that can sustain companies without core functionality for far longer than any honest accounting would allow. Real users in real workflows would expose the gap immediately. But real users are optional when your customer is essentially the funding ecosystem itself.
+
+The companies that eventually fail do not fail loudly. They pivot. They reframe. They become a slightly different product. The original vision quietly disappears from the website.
+
+![](/media/words/why-most-ai-workflows-fail/7.png)
+
+### The Benchmark Trap
+
+![](/media/words/why-most-ai-workflows-fail/8.png)
+
+Benchmarks were supposed to be how we measured progress honestly. They became something else.
+
+When you optimize hard for a benchmark, you get very good at the benchmark. Not necessarily at the thing the benchmark was meant to measure.
+
+SWE-bench, one of the most referenced coding AI evaluations, tests performance on isolated GitHub issues with clean problem definitions, available context, and known solutions. Real enterprise codebases have none of that. They have twelve years of accumulated decisions, undocumented workarounds, functions named after people who left the company, and business logic that exists because of a contract signed in 2017 that nobody can find anymore.
+
+A model can score impressively on a benchmark and fall completely apart the moment it touches a real system. And if the incentive is to look good for the next funding round rather than to actually work, optimizing for the benchmark is the rational move.
+
+This connects back to where we started. The documentation problem means real-world context never makes it into training. The incentive problem means nobody is motivated to surface that gap honestly. The circular funding means the gap does not have to be closed to keep the lights on. The benchmark just becomes one more layer of cover.
+
+### What Actually Works
+
+![](/media/words/why-most-ai-workflows-fail/9.png)
+
+After all of that, here is what I have seen hold up.
+
+AI works when the task is narrow and well-defined. When a capable human is supervising. When the context has actually been documented, not because an AI implementation was coming, but because the organization had good practices to begin with. When the timeline is honest about the work involved.
+
+It is a multiplier. It makes good processes faster. It does not make bad processes good. It does not replace the judgment of someone who understands the system. It does not fill in the context that was never written down.
+
+The organizations that get real value from AI are not the ones with the flashiest pilots. They are the ones that did the boring work first. The documentation, the process clarity, the honest assessment of what they actually know versus what lives in people’s heads.
+
+That work is hard and slow, and nobody is going to fund a deck about it. But it is the actual prerequisite.
+
+### The Real Question
+
+Most AI workflows fail not because the technology is bad. They fail because the conditions the technology needs to work were never in place, and nobody wanted to say that clearly because too many people had already committed to the story that they were.
+
+The question worth sitting with is whether that is fixable at scale, or whether AI success ends up being a selection filter. Only the organizations willing to do the unsexy foundational work before the AI implementation actually get the outcomes. Everyone else gets a graveyard of pilots and a pivot story.
+
+I think it is the second one. But I am open to being wrong.
+
+_If this resonated, I write about building in technology and what actually happens versus what gets talked about. Find me at_ [_dilpreetgrover.me_](https://dilpreetgrover.me)_._
+
+
+* * *
+
+[Why Most AI Workflows Fail (And Nobody Wants to Talk About It)](https://levelup.gitconnected.com/why-most-ai-workflows-fail-and-nobody-wants-to-talk-about-it-ac298e43747f) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

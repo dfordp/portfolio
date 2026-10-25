@@ -1,0 +1,19 @@
+{
+  "title": "ombly",
+  "status": "brewing",
+  "order": 1,
+  "year": "2026",
+  "oneLiner": "redaction that actually redacts",
+  "problem": "most \"redacted\" pdfs still have the text sitting under the black box. select, copy, oops.",
+  "whatItDoes": "it finds the private bits in your documents, like account numbers and ids, and takes them out for real. it runs on your own computer. nothing gets uploaded.",
+  "cover": "ombly",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://www.ombly.space/",
+  "linkLabel": "ombly.space",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

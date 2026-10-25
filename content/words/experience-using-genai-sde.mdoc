@@ -1,0 +1,118 @@
+---
+title: "My Experience Using GenAI in Software Development"
+date: 2024-09-10
+teaser: "what genai changed in how i write software, and what it didn't."
+description: "what genai changed in how i write software, and what it didn't."
+tags:
+  - "personal"
+  - "genai"
+  - "software engineering"
+cover: /media/words/experience-using-genai-sde/1.png
+mediumUrl: "https://medium.com/@dilpreetgrover2/my-experience-using-genai-in-software-development-8e5271b38313"
+---
+
+![](/media/words/experience-using-genai-sde/1.png)
+
+Generative AI (GenAI) has gained immense traction ever since OpenAI introduced GPT-3, and its chatbot version, ChatGPT, became a global sensation. Over the past few years, we have seen an explosion of new models and services trying to capitalize on this momentum. Some managed to carve out a significant market share, while many others faded away, unable to sustain their growth amidst the ongoing AI “gold rush.”
+
+However, this blog isn’t about the fear of AI taking over jobs or how it can turn someone into a “10x engineer,” outperforming peers and snagging higher salaries — something course sellers often peddle nowadays. Instead, I want to share my personal journey with GenAI, including the benefits it brings, the challenges I’ve faced, and some practical tips for building apps with GenAI technologies.
+
+### The Good: Leveraging GenAI for Practical Solutions
+
+For developers, GenAI is a game-changer, allowing us to focus more on core tasks rather than getting bogged down by mundane and repetitive aspects of the software development lifecycle. Below, I’ll highlight a few key examples from my own projects to show how GenAI has improved my workflow and opened new doors.
+
+#### Hackathon Project: Individual Level Flora Monitoring System
+
+During a recent hackathon (Google Solution Challenge), my team and I were working on a platform for gardening enthusiasts. The idea was simple but impactful: help people with little knowledge of botany monitor the health of their plants using image analysis. Initially, we built our own computer vision model and integrated it with a Flask API to analyze plant images. However, as the hackathon progressed, we hit a major roadblock — there simply weren’t enough datasets on different plants. At best, we could analyze common species like tomatoes and apples, but we were missing the broader plant catalog that we envisioned.
+
+After much deliberation, we shifted gears and turned to Google’s Gemini LLM, which was available for free (thanks to the hackathon sponsorship). By integrating the Gemini LLM, we not only solved our data scarcity problem but also introduced new features that enriched the user experience. Fine-tuning the large language model enabled us to personalize plant care advice further and provide users with tailored guidance.
+
+The ease with which GenAI allowed us to pivot and enhance our application’s capabilities is a testament to how flexible and powerful these models can be, especially when you’re dealing with complex data requirements.
+
+![](/media/words/experience-using-genai-sde/2.png)
+
+![](/media/words/experience-using-genai-sde/3.png)
+
+(If you want to see the backend of our application, [view here](https://github.com/Fada-Club/aarchid-api) )
+
+#### Open Source Project: Code Modifications with LLMs
+
+Recently, I participated in an open-source initiative called “Codemod Kickstart,” which focuses on simplifying tasks like version migration and bug fixes, especially in large repositories. One of the challenges with repositories that have huge codebases is making multiple changes manually, which is both tedious and time-consuming.
+
+Using GenAI models, I contributed to creating a series of tools that could automatically handle code changes based on specific file paths. Essentially, we provided test cases with the “before” and “after” states, and the model would then generate the necessary packages to implement those changes in the codebase. The process became smoother, with much of the manual labor eliminated. It not only streamlined our workflow but also reduced human error, as AI could manage the details more accurately.
+
+You can check out one of my contributions here: [codemod example](https://codemod.com/registry?author=dfordp).
+
+This is just a small illustration of how GenAI can be applied to open-source development. It saves time, improves efficiency, and allows developers to focus on more strategic elements rather than dealing with mundane and repetitive coding tasks.
+
+![](/media/words/experience-using-genai-sde/4.png)
+
+![](/media/words/experience-using-genai-sde/5.png)
+
+#### Revolutionizing Recruitment with GenAI
+
+In one of my recent projects, I was tasked with enhancing the recruitment process for a freelance project. Initially, the HR team relied on traditional recruitment software, which involved a manual, rule-based system for sorting resumes, scheduling interviews, and communicating with candidates. As the company scaled and began hiring across multiple departments, this approach became increasingly cumbersome.
+
+The existing system struggled with:
+
+-   Sorting through a high volume of resumes manually, resulting in delayed responses to qualified candidates.
+-   Scheduling interviews, which involved back-and-forth email communication, often led to miscommunication or missed opportunities.
+-   Engaging candidates at scale with tailored communication, which became unfeasible with the growing applicant pool.
+
+**Solution:** We decided to implement a GenAI-driven recruitment assistant using a fine-tuned version of GPT. The AI model was trained specifically for recruitment workflows, allowing it to automate various parts of the hiring process. Here’s how it worked:
+
+-   **Resume Screening:** The AI could parse thousands of resumes in a fraction of the time it took for manual review. It learned to identify key skills, qualifications, and experiences that were aligned with the company’s job descriptions, allowing it to rank candidates more effectively.
+-   **Interview Scheduling:** Using natural language processing (NLP), the AI assistant automatically coordinated with candidates, offering available time slots and booking interviews based on both interviewer and candidate availability. This eliminated the need for multiple back-and-forth emails, speeding up the entire process.
+-   **Candidate Communication:** The model was fine-tuned to handle personalized communication. It sent automated emails to candidates, updating them on the status of their application, providing feedback after interviews, and answering common queries. The ability of the GenAI to understand contextually different ways candidates phrased their questions allowed for more seamless interaction, enhancing the candidate experience.
+
+### The Bad: Not a Silver Bullet for Every Problem
+
+While GenAI offers incredible advantages, it’s far from being a magical solution to every problem in software development. There’s a growing notion on social media that “everything” can be replaced by AI, but the reality is much more nuanced.
+
+#### Building a B2C Service-Based GenAI Product
+
+For one of my startup ideas, I tried building a B2C service that would allow users to create their own audiobooks from custom-written books. The initial research seemed promising; I found a few high-quality GenAI models on Hugging Face that could generate audio at a fraction of the cost compared to using mainstream tools.
+
+However, when I dug deeper into the system design and evaluated it against the performance and scalability goals, things quickly became complicated. Running the audio generation model in production, with the level of customization I envisioned, was prohibitively expensive. After calculating the operational costs, I realized that in order to break even, I would have to charge customers nearly 10 times the amount similar platforms like Kukufm were offering.
+
+This experience served as a wake-up call: while GenAI can perform well, it doesn’t necessarily mean it’s cost-effective for every use case, especially when considering fine-tuning, hosting, and scaling in production environments.
+
+#### Integration Fatigue and Over-reliance
+
+Another common challenge is the temptation to use GenAI for everything, which can lead to “integration fatigue.” Many projects attempt to leverage AI even when traditional solutions might be more efficient and cost-effective. For example, I once helped a team trying to integrate GenAI into their internal project management tool. The goal was to automatically prioritize tasks based on developer productivity data, but the output was inconsistent and required manual intervention anyway.
+
+In the end, a simpler statistical model with custom heuristics proved to be more reliable. This experience reinforced that while GenAI is great, it’s not always the right fit for every problem — especially when you can accomplish the same result using less resource-intensive methods.
+
+#### Attempting Dynamic Search for E-Commerce
+
+One of my more ambitious projects involved developing a dynamic search system for an e-commerce platform. The goal was to revolutionize the search experience by eliminating the need for the traditional, cumbersome filters. I wanted users to interact directly with the platform’s API using natural language, which would drastically reduce the number of steps needed to find products.
+
+Initially, the system seemed promising. Users wouldn’t need to click through a series of filters for price, brand, size, and color. Instead, they could type in queries like “affordable red running shoes for jogging,” and the AI would interpret that and interact with the API to provide instant results.
+
+**Challenges and Realizations:**
+
+-   **Filter Overload:** The original system had too many filters, frustrating users. But after building the GenAI-powered search tool, I realized that eliminating all filters wasn’t necessarily a solution either. Users who preferred a traditional filter system for precision felt a loss of control.
+-   **Computational Complexity:** Running natural language queries with real-time interaction directly with the API was a heavy computational task. Even though it worked, the performance gains weren’t justifying the resource consumption. The costs, in terms of both infrastructure and response time optimization, began to outweigh the benefits.
+-   **Overkill for the Use Case:** Ultimately, the optimizations became too complex for what the project was offering. The dynamic search system, while innovative, required constant fine-tuning, especially when it came to understanding vague or ambiguous queries. After multiple iterations, I found that a simpler system — perhaps improving the existing filter system with slight AI-driven suggestions — would have been more than enough.
+
+**Why the Project Was Abandoned:** After analyzing the effort and costs associated with running this GenAI-powered system, it became clear that the complexity and resources required were far more than what was necessary for this platform. The search tool was solving a problem that didn’t exist for most users, and the additional layers of optimization added more overhead than value.
+
+**Challenges Faced:**
+
+-   **Computational Costs:** Initially, running the GenAI model to process real-time queries was computationally heavy, especially with NLP tasks like intent recognition and query parsing. To mitigate this, I had to optimize the API interaction and cache frequently requested search results to reduce the load on the server.
+-   **Fine-Tuning for Accuracy:** It took several iterations to fine-tune the model to understand user intent accurately, especially when dealing with ambiguous or vague queries. The model required constant feedback loops to improve search accuracy.
+
+### Conclusion
+
+Working with GenAI has been both exciting and humbling. It’s allowed me to streamline development processes, enrich applications with personalized features, and even open up new avenues of exploration that I hadn’t considered before. However, it’s essential to keep in mind that GenAI is not a one-size-fits-all solution. It can accelerate innovation, but it also comes with challenges — particularly around cost, fine-tuning, and practical integration.
+
+For anyone looking to build applications using GenAI, I’d recommend starting with a well-defined use case, testing it with traditional methods first, and then exploring how AI can add value rather than replacing every step in the process. Remember, AI should complement human intelligence, not replace it.
+
+### A Bit About Me
+
+I’m Dilpreet Grover, a software developer specializing in backend technologies. I enjoy exploring new trends in software engineering and contributing to open-source projects. If you’d like to connect or check out some of my work, feel free to visit my [website](https://dilpreetgrover.vercel.app/).
+
+Until next time,  
+Adios!
+
+

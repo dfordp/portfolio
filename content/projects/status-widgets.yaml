@@ -1,0 +1,19 @@
+{
+  "title": "status widgets",
+  "status": "brewing",
+  "order": 3,
+  "year": "2026",
+  "oneLiner": "calm ui for when apis aren't",
+  "problem": "when an ai provider or a payment gateway has a bad day, your app says \"something went wrong\" and people panic.",
+  "whatItDoes": "it watches the services your app depends on. when one wobbles, your app shows a cached answer or a short note instead of an error.",
+  "cover": "status",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://www.status-widgets.com/",
+  "linkLabel": "status-widgets.com",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

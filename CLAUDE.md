@@ -29,11 +29,11 @@ For why the site is being rebuilt this way (goals, decisions, what was rejected,
 ## Site structure (single page + detail pages)
 
 Home, top to bottom (each section has a small red index number):
-1. **DP** + handwritten tagline ("half batman, half spider-man") + 3-line bio. No rotating fun fact.
+1. **DP** + handwritten tagline ("half batman, half spider-man" / "no superpowers. no plot armor.") + bio. The first line is "my friends call me dp. forms call me dilpreet." where "dilpreet" is redacted by default under a black bar (ombly's gag); hover, focus or tap reveals it, and the name stays in the HTML for search. Then one line each: apps, video edits, design. No rotating fun fact.
 2. **01 right now**: 2–4 lines, first person, dated. Currently: taking a break between coding and experimenting.
-3. **02 on the stove** (currently brewing): polaroid cards with detailed ink illustrations, one-liner, the problem, what it does, link to the project page
+3. **02 on the stove** (currently brewing): polaroid cards with detailed ink illustrations, one-liner, the problem, what it does. Cards link straight to the live site; no story page.
 4. **03 stuff i made**: tabs, no "all" tab:
-   - `code`: newest first. 6 recent projects as illustrated cards, then an "older stuff" two-column list.
+   - `code`: newest first. 6 recent projects as illustrated cards (these have story pages), then an "older stuff" two-column list that links straight to each project (repo, package or live site); no page.
    - `edits`: filters `long ones` (custom thumbnails, shown first) · `shorts` (portrait cards) · `ai experiments` (only the ON TIME short film)
    - `art`: filters `photos` (Instagram) · `design` (Behance). Images are downloaded into the repo and shown in our own frames, never as raw embeds.
    - `explainers`: technical channel videos
@@ -46,10 +46,10 @@ Home, top to bottom (each section has a small red index number):
 There is no third-person "facts" section; it was dropped because it read as written about DP, not by DP.
 
 Detail pages:
-- `/made/[slug]` project page (Retold AI's page holds its five AI-cut trailers as evidence): title, one-liner, byline (photo, "by Dilpreet", published date + time, updated date, read time), doodle cover, the problem, what it does, the story so far (timeline), evidence (taped screenshots / demo videos), made with, footer (written by / first published / last updated / filed under / visit link, prev/next).
+- `/made/[slug]` project page, only for `recent` projects (Retold AI's page holds its five AI-cut trailers as evidence). Brewing/older slugs redirect to their link: title, one-liner, byline (photo, "by DP", published date + time, updated date, read time), doodle cover, the problem, what it does, the story so far (timeline), evidence (taped screenshots / demo videos), made with, footer (written by / first published / last updated / filed under / visit link, prev/next).
 - `/words/[slug]` blog post: same byline and footer pattern.
 
-Global: one fixed theme (no light/dark toggle), bottom icon dock with the music play button in the center (random track per visitor, plays continuously, pause anytime), oneko cat follows the cursor.
+Global: one fixed theme (no light/dark toggle), bottom icon dock with the music play button in the center (one song, loops, pause anytime). Dock buttons scroll smoothly and never put `#section` in the URL. The oneko cat follows the cursor (hidden on touch screens). Dock and cat are hidden on `/keystatic`.
 
 ## Design tokens (sketchbook theme)
 
@@ -85,10 +85,24 @@ Do not copy location fields from these profiles (Letterboxd lists one).
 
 Music: one song for now (`public/Akeboshi.mp3`, "Wind"), played from the center dock button. A bigger playlist is parked. If it comes back: hosted files must be public-domain/CC recordings (e.g. classical pieces from DP's Instrumental playlist); anything else goes through a visible YouTube player (YouTube's terms forbid hidden audio-only playback).
 
+## Where things live in the code
+
+| What | Where |
+|---|---|
+| CMS schema | `keystatic.config.ts` (admin at `localhost:3000/keystatic`, dev only) |
+| Content | `content/` (site.yaml, projects/, videos/, art/, words/*.mdoc) |
+| Reading content | `src/lib/content.ts` |
+| Live feeds (Letterboxd, YouTube) | `src/lib/feeds.ts` |
+| Project illustrations | `src/components/covers.ts` (SVG strings, keyed by the project's `cover` field) |
+| Markdown twins / llms.txt | `src/lib/markdown.ts`, `src/app/md/[...path]`, `src/app/llms.txt`, `src/proxy.ts` |
+| Share images | `src/lib/og.tsx` + `opengraph-image.tsx` files |
+| Old URL redirects | `next.config.ts` |
+| Medium import (one-off) | `npm run import:medium` |
+
 ## Stack and hosting
 
 - Next.js (App Router) + TypeScript + Tailwind, deployed on Vercel at madebydp.com.
 - Content lives in the repo, edited through Keystatic running locally (`/keystatic`, disabled in production). No database.
-- Media: images in `public/media/`, project demo videos on Mux via `next-video`.
+- Media: images in `public/media/`, project demo videos on Mux (played with `@mux/mux-player-react`).
 - SEO/AEO: sitemap + robots generated from content, JSON-LD (`Person`, `CreativeWork`, `BlogPosting`), per-page OG images in the sketchbook style, and DualMark (`@dualmark/nextjs`) for markdown twins + `llms.txt`.
 - Secrets (`GITHUB_TOKEN`, Mux keys) are server-only; never put them in `next.config.ts` `env` or `NEXT_PUBLIC_*`.

@@ -1,0 +1,19 @@
+{
+  "title": "video call streaming",
+  "status": "older",
+  "order": 2,
+  "year": "",
+  "oneLiner": "live video with separate streamer and viewer roles.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://streaming-timepass.vercel.app",
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

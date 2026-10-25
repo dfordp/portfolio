@@ -1,0 +1,19 @@
+{
+  "title": "super grader",
+  "status": "older",
+  "order": 5,
+  "year": "",
+  "oneLiner": "reads answer scripts and grades them against a rubric.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://github.com/dfordp/super-grader-api",
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

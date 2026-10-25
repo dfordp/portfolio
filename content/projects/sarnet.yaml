@@ -1,0 +1,19 @@
+{
+  "title": "sarnet",
+  "status": "older",
+  "order": 4,
+  "year": "",
+  "oneLiner": "colours in black-and-white radar satellite images.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://github.com/dfordp/sarnet-api",
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

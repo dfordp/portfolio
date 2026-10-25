@@ -1,0 +1,32 @@
+{
+  "title": "black hole simulation engine",
+  "status": "recent",
+  "order": 4,
+  "year": "",
+  "oneLiner": "i watch too much interstellar. so i made light bend around a black hole in c++.",
+  "problem": "every black hole picture online is a render someone else made. i wanted to bend the light myself.",
+  "whatItDoes": "it simulates black hole physics and gravitational lensing in 2d and 3d, and works out how light travels near the hole on the cpu or gpu.",
+  "cover": "blackhole",
+  "figCaption": "fig. 1: light, bending",
+  "tags": [
+    "c++17",
+    "cmake"
+  ],
+  "stack": [
+    "c++17",
+    "cmake"
+  ],
+  "link": null,
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": [
+    {
+      "caption": "the simulation running",
+      "kind": "mux",
+      "image": null,
+      "videoId": "PwigxTtNwQjuVYOUTP7WzC1yDP0102iYFiJG8011lTmoBs"
+    }
+  ]
+}

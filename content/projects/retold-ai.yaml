@@ -1,0 +1,59 @@
+{
+  "title": "retold ai",
+  "status": "recent",
+  "order": 2,
+  "year": "2025",
+  "oneLiner": "feed it a three-hour movie. get a trailer back.",
+  "problem": "sometimes you want the story of a film, not all three hours of it.",
+  "whatItDoes": "you give it a full movie or a long video. it finds the big moments and cuts a short trailer, plus a retelling of the story in plain words. it runs on openai's multimodal models.",
+  "cover": "retold",
+  "figCaption": "fig. 1: three hours in, one minute out",
+  "tags": [
+    "openai"
+  ],
+  "stack": [
+    "openai multimodal models"
+  ],
+  "link": "https://www.youtube.com/@retold-dfordp",
+  "linkLabel": "the retold youtube channel",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [
+    {
+      "date": "oct 2025",
+      "text": "five trailers go up on its own youtube channel."
+    }
+  ],
+  "evidence": [
+    {
+      "caption": "the silence of the lambs, retold",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "36qgzbYzemY"
+    },
+    {
+      "caption": "sharknado, taken seriously",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "VzsqouYpLJo"
+    },
+    {
+      "caption": "beetlejuice, retold",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "t6bUFpdJCnk"
+    },
+    {
+      "caption": "circle (2015), retold",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "oU_YXlW-1lo"
+    },
+    {
+      "caption": "citizen kane, squeezed",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "EIUzHvSvFA0"
+    }
+  ]
+}

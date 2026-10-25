@@ -1,0 +1,19 @@
+{
+  "title": "aarchid",
+  "status": "brewing",
+  "order": 2,
+  "year": "2026",
+  "oneLiner": "a personal botanist on your phone",
+  "problem": "plant apps tell you to water on tuesdays. plants don't know what a tuesday is.",
+  "whatItDoes": "you snap a photo and it tells you the species and how the plant is doing. reminders skip the days it's going to rain anyway.",
+  "cover": "aarchid",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://www.aarchid.space/",
+  "linkLabel": "aarchid.space",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

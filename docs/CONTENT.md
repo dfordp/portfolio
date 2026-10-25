@@ -20,9 +20,11 @@ Status key: `draft` (wording proposed, not approved) · `approved` · `needs-inf
 | Name (hero, bylines, share image) | approved | DP |
 | Handwritten tagline | approved | half batman, half spider-man |
 | Tagline, second line (smaller) | approved | no superpowers. no plot armor. |
-| Bio, line 1 | approved | my friends call me dp. forms call me dilpreet. |
-| Bio, line 2 | draft | i build small apps for things that annoy me. i also cut videos: movies, tv series, and stuff i shot myself. |
-| Bio, line 3 | draft | some of it's useful. most of it's just fun. |
+| Bio, line 1 | approved | my friends call me dp. forms call me dilpreet. ("dilpreet" is redacted by default; hover or tap reveals it) |
+| Bio, line 2 | approved | i build small apps for things that annoy me. |
+| Bio, line 3 | approved | i also edit videos using stuff i shot myself and tv series. |
+| Bio, line 4 | approved | i design posters and cover art too. |
+| Bio, line 5 | approved | some of it's useful. most of it's just fun. |
 | Footer line | draft | made with too much chai |
 | Footer right | approved | © 2026 DP · madebydp.com |
 | Site meta description (SEO, ~155 chars) | draft | DP (Dilpreet) builds small apps, cuts video edits and writes long essays about tech. A sketchbook of everything made, brewing and half-finished. |
@@ -40,6 +42,8 @@ Dropped: "makes things, then edits the evidence", "small apps, big batman energy
 
 ## 3. Currently brewing
 
+Cards link straight to the live site (no story page).
+
 Each needs: one-liner, the problem, what it does, timeline entries, stack, link, doodle cover.
 
 ### ombly · ombly.space · `draft`
@@ -51,7 +55,7 @@ Each needs: one-liner, the problem, what it does, timeline entries, stack, link,
 
 ### aarchid · aarchid.space · `draft`
 - **Facts** (site + YouTube): photo-based plant ID with a health score; per-plant profile ("digital twin") with photo journal and care history; reports that cite sources; watering reminders that move when rain is forecast; filter plants by room; three tiers (Starter, Enthusiast, Collector); early-bird waitlist. First demo video "Aarchid Demo" posted 2024-09-09 on the technical channel (JRoQtHEF_oY).
-- **One-liner:** a tiny therapist for your plants
+- **One-liner:** a personal botanist on your phone
 - **The problem:** plant apps say water on tuesdays. plants don't know what a tuesday is.
 - **What it does:** you snap a photo and it tells you the species and how the plant is doing. reminders skip the days it's going to rain anyway.
 - **Needs Dilpreet:** the real origin story (the mockup's "killed two basil plants" line is invented, remove unless true), stack, 2025 timeline.
@@ -78,7 +82,7 @@ Recent (cards):
 | hackmate | Swipe-based matchmaking for founders and builders. Next.js, Postgres, Redis, Clerk. | hackmate.space | tinder, but for co-founders. swipe right on someone who also wants to stay up till 4am fixing prod. |
 | onlynerds | Decentralized AI learning platform: fork courses, AI tutors, skill NFTs. BNB Chain AI hackathon. | onlynerds-rose.vercel.app | not what the name suggests. you fork a course, remix it and learn it with an ai tutor. |
 
-Older stuff (short pages only, no full project write-up). Removed on DP's call: echo (never deployed), video sharing platform, kosu, messenger app, e-commerce admin dashboard, mbp-10 order book.
+Older stuff: direct links only, no pages. toolchainai → npm package; sarnet, super grader, one med → GitHub repos; sumz → ai-summariser.vercel.app; goserve → compile-me.ankn.dev; video call streaming → streaming-timepass.vercel.app (**needs DP: confirm**); meeting scheduler mcp, crowd funding, ai companion → **needs DP: links**. Removed on DP's call: echo (never deployed), video sharing platform, kosu, messenger app, e-commerce admin dashboard, mbp-10 order book.
 
 | Project | Draft line |
 |---|---|

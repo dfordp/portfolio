@@ -1,0 +1,39 @@
+{
+  "title": "openlens",
+  "status": "recent",
+  "order": 1,
+  "year": "2025",
+  "oneLiner": "tells tired maintainers which prs are real and which are someone farming green squares.",
+  "problem": "popular repos get buried in low-effort and duplicate pull requests.",
+  "whatItDoes": "it looks at community health and contribution quality, and flags the spam and the duplicates, so maintainers spend their time merging real work.",
+  "cover": "openlens",
+  "figCaption": "fig. 1: two prs, crossed out",
+  "tags": [
+    "github api"
+  ],
+  "stack": [],
+  "link": null,
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [
+    {
+      "date": "oct 2025",
+      "text": "the demo goes up on the technical channel."
+    }
+  ],
+  "evidence": [
+    {
+      "caption": "the demo, oct 2025",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "rJBH-l3n2CA"
+    },
+    {
+      "caption": "the dashboard",
+      "kind": "image",
+      "image": "/media/made/openlens.png",
+      "videoId": ""
+    }
+  ]
+}

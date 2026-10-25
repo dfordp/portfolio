@@ -1,0 +1,40 @@
+{
+  "title": "onlynerds",
+  "status": "recent",
+  "order": 6,
+  "year": "2025",
+  "oneLiner": "not what the name suggests. you fork a course, remix it and learn it with an ai tutor.",
+  "problem": "online courses are fixed, the reviews are hard to trust, and finishing one proves very little.",
+  "whatItDoes": "you fork a course like a repo, remix it, and learn with an ai tutor. progress turns into skill nfts, so what you learned is on record. built at a bnb chain ai hackathon.",
+  "cover": "onlynerds",
+  "figCaption": "fig. 1: a course, forked",
+  "tags": [
+    "next.js",
+    "solidity"
+  ],
+  "stack": [
+    "next.js",
+    "solidity",
+    "hugging face",
+    "ipfs"
+  ],
+  "link": "https://onlynerds-rose.vercel.app/",
+  "linkLabel": "onlynerds",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": [
+    {
+      "caption": "the demo",
+      "kind": "mux",
+      "image": null,
+      "videoId": "1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA"
+    },
+    {
+      "caption": "the landing page",
+      "kind": "image",
+      "image": "/media/made/onlynerds.jpeg",
+      "videoId": ""
+    }
+  ]
+}
