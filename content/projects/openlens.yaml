@@ -1,0 +1,74 @@
+{
+  "title": "openlens",
+  "status": "recent",
+  "order": 1,
+  "year": "2025",
+  "oneLiner": "tells tired maintainers which prs are real and which are someone farming green squares.",
+  "problem": "popular repos get buried in spam prs, duplicates and low-effort contributions. maintainers end up sorting instead of merging.",
+  "whatItDoes": "it's a github app. you load a repo, it pulls in the open prs and issues and stores them as embeddings in postgres. then, for every pr, it shows similar past prs or issues, whether the contributor is new or returning, and small red flags like a missing linked issue or a suspiciously thin description.",
+  "cover": "openlens",
+  "figCaption": "fig. 1: two prs, crossed out",
+  "tags": [
+    "github api"
+  ],
+  "stack": [
+    "fastapi",
+    "next.js",
+    "tailwind",
+    "postgres + pgvector",
+    "github app"
+  ],
+  "link": "https://github.com/dfordp/Sentinel",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-25",
+  "story": [
+    {
+      "date": "jul 2025",
+      "text": "started it as a github app, then called sentinel."
+    },
+    {
+      "date": "oct 2025",
+      "text": "made a demo video for the technical channel."
+    },
+    {
+      "date": "after that",
+      "text": "got to talk about it at a few college events."
+    },
+    {
+      "date": "jul 2026",
+      "text": "built a complete version for a client and sold it for $2,500. the first project i've ever sold."
+    },
+    {
+      "date": "why sell",
+      "text": "the idea had already been copied a lot, and there were plenty of funded competitors. racing them didn't seem worth it, so i let it go."
+    },
+    {
+      "date": "now",
+      "text": "not taking openlens further. poking at other corners of the same space instead."
+    }
+  ],
+  "evidence": [
+    {
+      "caption": "the demo, oct 2025",
+      "kind": "youtube",
+      "image": null,
+      "videoId": "rJBH-l3n2CA"
+    },
+    {
+      "caption": "the day it sold, jul 2026",
+      "kind": "image",
+      "image": "/media/made/openlens-sold.jpg",
+      "videoId": "",
+      "link": "https://x.com/dfordp11/status/2076027960302481730"
+    },
+    {
+      "caption": "the dashboard",
+      "kind": "image",
+      "image": "/media/made/openlens.png",
+      "videoId": ""
+    }
+  ],
+  "stage": "shipped",
+  "reading": []
+}

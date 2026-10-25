@@ -1,84 +1,58 @@
-import type { Metadata } from "next";
-import {Inter_Tight, Instrument_Serif} from "next/font/google";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider"
-import { ScrollToTop } from "@/components/ui/ScrollAnimations"
-import BackgroundMusic from "@/components/BackgroundMusicWrapper"
+import type { Metadata, Viewport } from 'next';
+import { Instrument_Serif, Caveat, Inter_Tight } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import Dock from '@/components/Dock';
+import Oneko from '@/components/Oneko';
+import { getSite, getSongs } from '@/lib/content';
+import { SITE_URL } from '@/lib/seo';
+import './globals.css';
 
-const inter = Inter_Tight({
-  weight: '400',
-  style: 'normal',
-  subsets: ['latin']
-})
+const serif = Instrument_Serif({ weight: '400', subsets: ['latin'], variable: '--font-serif' });
+const hand = Caveat({ weight: ['500', '700'], subsets: ['latin'], variable: '--font-hand' });
+const sans = Inter_Tight({ weight: ['400', '500'], subsets: ['latin'], variable: '--font-sans' });
 
-const instrumentSerif = Instrument_Serif({
-  weight: ['400'],
-  style: 'normal',
-  subsets: ['latin'],
-  variable: '--font-instrument-serif'
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await getSite();
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: { default: 'Made by DP', template: '%s · Made by DP' },
+    description: site.description,
+    authors: [{ name: 'Dilpreet Grover', url: SITE_URL }],
+    alternates: { canonical: '/', types: { 'application/rss+xml': '/words/rss.xml' } },
+    openGraph: { siteName: 'Made by DP', locale: 'en_US', type: 'website', url: SITE_URL },
+    twitter: { card: 'summary_large_image', creator: '@dfordp11' },
+  };
+}
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://www.dilpreetgrover.me/'),
-  title: 'Dilpreet Grover',
-  description: '',
-  openGraph: {
-    url: 'https://www.dilpreetgrover.me/',
-    siteName: 'Dilpreet Grover Portfolio',
-    locale: 'en_US',
-    type: 'website',
-    images: [{
-      url: '/open-graph.png',
-      width: 1200,
-      height: 630,
-      alt: 'Dilpreet Grover - Portfolio'
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@dfordp11",
-    title: "Dilpreet Grover",
-    description: "I’m someone who loves exploring ideas through code, design, and whatever medium feels right that day. I spend most of my time building things that make life a bit simpler or spark curiosity, often blending structure with imagination.",
-    images: [
-      {
-        url: "https://www.dilpreetgrover.me/open-graph.png",  // Image URL
-        alt: "Dilpreet Grover - Portfolio"                // (Optional) Alt text
-      }
-    ]
-  },
-};
+export const viewport: Viewport = { themeColor: '#f3ede0' };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const songs = (await getSongs()).map(({ title, artist, src }) => ({ title, artist, src }));
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="google-site-verification" content="tMCNs2fgM6voEHBd3JsySffMFSiUCQDEFEF1iYI3-ZQ" />
-      </head>
-      <body className={`${inter.className} ${instrumentSerif.variable}`} suppressHydrationWarning={true}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-            <div className="relative z-10">
-              {children}
-              <Analytics/>
-            </div>
-            <ScrollToTop />
-            <BackgroundMusic />
-        </ThemeProvider>
-        <script
-          src="https://script.refix.ai/script.min.js"
-          type="text/javascript"
-          data-refix-token="c9a48825-4062-464a-941d-c958ddf21a96"
-          defer
-        ></script>
+    <html lang="en" className={`${serif.variable} ${hand.variable} ${sans.variable}`}>
+      <body>
+        <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden="true">
+          <defs>
+            <pattern id="hatch" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="5" stroke="#2B2722" strokeWidth="1" strokeOpacity=".45" />
+            </pattern>
+            <pattern id="dots" patternUnits="userSpaceOnUse" width="6" height="6">
+              <circle cx="1.5" cy="1.5" r=".9" fill="#2B2722" fillOpacity=".4" />
+            </pattern>
+          </defs>
+          <filter id="rough">
+            <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" />
+            <feDisplacementMap in="SourceGraphic" scale="3" />
+          </filter>
+          <filter id="rough2">
+            <feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="7" />
+            <feDisplacementMap in="SourceGraphic" scale="1.6" />
+          </filter>
+        </svg>
+        {children}
+        <Dock songs={songs} />
+        <Oneko />
+        <Analytics />
       </body>
     </html>
   );

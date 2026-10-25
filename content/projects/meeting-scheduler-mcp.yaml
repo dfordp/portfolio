@@ -1,0 +1,19 @@
+{
+  "title": "meeting scheduler mcp",
+  "status": "older",
+  "order": 3,
+  "year": "",
+  "oneLiner": "finds the cal.com and calendly links inside an organization, so an ai can book the meeting.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://github.com/dfordp/mcp-timepass",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

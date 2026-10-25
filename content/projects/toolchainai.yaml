@@ -1,0 +1,19 @@
+{
+  "title": "toolchainai",
+  "status": "older",
+  "order": 1,
+  "year": "",
+  "oneLiner": "llm agents with tools, minus the boilerplate.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [],
+  "link": "https://www.npmjs.com/package/toolchainai",
+  "linkLabel": "",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [],
+  "evidence": []
+}

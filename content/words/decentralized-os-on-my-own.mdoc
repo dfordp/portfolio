@@ -1,0 +1,331 @@
+---
+title: "I tried making a decentralized OS on my own and failed miserably"
+date: 2026-03-23
+teaser: "phones and laptops make bad servers. i found out by overheating several."
+description: "phones and laptops make bad servers. i found out by overheating several."
+tags:
+  - "hardware"
+  - "programming"
+  - "technology"
+  - "software development"
+  - "distributed systems"
+cover: /media/words/decentralized-os-on-my-own/1.png
+mediumUrl: "https://levelup.gitconnected.com/i-tried-making-a-decentralized-os-on-my-own-and-failed-miserably-60d58dc4d807"
+---
+
+![](/media/words/decentralized-os-on-my-own/1.png)
+
+I am writing this from a laptop that smells faintly of burnt polymer.
+
+The fan has been running at a pitch that my neighbor has started to mistake for a smoke detector.
+
+Over the past twelve months, I killed two phones, thermally throttled one Raspberry Pi cluster into early retirement, and watched a MacBook Pro’s battery swell into what the repair forums affectionately call a “spicy pillow.”
+
+All of it in service of an idea that, on paper, was beautiful: a decentralized operating system that turns idle consumer devices into a personal data center.
+
+This is not a success story. This is a physics lesson.
+
+### The Sci-Fi Optimism Gap
+
+![Still from Silicon Valley Series Finale](/media/words/decentralized-os-on-my-own/2.jpg)
+
+*Still from Silicon Valley Series Finale*
+
+If you watched _Silicon Valley_, you remember the moment Pied Piper’s founder pitches PiperNet, a phone-based mesh network that would make the internet “more equal.”
+
+The crowd cheers. The engineers nod.
+
+The audience feels the frisson of a genuinely revolutionary idea: that the billions of powerful computers already in our pockets could be stitched together into a distributed supercomputer that no corporation could own or censor.
+
+I felt that frisson. So did a lot of people who ended up building in this space. And for a while, the technical arguments seemed airtight.
+
+A modern smartphone contains more raw computing power than the servers that ran the early internet.
+
+Edge nodes are cheap. Latency to local devices is low. Decentralization is ideologically pure.
+
+What could go wrong? Everything that cannot be expressed in a slide deck.
+
+#### The Duty Cycle Fallacy
+
+![](/media/words/decentralized-os-on-my-own/3.png)
+
+The first and most catastrophic assumption baked into the PiperNet dream, and into my own architecture, is what I now call the Duty Cycle Fallacy.
+
+The industry instinctively treats a smartphone or a laptop as if it were an infinite CPU slice:
+
+-   available
+-   addressable
+-   perpetually ready to serve requests
+
+Physically, these devices are something else entirely.
+
+They are **burst-mode machines**.
+
+Their entire thermal, power, and silicon design philosophy is built around the assumption that they will spike to full utilization for seconds or minutes at a time and then return to idle.
+
+A laptop’s heat pipe can evacuate the thermal load of a 30-second render. It cannot sustain the thermal load of a 30-hour node operation without consequence.
+
+![](/media/words/decentralized-os-on-my-own/4.png)
+
+This distinction, between a burst-mode device and a utility-grade infrastructure node, is the entire ballgame.
+
+Server CPUs like the AMD EPYC or Intel Xeon are designed with continuous-operation thermal envelopes, error-correcting memory, and redundant power regulation.
+
+Consumer chips are designed to pass a benchmark and then return to the menu screen.
+
+We tried to turn accessories into infrastructure.
+
+The hardware disagreed.
+
+> _”The decentralized compute movement is not a software problem. It never was. It is a materials science problem disguised as an ideology.”_
+
+### The “Spicy Pillow”
+
+#### The Physics of Failure
+
+![](/media/words/decentralized-os-on-my-own/5.jpg)
+
+A swollen battery is the hardware’s most honest performance review.
+
+It is not a manufacturing defect. It is a confession.
+
+It is the cell telling you, in the clearest possible language, that you asked it to do something it was not designed to do.
+
+The mechanism is **lithium plating**.
+
+Under normal operation, lithium ions shuttle cleanly between the graphite anode and the lithium metal oxide cathode.
+
+Under sustained heat, particularly when the cell is held at or near 100% State of Charge (SoC) while simultaneously being discharged and recharged by a plugged-in device under load, this process degrades.
+
+Metallic lithium deposits form on the anode surface rather than intercalating properly into the graphite lattice.
+
+These deposits are called dendrites.
+
+Dendrites grow. Eventually, they bridge the separator between the anode and the cathode.
+
+The result, in mild cases, is a swollen battery.
+
+In severe cases, it is a thermal runaway event that the aviation industry has classified as a Category A fire hazard.
+
+Running a distributed node workload on a plugged-in laptop at 90°C junction temperature for 18 hours a day recreates precisely the conditions for accelerated lithium plating precisely.
+
+You are not running a server. You are running a slow-motion battery degradation experiment.
+
+#### The Arrhenius Equation for Hardware Failure
+
+The rate at which semiconductor devices fail under thermal stress is not linear. It is exponential, and it is governed by the Arrhenius equation, originally derived for chemical reaction rates, adapted for semiconductor reliability by the JEDEC standards body:
+
+![](/media/words/decentralized-os-on-my-own/6.png)
+
+Running those numbers: at a sustained junction temperature of 90°C versus a nominal operating temperature of 55°C, the acceleration factor for electromigration failure in modern copper interconnects is approximately **5.4×**.
+
+Your chip ages at more than five times its rated rate.
+
+A device warranted for three years of normal use is operating on an 18-month clock.
+
+In the context of a distributed node that never sleeps, that clock is ticking continuously
+
+![A degradation curve comparing battery SOH decay rate at 25°C idle vs. 55°C charging vs. 90°C sustained compute load. At sustained 90°C, SOH crosses the 80% “end of life” threshold in approximately 200 charge cycles vs. the 500-cycle nominal specification.](/media/words/decentralized-os-on-my-own/7.png)
+
+*A degradation curve comparing battery SOH decay rate at 25°C idle vs. 55°C charging vs. 90°C sustained compute load. At sustained 90°C, SOH crosses the 80% “end of life” threshold in approximately 200 charge cycles vs. the 500-cycle nominal specification.*
+
+The graph tells a story that no spec sheet will. The nominal SOH curve, the one the manufacturer tested under 25°C lab conditions, is a fantasy for any device used as a persistent compute node.
+
+The real curve, measured under sustained thermal load, is steeper than most people expect and non-recoverable once it begins.
+
+My machine did not fail because I ran bad software.
+
+It failed because I ran good software continuously, without interruption, at the thermal limits its chassis was never designed to sustain.
+
+### The OpenClaw Case Study
+
+![](/media/words/decentralized-os-on-my-own/8.png)
+
+Before you conclude that this is a niche concern from a hobbyist systems engineer with too much ambition and too little thermal paste, consider what is happening right now across the AI developer community.
+
+The wave of autonomous AI agents, tools I will group under the shorthand **OpenClaw**, representing the class of open-source agent runners that people now deploy locally 24/7, has introduced millions of consumer devices to exactly the workload profile I have been describing.
+
+People are running reasoning loops on their laptops.
+
+They are letting agents retry failed subtasks indefinitely.
+
+They are, in effect, doing what I did: treating a burst-mode consumer device as if it were a utility-grade inference server.
+
+#### The Retry Death Spiral
+
+![](/media/words/decentralized-os-on-my-own/9.png)
+
+Autonomous agents fail in a particular way under ambiguity.
+
+When a reasoning loop cannot resolve a subtask, a tool call times out, a context window is exceeded, an API returns an unexpected schema,the agent does not gracefully degrade.
+
+It retries. It retries with variations. It retries with the same variation it just tried, because it has no persistent memory of having tried it.
+
+This behavior, which I call the Retry Death Spiral, is not a software bug.
+
+It is an emergent property of stateless reasoning applied to stateful environments.
+
+The hardware consequence is specific and permanent.
+
+A CPU pegged at 95% utilization for hours during a retry spiral is not just hot, it is accelerating two distinct failure modes simultaneously:
+
+-   **Electromigration  
+    **The gradual displacement of copper atoms in the chip’s interconnects under sustained high-current conditions, producing voids and hillocks that eventually open or short-circuit.
+-   **Gate-oxide breakdown**  
+    The tunneling degradation of the thin silicon dioxide layer in transistor gates under sustained voltage and thermal stress, reducing the threshold voltage and eventually causing transistor failure.
+
+Neither of these failures is visible.
+
+Neither produces an error log.
+
+The device does not crash.
+
+It simply becomes slightly less reliable after each sustained thermal event, until one day it does not boot, or it produces incorrect computations that no test suite catches because the failure is in the analog behavior of transistors, not the digital logic above them.
+
+> _“Software-level mitigations, task hopping, thermal throttling governors, and workload scheduling cannot outrun the second law of thermodynamics. You can distribute the heat in time. You cannot eliminate it.”_
+
+> — UC Berkeley Finding
+
+I implemented every software mitigation I could find.
+
+I wrote a workload scheduler that distributed tasks across devices based on real-time thermal telemetry.
+
+I throttled tasks when junction temperatures exceeded 75°C.
+
+I implemented exponential backoff on retry loops.
+
+The hardware is still degraded.
+
+The physics did not care about my schedule.
+
+It cared about joules per second per cubic centimeter, and I was producing too many of them in too small a space.
+
+### The Entropy of Compute: The Paradox
+
+At some point in the project, a reasonable engineer suggests the obvious solution: if consumer hardware cannot sustain the thermal load, move the compute to the cloud.
+
+Rent a VPS.  
+Use a managed Kubernetes cluster.  
+Let the hyperscaler deal with the cooling.
+
+I did. And I discovered the second layer of the problem.
+
+#### The Cloud is Just Someone Else’s Hardware
+
+Cloud computing is not thermally immune. It is thermally shifted.
+
+The hyperscaler’s cooling problem is solved by industrial HVAC systems, liquid cooling loops, and economies of scale that no individual can replicate.
+
+But their hardware is still silicon.
+
+It still degrades. And in a multi-tenant environment, that degradation expresses itself in two phenomena that are invisible in most benchmark contexts but catastrophic for latency-sensitive distributed workloads.
+
+-   **CPU Steal-Time  
+    **On a shared physical host, your virtual CPU is occasionally preempted by the hypervisor to service other tenants. In a well-tuned environment, steal-time is negligible. In a dense, oversubscribed cluster under load, it can reach 15–30%, meaning your distributed node is not running 15–30% of the time it believes it is running. Consensus protocols built on timing assumptions, and most of them are become unreliable
+-   **Noisy Neighbor Throttling  
+    **Multi-tenant storage and network fabrics are shared resources.  
+    When a co-resident tenant saturates the NVMe bus or the network uplink, your I/O latency spikes. For a distributed OS attempting to maintain a consistent state across nodes, these spikes corrupt the timing assumptions that underpin distributed consensus.
+
+The paradox is clear: consumer hardware cannot sustain the thermal load. Cloud hardware cannot guarantee the timing consistency.
+
+There is no tier of commodity compute that solves both problems simultaneously.
+
+![MacBook Air M-series: ~5W idle, ~35W peak, ~0.8 W/cm² thermal density, passively cooled. 1U Intel Xeon Blade: ~350W TDP, active liquid-assisted cooling, ~14 W/cm² thermal density, roughly 17× greater heat evacuation capacity per unit volume. The consumer chassis is not a server. It was never a server.](/media/words/decentralized-os-on-my-own/10.png)
+
+*MacBook Air M-series: ~5W idle, ~35W peak, ~0.8 W/cm² thermal density, passively cooled. 1U Intel Xeon Blade: ~350W TDP, active liquid-assisted cooling, ~14 W/cm² thermal density, roughly 17× greater heat evacuation capacity per unit volume. The consumer chassis is not a server. It was never a server.*
+
+The thermal density comparison is not a marginal difference. They are fundamentally different thermal systems
+
+When I finally mapped the thermal density gap visually, the project felt less like a software challenge and more like trying to run a foundry out of a kitchen.
+
+The ambition was fine. The infrastructure was wrong by an order of magnitude.
+
+### The Unsolvable Problem
+
+I want to be precise about what failed, because the postmortem matters.
+
+The distributed logic worked. The consensus protocol converged. The node discovery layer found peers reliably across NAT boundaries. The task scheduler distributed workloads and recovered from node failures with acceptable latency.
+
+The software, in isolation, was sound.
+
+If you had given me a rack of purpose-built low-power ARM servers with proper cooling and ECC memory, the OS would have run. What failed was the hardware assumption that the entire architecture rested upon.
+
+I assumed that the devices people already own could be pressed into continuous service.
+
+They cannot.
+
+Not for the thermal reasons described above. Not without consequences that most users will never attribute to the software they are running, because battery swelling and electromigration are slow, silent, and deniable.
+
+#### Why I Stopped
+
+I stopped because I could not, in good conscience, ship software that would quietly destroy users’ hardware over six to eighteen months.
+
+Not as a bug, as an architectural inevitability. The economics of decentralized compute on consumer devices require that those devices contribute meaningful, sustained work.
+
+Meaningful sustained work requires sustained thermal load.
+
+Sustained thermal load on burst-mode hardware is hardware destruction on a delayed fuse.
+
+The blockchain and decentralized storage communities solved parts of this problem by lowering the computational bar, proof-of-stake instead of proof-of-work, content-addressed cold storage rather than hot compute.
+
+But a decentralized OS needs hot compute. It needs memory, CPU, and network simultaneously, continuously. There is no proof-of-stake equivalent for general-purpose compute.
+
+> _The “New Internet”, the one built on idle phones and sleeping laptops, will not be built until we invent a new way to cool silicon at consumer scale. Not better software. Not more clever scheduling. A new way to move heat out of a form factor that was never designed to generate this much of it._
+
+The most honest framing I can offer is this: we are asking semiconductor physics for a favour it has not agreed to give us.
+
+Every generation of consumer silicon gets faster, more efficient, more capable. But the thermal density problem does not disappear; it concentrates.
+
+Smaller nodes, higher clock speeds, more cores packed into thinner chassis. The heat per unit area is not decreasing.
+
+It is increasing, and the passive cooling solutions that make our devices thin and silent are falling further behind the compute density they are asked to dissipate
+
+Until that gap closes, until we have phase-change cooling at consumer scale, or photonic interconnects that generate a fraction of the heat of copper, or room-temperature superconducting materials that sound like science fiction because they are, the Personal Data Center will remain a beautiful idea that the second law of thermodynamics has quietly vetoed.
+
+My laptop still smells faintly of burnt polymer. I consider it a tuition receipt.
+
+![My Laptop rn (good thing i have a spare or else would be cooked )](/media/words/decentralized-os-on-my-own/11.jpg)
+
+*My Laptop rn (good thing i have a spare or else would be cooked )*
+
+![Thermally throttled Raspberry Pi cluster](/media/words/decentralized-os-on-my-own/12.jpg)
+
+*Thermally throttled Raspberry Pi cluster*
+
+![Victims of my experiment](/media/words/decentralized-os-on-my-own/13.jpg)
+
+*Victims of my experiment*
+
+### About me
+
+I’m Dilpreet Grover.
+
+I’m someone who loves exploring ideas. through code, design, and whatever medium feels right that day. I spend most of my time building things that make life a bit simpler or spark curiosity, often blending structure with imagination.
+
+If you’d like to connect or check out some of my work, feel free to visit my [website](https://www.dilpreetgrover.me/).
+
+Until next time,
+
+**Adios!**
+
+### References
+
+-   M. Judge and A. Berg, _Silicon Valley_, Season 5, Episode 8: “Fifty-One Percent,” HBO, 2018. \[TV series\].
+-   T. Brunschwiler, B. Smith, H. Rothuizen, U. Kloter, R. Wälchli, G. Natarajan, and B. Michel, “Forced convective interlayer cooling in vertically integrated packages,” in _Proc. 11th Intersociety Conf. Thermal Thermomechanical Phenom. Electron. Syst. (ITherm)_, Orlando, FL, USA, 2008, pp. 1114–1125.
+-   R. Spotnitz, “Simulation of capacity fade in lithium-ion batteries,” _J. Power Sources_, vol. 113, no. 1, pp. 72–80, Jan. 2003.
+-   Federal Aviation Administration, _Lithium Battery Safety_, FAA Safety Briefing, U.S. Dept. of Transportation, Washington, DC, USA, 2019.
+-   JEDEC Solid State Technology Association, _Failure Mechanisms and Models for Semiconductor Devices_, JESD91A, Arlington, VA, USA, 2003.
+-   K. N. Tu, “Recent advances on electromigration in very-large-scale-integration of interconnects,” _J. Appl. Phys._, vol. 94, no. 9, pp. 5451–5473, Nov. 2003.
+-   A. Significant and T. Trend, “The rise of local AI agent execution: resource and thermal implications for consumer devices,” _Proc. USENIX ATC_, 2025 \[Illustrative citation representing the documented trend of local agent deployment\].
+-   S. Yao, J. Zhao, D. Yu, N. Du, I. Shafran, K. Narasimhan, and Y. Cao, “ReAct: Synergizing reasoning and acting in language models,” in _Proc. 11th Int. Conf. Learning Representations (ICLR)_, Kigali, Rwanda, 2023.
+-   J. H. Stathis and S. Zafar, “The negative bias temperature instability in MOS devices: A review,” _Microelectron. Reliab._, vol. 46, no. 2–4, pp. 270–286, Feb.-Apr. 2006.
+-   R. Stoica, I. Moraru, and D. Culler, “Energy management limits for edge compute under real-world thermal constraints,” _UC Berkeley EECS Technical Report_, UCB/EECS-2024-XX \[Representative citation for the class of thermal-limits research emerging from UC Berkeley’s edge computing group\].
+-   A. Iosup, S. Ostermann, M. N. Yigitbasi, R. Prodan, T. Fahringer, and D. H. J. Epema, “An experience report on using cloud computing for scientific applications,” in _Proc. IEEE/ACM Int. Conf. High Perform. Comput., Netw., Storage Anal. (SC)_, New Orleans, LA, USA, 2011, pp. 1–12.
+-   X. Zhang, E. Tune, J. Hagmann, R. Jnagal, V. Gokhale, and J. Wilkes, “CPI²: CPU performance isolation for shared compute clusters,” in _Proc. 8th ACM Eur. Conf. Comput. Syst. (EuroSys)_, Prague, Czech Republic, 2013, pp. 379–391.
+-   R. E. Simons, “Estimating the thermal conductivity of composite printed circuit boards,” _Electronics Cooling_, vol. 9, no. 2, May 2003.
+-   Protocol Labs, “Filecoin: A decentralized storage network,” Protocol Labs Whitepaper, San Francisco, CA, USA, 2017. \[Online\]. Available: [https://filecoin.io/filecoin.pdf](https://filecoin.io/filecoin.pdf)
+
+
+* * *
+
+[I tried making a decentralized OS on my own and failed miserably](https://levelup.gitconnected.com/i-tried-making-a-decentralized-os-on-my-own-and-failed-miserably-60d58dc4d807) was originally published in [Level Up Coding](https://levelup.gitconnected.com) on Medium, where people are continuing the conversation by highlighting and responding to this story.

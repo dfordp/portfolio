@@ -1,0 +1,25 @@
+{
+  "title": "video call streaming",
+  "status": "older",
+  "order": 2,
+  "year": "",
+  "oneLiner": "webrtc rooms where one person streams and everyone else watches.",
+  "problem": "",
+  "whatItDoes": "",
+  "cover": "none",
+  "figCaption": "",
+  "tags": [],
+  "stack": [
+    "mediasoup",
+    "webrtc",
+    "socket.io",
+    "express",
+    "next.js"
+  ],
+  "link": "https://github.com/dfordp/fermion-timepass",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-25",
+  "story": [],
+  "evidence": []
+}

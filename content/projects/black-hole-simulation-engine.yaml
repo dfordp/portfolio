@@ -1,0 +1,64 @@
+{
+  "title": "black hole simulation engine",
+  "status": "recent",
+  "order": 4,
+  "year": "",
+  "oneLiner": "i watch too much interstellar. so i made light bend around a black hole in c++.",
+  "problem": "interstellar's black hole wasn't just a pretty render. the people who made it published actual physics papers about it. i wanted to understand the light bending well enough to draw it myself.",
+  "whatItDoes": "two simulations. the 2d one traces light rays as they bend around a black hole. the 3d one sends the scene to the gpu, where a compute shader works out each ray's path through curved space (its geodesic) so the image renders in real time.",
+  "cover": "blackhole",
+  "figCaption": "fig. 1: light, bending",
+  "tags": [
+    "c++17",
+    "cmake"
+  ],
+  "stack": [
+    "c++17",
+    "cmake",
+    "vcpkg",
+    "opengl compute shaders"
+  ],
+  "link": "https://github.com/dfordp/Black-Hole-Simulation-Engine",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [
+    {
+      "date": "aug 2025",
+      "text": "started with the 2d lensing version."
+    },
+    {
+      "date": "oct 2025",
+      "text": "moved the heavy maths onto the gpu with a compute shader for the 3d version."
+    }
+  ],
+  "evidence": [
+    {
+      "caption": "the simulation running",
+      "kind": "mux",
+      "image": null,
+      "videoId": "PwigxTtNwQjuVYOUTP7WzC1yDP0102iYFiJG8011lTmoBs"
+    }
+  ],
+  "stage": "shipped",
+  "reading": [
+    {
+      "title": "Gravitational lensing by spinning black holes in astrophysics, and in the movie Interstellar",
+      "who": "Oliver James, Eugénie von Tunzelmann, Paul Franklin, Kip S. Thorne · Classical and Quantum Gravity 32, 065001 (2015)",
+      "url": "https://arxiv.org/abs/1502.03808",
+      "note": "how the film's black hole, gargantua, was actually rendered: tracing light bundles through a spinning black hole's curved spacetime."
+    },
+    {
+      "title": "Visualizing Interstellar's Wormhole",
+      "who": "Oliver James, Eugénie von Tunzelmann, Paul Franklin, Kip S. Thorne · American Journal of Physics (2015)",
+      "url": "https://arxiv.org/abs/1502.03809",
+      "note": "the companion paper, about the wormhole near saturn."
+    },
+    {
+      "title": "The Science of Interstellar",
+      "who": "Kip Thorne · W. W. Norton (2014)",
+      "url": null,
+      "note": "the book the physicist behind the film wrote about the science in it."
+    }
+  ]
+}

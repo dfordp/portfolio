@@ -1,0 +1,33 @@
+{
+  "title": "spotify mcp",
+  "status": "recent",
+  "order": 3,
+  "year": "",
+  "oneLiner": "tells you how your music taste has shifted. no premium needed.",
+  "problem": "spotify knows exactly how your taste has changed over the years. it just never tells you, and most of the good stuff sits behind premium.",
+  "whatItDoes": "it's an mcp server, so an ai assistant can use your spotify like a tool. it can search, break down your taste by genre and mood, compare how your music's energy and mood shifted between two periods, guess where your taste is heading, show top tracks and artists, build or clean up playlists, and dig into a track's tempo, danceability and the rest. none of it needs premium.",
+  "cover": "spotify",
+  "figCaption": "fig. 1: taste, over time",
+  "tags": [
+    "mcp",
+    "spotify api"
+  ],
+  "stack": [
+    "python",
+    "fastmcp",
+    "spotify web api"
+  ],
+  "link": "https://github.com/dfordp/spotify-shadow-listen-mcp",
+  "linkLabel": "source",
+  "published": null,
+  "updated": "2026-10-24",
+  "story": [
+    {
+      "date": "aug 2025",
+      "text": "built it over a few days with fastmcp on top of the spotify web api."
+    }
+  ],
+  "evidence": [],
+  "stage": "shipped",
+  "reading": []
+}

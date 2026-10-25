@@ -1,0 +1,84 @@
+{
+  "title": "onlynerds",
+  "status": "recent",
+  "order": 6,
+  "year": "2025",
+  "oneLiner": "not what the name suggests. you fork a course, remix it and learn it with an ai tutor.",
+  "problem": "online courses are fixed, the reviews are hard to trust, and finishing one proves very little.",
+  "whatItDoes": "you fork a course like a repo, remix it, and learn with an ai tutor. progress turns into skill nfts, so what you learned is on record. built at a bnb chain ai hackathon.",
+  "cover": "onlynerds",
+  "figCaption": "fig. 1: a course, forked",
+  "tags": [
+    "next.js",
+    "solidity"
+  ],
+  "stack": [
+    "next.js",
+    "solidity",
+    "hugging face",
+    "ipfs"
+  ],
+  "link": "https://onlynerds-rose.vercel.app/",
+  "linkLabel": "onlynerds",
+  "published": null,
+  "updated": "2026-10-25",
+  "story": [
+    {
+      "date": "may 2025",
+      "text": "built it over a hackathon weekend at a bnb chain ai hackathon with aditya, priyanshu and one more teammate. forkable courses, ai tutors and skill nfts, end to end. aditya's verdict on me: \"sucks at vibe coding but normally W.\""
+    },
+    {
+      "date": "jun 2025",
+      "text": "we came out runners-up nationally. kind of my last hackathon, as it turned out."
+    },
+    {
+      "date": "after that",
+      "text": "a small experiment. it stayed one. priyanshu wrote a whole thread on how that weekend changed things."
+    }
+  ],
+  "evidence": [
+    {
+      "caption": "the demo",
+      "kind": "mux",
+      "image": null,
+      "videoId": "1COGQgdUNDmnVeXhmyCVZyHynxHh01yYNm93892AXgMA"
+    },
+    {
+      "caption": "the team, hackathon weekend",
+      "kind": "image",
+      "image": "/media/made/onlynerds-team.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1926635226190455096"
+    },
+    {
+      "caption": "where it happened",
+      "kind": "image",
+      "image": "/media/made/onlynerds-venue.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1926635226190455096"
+    },
+    {
+      "caption": "the landing page",
+      "kind": "image",
+      "image": "/media/made/onlynerds-landing.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1937031042256286090"
+    },
+    {
+      "caption": "the day we came runners-up",
+      "kind": "image",
+      "image": "/media/made/onlynerds-runners-up.jpg",
+      "videoId": "",
+      "link": "https://x.com/adxtyahq/status/1937031042256286090"
+    },
+    {
+      "caption": "pitching it on stage",
+      "kind": "image",
+      "image": "/media/made/onlynerds-pitch.jpg",
+      "videoId": "",
+      "link": "https://x.com/priyanshudotsol/status/1937093765149188424"
+    }
+  ],
+  "stage": "shipped",
+  "reading": []
+}
