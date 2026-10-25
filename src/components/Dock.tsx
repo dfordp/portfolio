@@ -112,17 +112,18 @@ export default function Dock({ songs }: { songs: Song[] }) {
     try { localStorage.setItem('dp-volume', String(volume)); } catch { /* private mode */ }
   }, [volume, muted]);
 
-  // Point people at the play button a moment after load, unless they've played before.
+  // Point people at the play button a moment after load. It comes back on every
+  // visit; pressing play or the × hides it until the tab is closed.
   useEffect(() => {
     let seen = false;
-    try { seen = localStorage.getItem('dp-played') === '1'; } catch { /* private mode */ }
+    try { seen = sessionStorage.getItem('dp-nudged') === '1'; } catch { /* private mode */ }
     if (seen) return;
     const t = window.setTimeout(() => setNudge(true), 2200);
     return () => window.clearTimeout(t);
   }, []);
   const dismissNudge = () => {
     setNudge(false);
-    try { localStorage.setItem('dp-played', '1'); } catch { /* private mode */ }
+    try { sessionStorage.setItem('dp-nudged', '1'); } catch { /* private mode */ }
   };
 
   // Every visitor gets their own shuffle on load, so the song shown on top is the
