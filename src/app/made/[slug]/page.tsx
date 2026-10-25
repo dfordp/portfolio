@@ -52,7 +52,7 @@ export default async function ProjectPage({ params }: Props) {
     name: p.title,
     description: p.oneLiner,
     url: `${SITE_URL}/made/${p.slug}`,
-    author: { '@type': 'Person', name: 'Dilpreet Grover', alternateName: 'DP', url: SITE_URL },
+    author: { '@type': 'Person', name: 'DP', alternateName: 'Dilpreet', url: SITE_URL },
     ...(p.updated && { dateModified: p.updated }),
     ...(p.published && { datePublished: p.published }),
     ...(p.stack.length && { keywords: p.stack.join(', ') }),

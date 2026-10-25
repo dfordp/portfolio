@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: p.title,
     description,
     alternates: { canonical: `/words/${p.slug}` },
-    openGraph: { type: 'article', title: p.title, description, url: `/words/${p.slug}`, siteName: 'made by dp', locale: 'en_US', publishedTime: p.date, authors: ['DP (Dilpreet Grover)'], tags: [...p.tags] },
+    openGraph: { type: 'article', title: p.title, description, url: `/words/${p.slug}`, siteName: 'made by dp', locale: 'en_US', publishedTime: p.date, authors: ['DP'], tags: [...p.tags] },
   };
 }
 
@@ -44,7 +44,7 @@ export default async function PostPage({ params }: Props) {
     datePublished: post.date,
     url: `${SITE_URL}/words/${slug}`,
     ...(post.cover && { image: `${SITE_URL}${post.cover}` }),
-    author: { '@type': 'Person', name: 'Dilpreet Grover', alternateName: 'DP', url: SITE_URL },
+    author: { '@type': 'Person', name: 'DP', alternateName: 'Dilpreet', url: SITE_URL },
     keywords: post.tags.join(', '),
     timeRequired: `PT${post.minutes}M`,
   };

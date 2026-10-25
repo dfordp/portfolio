@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL(SITE_URL),
     title: { default: 'made by dp', template: '%s · made by dp' },
     description: site.description,
-    authors: [{ name: 'Dilpreet Grover', url: SITE_URL }],
+    authors: [{ name: 'DP', url: SITE_URL }],
     alternates: { canonical: '/', types: { 'application/rss+xml': '/words/rss.xml' } },
     openGraph: { siteName: 'made by dp', locale: 'en_US', type: 'website', url: SITE_URL },
     twitter: { card: 'summary_large_image', creator: '@dfordp11' },

@@ -11,8 +11,8 @@ export function personJsonLd(description: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Dilpreet Grover',
-    alternateName: 'DP',
+    name: 'DP',
+    alternateName: 'Dilpreet',
     url: SITE_URL,
     image: `${SITE_URL}/Dilpreet.jpeg`,
     description,
