@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "madebydp",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /private/tmp/claude-501/-Users-Shared-Files-From-d-localized-Projects-Development-portfolio/659a0d93-4fb8-41b6-b035-20356b36a7f0/scratchpad/site && npx next dev -p 3000"],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\blackhole.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "JntUTbMyStnWT01b8oklh4JoEu02KtQgmcAO58iFUFxDc",
+      "playbackId": "PwigxTtNwQjuVYOUTP7WzC1yDP0102iYFiJG8011lTmoBs"
+    }
+  },
+  "createdAt": 1751329440000,
+  "updatedAt": 1751329440000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/PwigxTtNwQjuVYOUTP7WzC1yDP0102iYFiJG8011lTmoBs.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/PwigxTtNwQjuVYOUTP7WzC1yDP0102iYFiJG8011lTmoBs/thumbnail.webp",
+  "blurDataURL": ""
+}

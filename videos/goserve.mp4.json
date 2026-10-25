@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\goserve.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "j2S2jA2U1UhgFdi7VtSq3601uHJw006bQW8mNDQNg48yg",
+      "playbackId": "S42P6NkiopfIyCEPNaKtlXqMoR1NF3lGXqVV9xWUH02k"
+    }
+  },
+  "createdAt": 1751329500000,
+  "updatedAt": 1751329500000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/S42P6NkiopfIyCEPNaKtlXqMoR1NF3lGXqVV9xWUH02k.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/S42P6NkiopfIyCEPNaKtlXqMoR1NF3lGXqVV9xWUH02k/thumbnail.webp",
+  "blurDataURL": ""
+}

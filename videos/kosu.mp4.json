@@ -1,0 +1,22 @@
+{
+  "status": "ready",
+  "originalFilePath": "videos\\kosu-ai-demo.mp4",
+  "provider": "mux",
+  "providerMetadata": {
+    "mux": {
+      "assetId": "dAalxGLN9JozfPiVs9QYWp3dVadR715029PkaQP3gSis",
+      "playbackId": "BuDDZTqlkyssLg02cNLw01UBlCXt8D1VcBba5pMLyp3i8"
+    }
+  },
+  "createdAt": 1751175420000,
+  "updatedAt": 1751175420000,
+  "size": 0,
+  "sources": [
+    {
+      "src": "https://stream.mux.com/BuDDZTqlkyssLg02cNLw01UBlCXt8D1VcBba5pMLyp3i8.m3u8",
+      "type": "application/x-mpegURL"
+    }
+  ],
+  "poster": "https://image.mux.com/BuDDZTqlkyssLg02cNLw01UBlCXt8D1VcBba5pMLyp3i8/thumbnail.webp",
+  "blurDataURL": ""
+}
