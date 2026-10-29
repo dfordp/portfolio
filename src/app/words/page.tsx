@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'words',
   description: 'Long essays by DP on ai, building things, quantum computing and burnt laptops.',
   alternates: { canonical: '/words' },
-  openGraph: { siteName: 'made by dp', locale: 'en_US', type: 'website', url: '/words' },
+  openGraph: { siteName: 'madebydp', locale: 'en_US', type: 'website', url: '/words' },
 };
 
 export default async function Words() {
